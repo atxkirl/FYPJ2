@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 	}
 }
 
+[System.Serializable]
 public class Character
 {
 	public string name;
