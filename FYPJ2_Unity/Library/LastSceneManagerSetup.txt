@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Scenes/Test_Adrian.unity
+  isLoaded: 1
+  isActive: 1

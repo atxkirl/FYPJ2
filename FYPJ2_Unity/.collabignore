@@ -31,6 +31,9 @@ ehthumbs.db
 [Bb]uild
 sysinfo.txt
 *.stackdump
-Assets\Models
-Assets\Textures
-Assets\Scripts
+
+# Personal ATXK
+# =============
+/Assets/Scripts/
+/Assets/Models/
+/Assets/Textures/
