@@ -31,3 +31,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+FYPJ2_Unity/Assets/Models
+FYPJ2_Unity/Assets/Prefabs
+FYPJ2_Unity/Assets/Textures
