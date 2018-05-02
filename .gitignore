@@ -3,6 +3,9 @@ FYP2_Unity/[Tt]emp/
 FYP2_Unity/[Oo]bj/
 FYP2_Unity/[Bb]uild/
 FYP2_Unity/[Bb]uilds/
+FYPJ2_Unity/Assets/Models
+FYPJ2_Unity/Assets/Prefabs
+FYPJ2_Unity/Assets/Textures
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -31,6 +34,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-FYPJ2_Unity/Assets/Models
-FYPJ2_Unity/Assets/Prefabs
-FYPJ2_Unity/Assets/Textures
