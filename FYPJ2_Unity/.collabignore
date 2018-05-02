@@ -34,6 +34,6 @@ sysinfo.txt
 
 # Personal ATXK
 # =============
-/Assets/Scripts/
-/Assets/Models/
-/Assets/Textures/
+/Assets/Scripts
+/Assets/Models
+/Assets/Textures
