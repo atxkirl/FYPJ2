@@ -1,8 +1,9 @@
-FYP2_Unity/[Ll]ibrary/
-FYP2_Unity/[Tt]emp/
-FYP2_Unity/[Oo]bj/
-FYP2_Unity/[Bb]uild/
-FYP2_Unity/[Bb]uilds/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -33,7 +34,7 @@ sysinfo.txt
 *.unitypackage
 
 #Unity Assets
-FYPJ2_Unity/Temp/
-FYPJ2_Unity/Assets/Prefabs
-FYPJ2_Unity/Assets/Scenes
-FYPJ2_Unity/Library/
+Temp/
+Assets/Prefabs
+Assets/Scenes
+Library/
