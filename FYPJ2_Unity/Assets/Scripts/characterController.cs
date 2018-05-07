@@ -6,8 +6,13 @@ public class characterController : MonoBehaviour
 {
     public float speed = 10.0f;
 
-	// Use this for initialization
-	void Start ()
+    private void Awake()
+    {
+        ThirdPerson_Cam.UseCurrentCamera();
+    }
+
+    // Use this for initialization
+    void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
 	}
