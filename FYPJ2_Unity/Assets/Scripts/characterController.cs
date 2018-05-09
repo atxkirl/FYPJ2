@@ -8,7 +8,8 @@ public class characterController : MonoBehaviour
 
     private void Awake()
     {
-        ThirdPerson_Cam.UseCurrentCamera();
+		//ThirdPerson_Cam.UseCurrentCamera();
+		this.gameObject.GetComponentInChildren<ThirdPerson_Cam>().UseCurrentCamera();
     }
 
     // Use this for initialization

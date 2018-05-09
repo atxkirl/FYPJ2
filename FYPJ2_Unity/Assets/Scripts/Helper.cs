@@ -28,7 +28,10 @@ public static class Helper
         var clipPlanePoints = new ClipPlanePoints();
 
         if (!Camera.main)
-            return clipPlanePoints;
+		{
+			Debug.Log("camera not found");
+			return clipPlanePoints;
+		}
 
         var transform = Camera.main.transform;
         var halfFOV = (Camera.main.fieldOfView / 2) * Mathf.Deg2Rad;
