@@ -6,12 +6,6 @@ public class characterController : MonoBehaviour
 {
     public float speed = 10.0f;
 
-    private void Awake()
-    {
-		//ThirdPerson_Cam.UseCurrentCamera();
-		this.gameObject.GetComponentInChildren<ThirdPerson_Cam>().UseCurrentCamera();
-    }
-
     // Use this for initialization
     void Start ()
     {

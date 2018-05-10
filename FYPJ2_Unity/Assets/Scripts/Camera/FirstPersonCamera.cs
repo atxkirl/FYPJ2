@@ -2,21 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camMouseControl : MonoBehaviour {
-
+public class FirstPersonCamera : MonoBehaviour
+{
     Vector2 mouseLook;
     Vector2 smoothV;
     public float sensitivity = 5.0f;
     public float smoothing = 2.0f;
+	public GameObject player;
 
-    GameObject player;
-
-	// Use this for initialization
-	void Start ()
-    {
-        player = this.transform.parent.gameObject;
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {
