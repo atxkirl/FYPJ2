@@ -8,9 +8,14 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-	public string itemID;
 	public string itemDisplayName;
 	public string itemDisplayDescription;
 	public int itemWeight;
-	public GameObject itemPrefab;
+
+	void Start()
+	{
+		itemDisplayName = "DEFAULT";
+		itemDisplayDescription = "DEFAULT DESCRIPTOR";
+		itemWeight = 0;
+	}
 }
