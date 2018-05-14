@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuListControl : MonoBehaviour
+public class InventoryListControl : MonoBehaviour
 {
 	public GameObject buttonPrefab;
 
@@ -10,9 +10,10 @@ public class MenuListControl : MonoBehaviour
 	{
 		GameObject button = Instantiate(buttonPrefab) as GameObject;
 		button.SetActive(true);
+		
+		button.GetComponent<InventoryButton>().SetButton(itemToAdd);
 		button.transform.SetParent(buttonPrefab.transform.parent);
-
-		button.GetComponent<MenuButton>().SetButton(itemToAdd);
+		button.transform.localScale = buttonPrefab.transform.localScale;
 	}
 
 	void Update()

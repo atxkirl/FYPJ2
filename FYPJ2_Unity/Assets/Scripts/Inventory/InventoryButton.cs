@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuButton : MonoBehaviour
+public class InventoryButton : MonoBehaviour
 {
 	public Text itemText;
 	public GameObject itemObject;
