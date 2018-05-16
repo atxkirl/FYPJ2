@@ -50,17 +50,23 @@ public class Player : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			GameObject chestplate = new GameObject("item", typeof(Armor));
+			GameObject chestplate = new GameObject("chestplate", typeof(Armor));
 			chestplate.GetComponent<Armor>().SetStatistics("chestplate", "chestplate test", 1, 2);
 
 			InventoryListControl.instance.AddNewItem(chestplate);
 		}
 		if (Input.GetKeyDown(KeyCode.G))
 		{
-			GameObject sword = new GameObject("item", typeof(Weapon));
+			GameObject sword = new GameObject("sword", typeof(Weapon));
 			sword.GetComponent<Weapon>().SetStatistics("sword", "sword test", 3, 4);
 
 			InventoryListControl.instance.AddNewItem(sword);
+		}
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			GameObject item = new GameObject("item", typeof(Item));
+
+			InventoryListControl.instance.AddNewItem(item);
 		}
 		///End of Test Code
 	}

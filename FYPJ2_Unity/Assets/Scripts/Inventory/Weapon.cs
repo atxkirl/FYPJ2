@@ -9,4 +9,9 @@
 		itemWeight = newItemWeight;
 		weaponDamage = newWeaponDamage;
 	}
+
+	public override string GetStatistics()
+	{
+		return itemDisplayName + "-" + itemDisplayDescription + "-" + itemWeight + "-" + weaponDamage;
+	}
 }

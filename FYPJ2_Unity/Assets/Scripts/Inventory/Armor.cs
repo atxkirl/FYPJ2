@@ -9,4 +9,9 @@
 		itemWeight = newItemWeight;
 		armorDefence = newArmourDefence;
 	}
+
+	public override string GetStatistics()
+	{
+		return itemDisplayName + "-" + itemDisplayDescription + "-" + itemWeight + "-" + armorDefence;
+	}
 }

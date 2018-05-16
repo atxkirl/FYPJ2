@@ -19,9 +19,6 @@ public class InventoryListControl : MonoBehaviour
 		//If instance already exists and it's not this then destroy
 		else if (instance != this)
 			Destroy(gameObject);
-
-		//Sets this to not be destroyed when reloading scene
-		DontDestroyOnLoad(gameObject);
 	}
 
 	void Start()
@@ -89,5 +86,11 @@ public class InventoryListControl : MonoBehaviour
 
 		if (this.gameObject.activeSelf)
 			GenerateButtons();
+	}
+
+	//Handles Button Clicks
+	public void ButtonClicked(GameObject itemInButton)
+	{
+		Debug.Log("Clicked on: " + itemInButton.GetComponent<Item>().GetStatistics());
 	}
 }
