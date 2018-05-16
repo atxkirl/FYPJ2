@@ -16,8 +16,9 @@ public class ThirdPersonCamera : MonoBehaviour
 	public float mouseWheelSensitivity = 5.0f;
 	public float x_Smooth = 0.05f;
 	public float y_Smooth = 0.1f;
+    public float rotate_Smooth_T = 0.1f;
 	public float y_MinLimit = -40.0f;
-	public float y_MaxLimit = 40.0f;
+    public float y_MaxLimit = 40.0f;
 	public float occlusionDistanceStep = 0.01f;
 	public int maxOcclusionChecks = 10;
 
@@ -36,6 +37,7 @@ public class ThirdPersonCamera : MonoBehaviour
 	private float velY = 0f;
 	private float velZ = 0f;
 	private float velDistance = 0f;
+    private Vector3 velRotate = Vector3.zero;
 	private float startDistance = 0f;
 	private Vector3 pos = Vector3.zero;
 	private Vector3 desiredPos = Vector3.zero;
@@ -98,6 +100,25 @@ public class ThirdPersonCamera : MonoBehaviour
 			else
 				mouseGoingUp = false;
 		}
+        else
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            Quaternion rotation = Quaternion.Euler(0, mouseX, 0);
+
+            //if (rotation.eulerAngles.y < -180)
+            //{
+            //    rotation.eulerAngles.Set(rotation.eulerAngles.x, 180f + rotation.eulerAngles.y, rotation.eulerAngles.z);
+            //}
+            //else if (rotation.eulerAngles.y > 180)
+            //{
+            //    rotation.eulerAngles = new Vector3(rotation.eulerAngles.x, rotation.eulerAngles.y - 360, rotation.eulerAngles.z);
+            //}
+
+            //player.transform.eulerAngles = Vector3.SmoothDamp(player.transform.eulerAngles, rotation.eulerAngles, ref velRotate, rotate_Smooth);
+
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, rotation, rotate_Smooth_T);
+        }
 
 		// This is limiting y
 		mouseY = Helper.ClampAngle(mouseY, y_MinLimit, y_MaxLimit);
