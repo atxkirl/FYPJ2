@@ -8,11 +8,13 @@ public class InventoryButton : MonoBehaviour
 	public Text itemText;
 	public GameObject itemObject;
 
+	private string padding = "  ";
+
 	//Sets the object held in the button
 	public void SetButton(GameObject buttonObject)
 	{
 		itemObject = buttonObject;
-		itemText.text = buttonObject.GetComponent<Item>().itemDisplayName;
+		itemText.text = padding + buttonObject.GetComponent<Item>().itemDisplayName;
 	}
 
 	//Returns the object held in the button to the controller

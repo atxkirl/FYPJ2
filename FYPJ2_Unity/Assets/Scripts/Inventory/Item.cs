@@ -8,22 +8,17 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-	public string itemDisplayName;
-	public string itemDisplayDescription;
-	public int itemWeight;
+	public string itemDisplayName = "DEFAULT_NAME";
+	public string itemDisplayDescription = "DEFAULT_DESCRIPTOR";
+	public int itemWeight = 0;
+	public GameObject itemModel;
 
-	void Awake()
-	{
-		itemDisplayName = "DEFAULT_NAME";
-		itemDisplayDescription = "DEFAULT_DESCRIPTOR";
-		itemWeight = 0;
-	}
-
-	public virtual void SetStatistics(string newItemDisplayName, string newItemDisplayDescription, int newItemWeight)
+	public virtual void SetStatistics(string newItemDisplayName, string newItemDisplayDescription, int newItemWeight, GameObject newItemModel)
 	{
 		itemDisplayName = newItemDisplayName;
 		itemDisplayDescription = newItemDisplayDescription;
 		itemWeight = newItemWeight;
+		itemModel = newItemModel;
 	}
 
 	public virtual string GetStatistics()

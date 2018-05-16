@@ -7,8 +7,8 @@ public class InventoryListControl : MonoBehaviour
 	public static InventoryListControl instance = null;
 	public GameObject buttonPrefab;
 
-	private List<GameObject> itemList;
-	private List<GameObject> buttonList;
+	public List<GameObject> itemList;
+	public List<GameObject> buttonList;
 
 	void Awake()
 	{
@@ -66,7 +66,8 @@ public class InventoryListControl : MonoBehaviour
 		button.GetComponent<InventoryButton>().SetButton(itemToAdd);
 		button.transform.SetParent(buttonPrefab.transform.parent);
 		button.transform.localScale = buttonPrefab.transform.localScale;
-
+		button.transform.localPosition = buttonPrefab.transform.localPosition;
+		
 		buttonList.Add(button);
 	}
 
@@ -91,6 +92,6 @@ public class InventoryListControl : MonoBehaviour
 	//Handles Button Clicks
 	public void ButtonClicked(GameObject itemInButton)
 	{
-		Debug.Log("Clicked on: " + itemInButton.GetComponent<Item>().GetStatistics());
+		ItemHolder.instance.SetItem(itemInButton);
 	}
 }
