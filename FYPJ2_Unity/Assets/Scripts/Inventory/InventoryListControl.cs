@@ -4,27 +4,90 @@ using UnityEngine;
 
 public class InventoryListControl : MonoBehaviour
 {
+	public static InventoryListControl instance = null;
 	public GameObject buttonPrefab;
 
+	private List<GameObject> itemList;
+	private List<GameObject> buttonList;
+
+	void Awake()
+	{
+		//Check if instance already exists
+		if (instance == null)
+			instance = this;
+
+		//If instance already exists and it's not this then destroy
+		else if (instance != this)
+			Destroy(gameObject);
+
+		//Sets this to not be destroyed when reloading scene
+		DontDestroyOnLoad(gameObject);
+	}
+
+	void Start()
+	{
+		this.gameObject.SetActive(false);
+
+		itemList = new List<GameObject>();
+		buttonList = new List<GameObject>();
+	}
+
+	//Generates buttons based on items in the itemList
+	void GenerateButtons()
+	{
+		//Removes existing buttons
+		ClearButtons();
+
+		//Creates buttons according to itemList
+		if(itemList.Count > 0)
+		{
+			foreach(GameObject item in itemList)
+			{
+				AddNewButton(item.gameObject);
+			}
+		}
+	}
+
+	//Clears buttons from inventory prior to generation
+	void ClearButtons()
+	{
+		if (buttonList.Count > 0)
+		{
+			foreach(GameObject button in buttonList)
+			{
+				Destroy(button);
+			}
+			buttonList.Clear();
+		}
+	}
+
+	//Adds a inventory button with an item attached to it
 	void AddNewButton(GameObject itemToAdd)
 	{
 		GameObject button = Instantiate(buttonPrefab) as GameObject;
 		button.SetActive(true);
-		
 		button.GetComponent<InventoryButton>().SetButton(itemToAdd);
 		button.transform.SetParent(buttonPrefab.transform.parent);
 		button.transform.localScale = buttonPrefab.transform.localScale;
+
+		buttonList.Add(button);
 	}
 
-	void Update()
+	//Adds an item to the itemList
+	public void AddNewItem(GameObject itemToAdd)
 	{
-		//THIS IS TEST CODE
-		if(Input.GetKeyDown(KeyCode.E))
-		{
-			GameObject chestplate = new GameObject("chestplate", typeof(Armor));
-			chestplate.GetComponent<Armor>().SetStatistics("chestplate", "test", 10, 10);
+		itemList.Add(itemToAdd);
 
-			AddNewButton(chestplate);
-		}
+		//Regenerate buttons to update
+		GenerateButtons();
+	}
+
+	//Toggle on/off inventory
+	public void ToggleInventory()
+	{
+		this.gameObject.SetActive(!this.gameObject.activeSelf);
+
+		if (this.gameObject.activeSelf)
+			GenerateButtons();
 	}
 }

@@ -11,11 +11,4 @@ public class Item : MonoBehaviour
 	public string itemDisplayName;
 	public string itemDisplayDescription;
 	public int itemWeight;
-
-	void Start()
-	{
-		itemDisplayName = "DEFAULT";
-		itemDisplayDescription = "DEFAULT DESCRIPTOR";
-		itemWeight = 0;
-	}
 }

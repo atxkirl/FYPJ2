@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 	private void Update()
 	{
 		///Test Code
+		//Test Carry Weight
 		if (Input.GetKeyDown(KeyCode.Equals))
 		{
 			++playerCurrentCarryWeight;
@@ -40,6 +41,26 @@ public class Player : MonoBehaviour
 			--playerCurrentCarryWeight;
 			if (playerCurrentCarryWeight < 0)
 				playerCurrentCarryWeight = 0;
+		}
+
+		//Test Inventory
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			InventoryListControl.instance.ToggleInventory();
+		}
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			GameObject chestplate = new GameObject("item", typeof(Armor));
+			chestplate.GetComponent<Armor>().SetStatistics("chestplate", "chestplate test", 1, 2);
+
+			InventoryListControl.instance.AddNewItem(chestplate);
+		}
+		if (Input.GetKeyDown(KeyCode.G))
+		{
+			GameObject sword = new GameObject("item", typeof(Weapon));
+			sword.GetComponent<Weapon>().SetStatistics("sword", "sword test", 3, 4);
+
+			InventoryListControl.instance.AddNewItem(sword);
 		}
 		///End of Test Code
 	}
