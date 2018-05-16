@@ -82,26 +82,25 @@ public class ThirdPersonCamera : MonoBehaviour
 	{
 		float deadZone = 0.01f;
 
-		if (Input.GetMouseButton(1))
-		{
-			if (checkTime <= deltaTime)
-			{
-				lastMouseX = mouseX;
-				lastMouseY = mouseY;
-				checkTime = deltaTime + 0.5f;
-			}
-
-			// The RMB is down get mouse axis input
-			mouseX += Input.GetAxis("Mouse X") * x_mouseSensitivity;
-			mouseY -= Input.GetAxis("Mouse Y") * y_mouseSensitivity;
-
-			if (lastMouseY < mouseY)
-				mouseGoingUp = true;
-			else
-				mouseGoingUp = false;
-		}
-        else
+        if (checkTime <= deltaTime)
         {
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+            checkTime = deltaTime + 0.5f;
+        }
+
+        // The RMB is down get mouse axis input
+        mouseX += Input.GetAxis("Mouse X") * x_mouseSensitivity;
+        mouseY -= Input.GetAxis("Mouse Y") * y_mouseSensitivity;
+
+        if (lastMouseY < mouseY)
+            mouseGoingUp = true;
+        else
+            mouseGoingUp = false;
+
+        if (!Input.GetMouseButton(1))
+        {
+            
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             Quaternion rotation = Quaternion.Euler(0, mouseX, 0);
