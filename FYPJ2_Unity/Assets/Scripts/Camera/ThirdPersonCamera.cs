@@ -45,6 +45,17 @@ public class ThirdPersonCamera : MonoBehaviour
 	private float desiredDistance = 0f;
 	private float preOccludedDistance = 0;
 
+    public void SetMouseXY(Vector2 mouseLook)
+    {
+        mouseX = mouseLook.x;
+        mouseY = -mouseLook.y;
+    }
+
+    public Vector2 GetMouseXY()
+    {
+        return new Vector2(mouseX, -mouseY);
+    }
+
 	// Use this for initialization
 	void Start()
 	{

@@ -28,6 +28,15 @@ public class CameraManager : MonoBehaviour
 		fpsCamera.gameObject.SetActive(!fpsCamera.gameObject.activeSelf);
 		tpsCamera.gameObject.SetActive(!tpsCamera.gameObject.activeSelf);
 
-		isFPSCamera = fpsCamera.gameObject.activeSelf;
-	}
+        FirstPersonCamera fpsCam = fpsCamera.GetComponent<FirstPersonCamera>();
+        ThirdPersonCamera tpsCam = tpsCamera.GetComponent<ThirdPersonCamera>();
+
+        if (isFPSCamera)
+            tpsCam.SetMouseXY(fpsCam.mouseLook);
+        else
+            fpsCam.mouseLook = tpsCam.GetMouseXY();
+
+        isFPSCamera = fpsCamera.gameObject.activeSelf;
+
+    }
 }
