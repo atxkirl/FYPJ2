@@ -18,6 +18,12 @@ public class ItemHolder : MonoBehaviour
 			Destroy(gameObject);
 	}
 
+	void Update()
+	{
+		if(!itemToPreview)
+			this.GetComponent<MeshFilter>().mesh = null;
+	}
+
 	public void SetItem(GameObject item)
 	{
 		itemToPreview = item;

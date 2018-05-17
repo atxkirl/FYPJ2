@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-	public LinkedList<Item> itemList = new LinkedList<Item>();
+	public List<GameObject> itemList = new List<GameObject>();
 }

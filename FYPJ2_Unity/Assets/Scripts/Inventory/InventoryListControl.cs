@@ -6,9 +6,10 @@ public class InventoryListControl : MonoBehaviour
 {
 	public static InventoryListControl instance = null;
 	public GameObject buttonPrefab;
+	public GameObject itemBlur;
 
-	public List<GameObject> itemList;
-	public List<GameObject> buttonList;
+	private List<GameObject> itemList;
+	private List<GameObject> buttonList;
 
 	void Awake()
 	{
@@ -24,6 +25,7 @@ public class InventoryListControl : MonoBehaviour
 	void Start()
 	{
 		this.gameObject.SetActive(false);
+		itemBlur.SetActive(false);
 
 		itemList = new List<GameObject>();
 		buttonList = new List<GameObject>();
@@ -80,10 +82,26 @@ public class InventoryListControl : MonoBehaviour
 		GenerateButtons();
 	}
 
+	//Removes an item from the itemList
+	public void RemoveItem()
+	{
+		//Checks if ItemHolder has a item selected
+		if(ItemHolder.instance.itemToPreview)
+		{
+			//Remove item from itemList and destroy item
+			itemList.Remove(ItemHolder.instance.itemToPreview);
+			Destroy(ItemHolder.instance.itemToPreview);
+
+			//Regenerate buttons to update
+			GenerateButtons();
+		}
+	}
+
 	//Toggle on/off inventory
 	public void ToggleInventory()
 	{
 		this.gameObject.SetActive(!this.gameObject.activeSelf);
+		itemBlur.SetActive(this.gameObject.activeSelf);
 
 		if (this.gameObject.activeSelf)
 			GenerateButtons();

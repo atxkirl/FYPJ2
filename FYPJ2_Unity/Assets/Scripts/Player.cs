@@ -20,15 +20,7 @@ public class Player : MonoBehaviour
 	public int playerCurrentCarryWeight;
 	public int playerMaxCarryWeight;
 
-	//Check if the player is carrying too much
-	public bool IsOverburdened()
-	{
-		if (playerCurrentCarryWeight > playerMaxCarryWeight)
-			return true;
-		return false;
-	}
-
-	private void Update()
+	void Update()
 	{
 		///Test Code
 		//Test Carry Weight
@@ -50,7 +42,7 @@ public class Player : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			GameObject shield = Instantiate(Resources.Load("Mythril Hulbark")) as GameObject;
+			GameObject shield = (GameObject)Instantiate(Resources.Load("Mythril Hulbark"));
 			InventoryListControl.instance.AddNewItem(shield);
 		}
 		if (Input.GetKeyDown(KeyCode.G))
@@ -63,6 +55,18 @@ public class Player : MonoBehaviour
 			GameObject item = new GameObject("item", typeof(Item));
 			InventoryListControl.instance.AddNewItem(item);
 		}
+		if (Input.GetKeyDown(KeyCode.J))
+		{
+			InventoryListControl.instance.RemoveItem();
+		}
 		///End of Test Code
+	}
+
+	//Check if the player is carrying too much
+	public bool IsOverburdened()
+	{
+		if (playerCurrentCarryWeight > playerMaxCarryWeight)
+			return true;
+		return false;
 	}
 }
