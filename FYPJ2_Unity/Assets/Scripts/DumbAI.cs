@@ -13,7 +13,7 @@ public class DumbAI : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        path = new[] { new Vector3(transform.position.x - 3.0f, transform.position.y, transform.position.z + 2.5f), new Vector3(transform.position.x - 3.0f, transform.position.y, transform.position.z - 2.5f), new Vector3(transform.position.x + 3.0f, transform.position.y, transform.position.z - 2.5f), new Vector3(transform.position.x + 3.0f, transform.position.y, transform.position.z + 2.5f) };
+        path = new[] { new Vector3(transform.position.x - 10.0f, transform.position.y, transform.position.z + 10.0f), new Vector3(transform.position.x - 10.0f, transform.position.y, transform.position.z - 10f), new Vector3(transform.position.x + 10.0f, transform.position.y, transform.position.z - 10f), new Vector3(transform.position.x + 10.0f, transform.position.y, transform.position.z + 10f) };
 
         MakeFSM();
 
@@ -59,8 +59,8 @@ public class FollowPathState : FSMState
 
     public override void Act(GameObject player, GameObject npc)
     {
-        const float moveSpeed = 0.5f;
-        const float rotateSpeed = 0.5f;
+        const float moveSpeed = 10.0f;
+        const float rotateSpeed = 2.5f;
 
         Vector3 vel = npc.GetComponent<Rigidbody>().velocity;
 
@@ -79,8 +79,6 @@ public class FollowPathState : FSMState
             vel = moveDir.normalized * moveSpeed;
 
             npc.transform.forward = Vector3.Lerp(npc.transform.forward, moveDir.normalized, rotateSpeed * Time.deltaTime);
-
-            npc.transform.eulerAngles = new Vector3(0, 0, npc.transform.eulerAngles.z);
         }
 
         npc.GetComponent<Rigidbody>().velocity = vel;
@@ -89,7 +87,8 @@ public class FollowPathState : FSMState
     public override void Reason(GameObject player, GameObject npc)
     {
         RaycastHit hitInfo;
-        if (Vector3.Distance(npc.transform.position, player.transform.position) < 5 && Physics.Raycast(npc.transform.position, player.transform.position, out hitInfo ))
+        Vector3 dir = (player.transform.position - npc.transform.position).normalized;
+        if (Vector3.Distance(npc.transform.position, player.transform.position) < 100 && Physics.Raycast(npc.transform.position, dir, out hitInfo ))
         {
             float angle = Vector3.Angle(npc.transform.forward, player.transform.position);
             if (hitInfo.transform.tag == "Player" &&  angle < 30 && angle > -30)
@@ -107,8 +106,8 @@ public class ChasePlayerState : FSMState
 
     public override void Act(GameObject player, GameObject npc)
     {
-        const float moveSpeed = 1.0f;
-        const float rotateSpeed = 0.5f;
+        const float moveSpeed = 10.0f;
+        const float rotateSpeed = 2.5f;
 
         Vector3 moveDir = player.transform.position - npc.transform.position;
 
@@ -116,14 +115,12 @@ public class ChasePlayerState : FSMState
 
         npc.transform.forward = Vector3.Lerp(npc.transform.forward, moveDir.normalized, rotateSpeed * Time.deltaTime);
 
-        npc.transform.eulerAngles = new Vector3(0, 0, npc.transform.eulerAngles.z);
-
-        npc.GetComponent<Rigidbody2D>().velocity = vel;
+        npc.GetComponent<Rigidbody>().velocity = vel;
     }
 
     public override void Reason(GameObject player, GameObject npc)
     {
-        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 5)
+        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 10)
         {
             npc.GetComponent<DumbAI>().SetTransition(Transition.LostPlayer);
         }
@@ -136,7 +133,7 @@ public class ChasePlayerState : FSMState
 
 public class AttackPlayerState : FSMState
 {
-    const float rotateSpeed = 0.5f;
+    const float rotateSpeed = 2.5f;
     private float damageValue = -1.0f;
 
     float attackDelay = 1.0f;
