@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour {
 
     private GameObject interactedNPC;
 
-    private string[] dialogueList;
+    private List<string> dialogueList;
     private int dialogueIndex;
 
     private bool dialogueActive;
@@ -31,7 +31,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void Start () {
-        dialogueList = new string[] { "" };
+		//dialogueList = new string[] { "" };
+		dialogueList = new List<string>();
         dialogueIndex = 0;
 
         dialogueBox.SetActive(false);
@@ -41,7 +42,7 @@ public class DialogueManager : MonoBehaviour {
 	void Update () {
 		if (dialogueActive && Input.GetKeyDown(KeyCode.Q))
         {
-            if (dialogueList.Length == dialogueIndex)
+            if (dialogueList.Count == dialogueIndex)
             {
                 dialogueBox.SetActive(false);
                 dialogueActive = false;
@@ -56,23 +57,34 @@ public class DialogueManager : MonoBehaviour {
 
     void ShowDialogue(string dialogue)
     {
-        dialogueList = new string[] { dialogue };
-        dialogueIndex = 0;
+		//dialogueList = new string[] { dialogue };
+		dialogueList.Clear();
+		dialogueList.Add(dialogue);
+		dialogueIndex = 0;
 
         dialogueActive = true;
         dialogueBox.SetActive(true);
     }
 
-    void ShowDialogue(string[] dialogue)
-    {
-        dialogueList = dialogue;
-        dialogueIndex = 0;
+    //void ShowDialogue(string[] dialogue)
+    //{
+    //    dialogueList = dialogue;
+    //    dialogueIndex = 0;
 
-        dialogueActive = true;
-        dialogueBox.SetActive(true);
-    }
+    //    dialogueActive = true;
+    //    dialogueBox.SetActive(true);
+    //}
 
-    void AttachNPC(GameObject npc)
+	void ShowDialogue(List<string> dialogue)
+	{
+		dialogueList = dialogue;
+		dialogueIndex = 0;
+
+		dialogueActive = true;
+		dialogueBox.SetActive(true);
+	}
+
+	void AttachNPC(GameObject npc)
     {
         interactedNPC = npc;
     }

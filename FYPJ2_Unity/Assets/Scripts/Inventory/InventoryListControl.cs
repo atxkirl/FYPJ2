@@ -7,7 +7,6 @@ public class InventoryListControl : MonoBehaviour
 	public static InventoryListControl instance = null;
 	public GameObject canvas;
 	public GameObject buttonPrefab;
-	public GameObject itemBlur;
 
 	public List<GameObject> itemList;
 	public List<GameObject> buttonList;
@@ -26,7 +25,6 @@ public class InventoryListControl : MonoBehaviour
 	void Start()
 	{
 		this.gameObject.SetActive(false);
-		itemBlur.SetActive(false);
 
 		itemList = new List<GameObject>();
 		buttonList = new List<GameObject>();
@@ -78,8 +76,10 @@ public class InventoryListControl : MonoBehaviour
 	//Adds an item to the itemList
 	public void AddNewItem(GameObject itemToAdd)
 	{
-		itemList.Add(itemToAdd);
 		itemToAdd.SetActive(false);
+
+		//Add item to list
+		itemList.Add(itemToAdd);
 
 		//Regenerate buttons to update
 		GenerateButtons();
@@ -104,7 +104,6 @@ public class InventoryListControl : MonoBehaviour
 	public void ToggleInventory()
 	{
 		this.gameObject.SetActive(!this.gameObject.activeSelf);
-		itemBlur.SetActive(this.gameObject.activeSelf);
 
 		if (this.gameObject.activeSelf)
 		{

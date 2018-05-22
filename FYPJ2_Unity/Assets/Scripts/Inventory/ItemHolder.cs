@@ -25,6 +25,7 @@ public class ItemHolder : MonoBehaviour
 		//Reset itemHolder mesh
 		this.GetComponent<MeshFilter>().mesh = null;
 		this.GetComponent<MeshCollider>().sharedMesh = null;
+		this.GetComponent<MeshRenderer>().material = null;
 	}
 
 	void Update()
@@ -33,6 +34,7 @@ public class ItemHolder : MonoBehaviour
 		{
 			this.GetComponent<MeshFilter>().mesh = null;
 			this.GetComponent<MeshCollider>().sharedMesh = null;
+			this.GetComponent<MeshRenderer>().material = null;
 		}
 	}
 
@@ -44,11 +46,14 @@ public class ItemHolder : MonoBehaviour
 		if (!item.GetComponent<MeshFilter>())
 		{
 			this.GetComponent<MeshFilter>().mesh = null;
+			this.GetComponent<MeshCollider>().sharedMesh = null;
+			this.GetComponent<MeshRenderer>().material = null;
 			return;
 		}
 
 		this.GetComponent<MeshFilter>().mesh = itemToPreview.GetComponent<MeshFilter>().mesh;
 		this.GetComponent<MeshCollider>().sharedMesh = itemToPreview.GetComponent<MeshFilter>().mesh;
+		this.GetComponent<MeshRenderer>().material = itemToPreview.GetComponent<MeshRenderer>().material;
 
 		//Reset itemHolder rotation
 		this.gameObject.transform.forward = Camera.main.transform.forward;

@@ -74,6 +74,9 @@ public class ThirdPersonCamera : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate()
 	{
+		if (Cursor.lockState == CursorLockMode.None)
+			return;
+
 		if (!TargetLookAt)
 			return;
 

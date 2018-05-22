@@ -9,20 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1922642500207126}
+  m_RootGameObject: {fileID: 1465262333719962}
   m_IsPrefabParent: 1
---- !u!1 &1922642500207126
+--- !u!1 &1465262333719962
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4294106248244898}
-  - component: {fileID: 33689049218722426}
-  - component: {fileID: 135308160459131434}
-  - component: {fileID: 23347646136353356}
-  - component: {fileID: 114021846173826968}
+  - component: {fileID: 4228089763367246}
+  - component: {fileID: 33203425494930604}
+  - component: {fileID: 135198194274871044}
+  - component: {fileID: 23191258722914930}
+  - component: {fileID: 114976305645047546}
+  - component: {fileID: 114378144779563842}
   m_Layer: 0
   m_Name: Mythril Hulbark
   m_TagString: Untagged
@@ -30,25 +31,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4294106248244898
+--- !u!4 &4228089763367246
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922642500207126}
+  m_GameObject: {fileID: 1465262333719962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.437, y: 0.237, z: 3.381}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23347646136353356
+--- !u!23 &23191258722914930
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922642500207126}
+  m_GameObject: {fileID: 1465262333719962}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ad56fda07034ec045b4bdcd1ad00100d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,19 +76,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33689049218722426
+--- !u!33 &33203425494930604
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922642500207126}
+  m_GameObject: {fileID: 1465262333719962}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114021846173826968
+--- !u!114 &114378144779563842
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922642500207126}
+  m_GameObject: {fileID: 1465262333719962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899dab4f9b2d3a348842e327f7c02c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114976305645047546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465262333719962}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 047d3578eff5e874f8c0c5197f4ab3de, type: 3}
@@ -96,16 +108,16 @@ MonoBehaviour:
   itemDisplayName: Mythril Hulbark
   itemDisplayDescription: Bing Bong
   itemWeight: 20
-  itemModel: {fileID: 1922642500207126}
+  itemModel: {fileID: 1465262333719962}
   armorDefence: 20
---- !u!135 &135308160459131434
+--- !u!135 &135198194274871044
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922642500207126}
+  m_GameObject: {fileID: 1465262333719962}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

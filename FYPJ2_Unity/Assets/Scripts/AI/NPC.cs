@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour {
-
+public class NPC : MonoBehaviour
+{
     public GameObject player;
-    private Vector3 path;
+	public List<string> NPCDialogue;
+
+	private Vector3 path;
     private FSMSystem sm;
 
     private bool interacting = false;
@@ -18,7 +20,6 @@ public class NPC : MonoBehaviour {
         path = new Vector3(transform.position.x + Random.Range(-10, 10), transform.position.y, transform.position.z + Random.Range(-10, 10));
 
         MakeFSM();
-
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class NPC : MonoBehaviour {
         PlayerNearState track = new PlayerNearState();
         track.AddTransition(Transition.RoamNPC, StateID.MovementNPC);
         track.AddTransition(Transition.InteractNPC, StateID.InteractionNPC);
+		track.AddDialogue(NPCDialogue);
 
         InteractionState interact = new InteractionState();
         interact.AddTransition(Transition.NearNPC, StateID.TrackNPC);
@@ -68,7 +70,6 @@ public class NPC : MonoBehaviour {
         return interacting;
     }
 }
-
 
 public class MovementState : FSMState
 {
@@ -116,12 +117,20 @@ public class MovementState : FSMState
 
 public class PlayerNearState : FSMState
 {
+	List<string> npcDialogue;
+
     public PlayerNearState()
     {
         stateID = StateID.TrackNPC;
     }
 
-    public override void Act(GameObject player, GameObject npc)
+	public void AddDialogue(List<string> dialogue)
+	{
+		npcDialogue = new List<string>();
+		npcDialogue = dialogue;
+	}
+
+	public override void Act(GameObject player, GameObject npc)
     {
         const float rotateSpeed = 2.5f;
 
@@ -142,10 +151,13 @@ public class PlayerNearState : FSMState
             npc.GetComponent<NPC>().SendMessage("ChangeInteracting", true);
             npc.GetComponent<NPC>().SetTransition(Transition.InteractNPC);
 
-            string[] test = { "TDJ buay song", "Daniel worst student SIDM", "Victor Wee no reply email" };
-            DialogueManager.instance.SendMessage("ShowDialogue", test);
-            DialogueManager.instance.SendMessage("AttachNPC", npc);
-        }
+            //string[] test = { "TDJ buay song", "Daniel worst student SIDM", "Victor Wee no reply email" };
+            //DialogueManager.instance.SendMessage("ShowDialogue", test);
+            //DialogueManager.instance.SendMessage("AttachNPC", npc);
+
+			DialogueManager.instance.SendMessage("ShowDialogue", npcDialogue);
+			DialogueManager.instance.SendMessage("AttachNPC", npc);
+		}
     }
 }
 

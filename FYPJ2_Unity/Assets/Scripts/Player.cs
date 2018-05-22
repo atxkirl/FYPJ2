@@ -42,12 +42,12 @@ public class Player : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			GameObject shield = (GameObject)Instantiate(Resources.Load("Mythril Hulbark"));
+			GameObject shield = (GameObject)Instantiate(Resources.Load("Items/Armor/Mythril Hulbark"));
 			InventoryListControl.instance.AddNewItem(shield);
 		}
 		if (Input.GetKeyDown(KeyCode.G))
 		{
-			GameObject sword = (GameObject)Instantiate(Resources.Load("Sword of Icarus"));
+			GameObject sword = (GameObject)Instantiate(Resources.Load("Items/Weapon/Sword of Icarus"));
 			InventoryListControl.instance.AddNewItem(sword);
 		}
 		if (Input.GetKeyDown(KeyCode.H))
