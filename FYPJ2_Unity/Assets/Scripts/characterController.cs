@@ -16,6 +16,9 @@ public class characterController : MonoBehaviour
 	void Update ()
 	{
 		//Adrian test code
+		if (Cursor.lockState == CursorLockMode.None)
+			return;
+
 		if (GetComponent<Player>().IsOverburdened())
 			speed = 1.0f;
 		else

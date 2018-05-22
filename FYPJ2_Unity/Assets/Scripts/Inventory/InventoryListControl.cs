@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryListControl : MonoBehaviour
 {
 	public static InventoryListControl instance = null;
+	public GameObject canvas;
 	public GameObject buttonPrefab;
 	public GameObject itemBlur;
 
@@ -69,6 +70,7 @@ public class InventoryListControl : MonoBehaviour
 		button.transform.SetParent(buttonPrefab.transform.parent);
 		button.transform.localScale = buttonPrefab.transform.localScale;
 		button.transform.localPosition = buttonPrefab.transform.localPosition;
+		button.transform.localRotation = buttonPrefab.transform.localRotation;
 		
 		buttonList.Add(button);
 	}
@@ -77,6 +79,7 @@ public class InventoryListControl : MonoBehaviour
 	public void AddNewItem(GameObject itemToAdd)
 	{
 		itemList.Add(itemToAdd);
+		itemToAdd.SetActive(false);
 
 		//Regenerate buttons to update
 		GenerateButtons();
@@ -104,7 +107,14 @@ public class InventoryListControl : MonoBehaviour
 		itemBlur.SetActive(this.gameObject.activeSelf);
 
 		if (this.gameObject.activeSelf)
+		{
 			GenerateButtons();
+			Cursor.lockState = CursorLockMode.None;
+		}
+		else
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+		}
 	}
 
 	//Handles Button Clicks

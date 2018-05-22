@@ -13,7 +13,10 @@ public class FirstPersonCamera : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Vector2 md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+		if (Cursor.lockState == CursorLockMode.None)
+			return;
+
+		Vector2 md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1.0f / smoothing);
