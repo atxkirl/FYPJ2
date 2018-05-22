@@ -120,11 +120,11 @@ public class ChasePlayerState : FSMState
 
     public override void Reason(GameObject player, GameObject npc)
     {
-        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 10)
+        if (Vector3.Distance(npc.transform.position, player.transform.position) > 100)
         {
             npc.GetComponent<DumbAI>().SetTransition(Transition.LostPlayer);
         }
-        else if (Vector3.Distance(npc.transform.position, player.transform.position) < 2)
+        else if (Vector3.Distance(npc.transform.position, player.transform.position) < 10)
         {
             npc.GetComponent<DumbAI>().SetTransition(Transition.NearPlayer);
         }
@@ -167,7 +167,7 @@ public class AttackPlayerState : FSMState
 
     public override void Reason(GameObject player, GameObject npc)
     {
-        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 2)
+        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 10)
         {
             npc.GetComponent<DumbAI>().SetTransition(Transition.SawPlayer);
         }

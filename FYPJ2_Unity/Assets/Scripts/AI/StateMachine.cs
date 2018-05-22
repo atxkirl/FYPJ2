@@ -8,6 +8,12 @@ public enum Transition
     SawPlayer,
     LostPlayer,
     NearPlayer,
+    RoamNPC,
+    NearNPC,
+    InteractNPC,
+    AngryNPC,
+    AttackNPC,
+
 }
 
 public enum StateID
@@ -16,6 +22,13 @@ public enum StateID
     ChasePlayer,
     FollowPath,
     AttackPlayer,
+
+    MovementNPC,
+    TrackNPC,
+    InteractionNPC,
+    AggroNPC,
+    DamageNPC,
+    
 
     BossIdle,
     BossAttack,
