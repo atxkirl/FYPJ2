@@ -8,6 +8,8 @@ public class FirstPersonCamera : MonoBehaviour
     Vector2 smoothV;
     public float sensitivity = 5.0f;
     public float smoothing = 2.0f;
+	public float maxLook = 50.0f;
+	public float minLook = -50.0f;
 	public GameObject player;
 
 	// Update is called once per frame
@@ -23,7 +25,7 @@ public class FirstPersonCamera : MonoBehaviour
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1.0f / smoothing);
         mouseLook += smoothV;
 
-        mouseLook.y = Mathf.Clamp(mouseLook.y, -70.0f, 70.0f);
+        mouseLook.y = Mathf.Clamp(mouseLook.y, minLook, maxLook);
 
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, player.transform.up);

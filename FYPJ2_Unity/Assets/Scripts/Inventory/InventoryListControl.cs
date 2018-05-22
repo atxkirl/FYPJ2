@@ -9,8 +9,8 @@ public class InventoryListControl : MonoBehaviour
 	public GameObject buttonPrefab;
 	public GameObject itemBlur;
 
-	private List<GameObject> itemList;
-	private List<GameObject> buttonList;
+	public List<GameObject> itemList;
+	public List<GameObject> buttonList;
 
 	void Awake()
 	{
@@ -71,7 +71,7 @@ public class InventoryListControl : MonoBehaviour
 		button.transform.localScale = buttonPrefab.transform.localScale;
 		button.transform.localPosition = buttonPrefab.transform.localPosition;
 		button.transform.localRotation = buttonPrefab.transform.localRotation;
-		
+
 		buttonList.Add(button);
 	}
 

@@ -8,7 +8,7 @@ public class CustomRenderQueue : MonoBehaviour
 
 	void Start()
 	{
-		Debug.Log("Updated" + gameObject.name + "material val");
+		//Debug.Log("Updated" + gameObject.name + "material val");
 		Image image = GetComponent<Image>();
 		Material existingGlobalMat = image.materialForRendering;
 		Material updatedMaterial = new Material(existingGlobalMat);
