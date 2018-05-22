@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject.transform.parent);
+        //DontDestroyOnLoad(gameObject.transform.parent);
     }
 
     void Start () {
