@@ -25,7 +25,7 @@ public class CameraManager : MonoBehaviour
 	{
 		fpsCamera.gameObject.SetActive(true);
 		tpsCamera.gameObject.SetActive(false);
-		currCamera = currCamera = Camera.main;
+		currCamera = Camera.main;
 		isFPSCamera = fpsCamera.gameObject.activeSelf;
 	}
 

@@ -134,9 +134,10 @@ public class PlayerNearState : FSMState
     {
         const float rotateSpeed = 2.5f;
 
-        npc.GetComponent<Rigidbody>().velocity.Set(0, 0, 0);
+		npc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		npc.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-        Vector3 moveDir = player.transform.position - npc.transform.position;
+		Vector3 moveDir = player.transform.position - npc.transform.position;
 
         npc.transform.forward = Vector3.Lerp(npc.transform.forward, moveDir.normalized, rotateSpeed * Time.deltaTime);
     }

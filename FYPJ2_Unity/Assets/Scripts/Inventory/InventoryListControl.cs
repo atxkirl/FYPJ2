@@ -76,7 +76,11 @@ public class InventoryListControl : MonoBehaviour
 	//Adds an item to the itemList
 	public void AddNewItem(GameObject itemToAdd)
 	{
+		//Disable item
 		itemToAdd.SetActive(false);
+
+		//Append Player's carry weight
+		Player.instance.ModifyCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
 
 		//Add item to list
 		itemList.Add(itemToAdd);

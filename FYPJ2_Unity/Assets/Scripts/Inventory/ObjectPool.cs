@@ -18,6 +18,7 @@ public class ObjectPool : MonoBehaviour
 		{
 			GameObject obj = (GameObject)Instantiate(objectToPool);
 			obj.SetActive(false);
+			pool.Add(obj);
 		}
 	}
 

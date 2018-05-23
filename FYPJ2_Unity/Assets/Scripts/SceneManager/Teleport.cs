@@ -16,6 +16,7 @@ public class Teleport : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		SceneChanger.instance.FadeToScene(SceneToTeleportTo);
+		if(other.tag == "Player")
+			SceneChanger.instance.FadeToScene(SceneToTeleportTo);
 	}
 }

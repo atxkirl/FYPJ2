@@ -8,7 +8,7 @@ public class Pickable : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		//Check if thing colliding is a Player
-		if (other.tag == "Player")
+		if (other.tag.Equals("Player"))
 		{
 			//Add item to player inventory
 			InventoryListControl.instance.AddNewItem(this.gameObject);

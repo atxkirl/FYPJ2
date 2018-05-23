@@ -40,6 +40,10 @@ public class Bullet : MonoBehaviour
 
 	void OnCollisionEnter(Collision other)
 	{
+		if(other.gameObject.tag.Equals("Player"))
+		{
+			Player.instance.ModifyHP(damage);
+		}
 		if (other.gameObject != owner)
 		{
 			//Destroy projectile

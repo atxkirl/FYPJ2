@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	//Player Singleton
+	public static Player instance = null;
+
 	//Player stats
 	public string playerName;
 	public int playerHealth;
@@ -19,6 +22,17 @@ public class Player : MonoBehaviour
 	//Player carry weight
 	public int playerCurrentCarryWeight;
 	public int playerMaxCarryWeight;
+
+	void Awake()
+	{
+		//Check if instance already exists
+		if (instance == null)
+			instance = this;
+
+		//If instance already exists and it's not this then destroy
+		else if (instance != this)
+			Destroy(gameObject);
+	}
 
 	void Update()
 	{
@@ -62,11 +76,79 @@ public class Player : MonoBehaviour
 		///End of Test Code
 	}
 
+	///////////////////////////////////
+	// CHECK PLAYER STATS FUNCTIONS  //
+	///////////////////////////////////
+
 	//Check if the player is carrying too much
 	public bool IsOverburdened()
 	{
 		if (playerCurrentCarryWeight > playerMaxCarryWeight)
 			return true;
 		return false;
+	}
+
+	//Check if the player is tired - stamina
+	public bool IsTired()
+	{
+		if (playerStamina <= 0)
+			return true;
+		return false;
+	}
+
+	//Check if the player is drained - mana
+	public bool IsDrained()
+	{
+		if (playerMana <= 0)
+			return true;
+		return false;
+	}
+
+	//Check if the player is dead - health
+	public bool IsDead()
+	{
+		if (playerHealth <= 0)
+			return true;
+		return false;
+	}
+
+	///////////////////////////////////
+	// MODIFY PLAYER STATS FUNCTIONS //
+	///////////////////////////////////
+
+	//Modify HP
+	public void ModifyHP(int amountToModify)
+	{
+		playerHealth += amountToModify;
+
+		if (playerHealth < 0)
+			playerHealth = 0;
+	}
+
+	//Modify MP
+	public void ModifyMP(int amountToModify)
+	{
+		playerMana += amountToModify;
+
+		if (playerMana < 0)
+			playerMana = 0;
+	}
+
+	//Modify SP
+	public void ModifySP(int amountToModify)
+	{
+		playerStamina += amountToModify;
+
+		if (playerStamina < 0)
+			playerStamina = 0;
+	}
+
+	//Modify CarryWeight
+	public void ModifyCarryWeight(int amountToModify)
+	{
+		playerCurrentCarryWeight += amountToModify;
+
+		if (playerCurrentCarryWeight < 0)
+			playerCurrentCarryWeight = 0;
 	}
 }

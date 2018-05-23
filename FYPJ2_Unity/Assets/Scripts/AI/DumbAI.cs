@@ -5,6 +5,7 @@ using UnityEngine;
 public class DumbAI : MonoBehaviour {
 
     public GameObject player;
+	public float distanceFromPlayer;
     private Vector3[] path;
     private FSMSystem sm;
 
@@ -152,7 +153,10 @@ public class AttackPlayerState : FSMState
     public override void Act(GameObject player, GameObject npc)
     {
 
-        elapsedTime += Time.deltaTime;
+		npc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		npc.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+		elapsedTime += Time.deltaTime;
 
         if (elapsedTime >= attackDelay)
         {
