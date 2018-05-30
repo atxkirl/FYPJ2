@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemRotate : MonoBehaviour
 {
-	public float rotateSpeed = 300;
+	public float rotateSpeed = 1000;
 
 	private Ray ray;
 	private RaycastHit rayCastHit;
