@@ -20,6 +20,6 @@ public class InventoryButton : MonoBehaviour
 	//Returns the object held in the button to the controller
 	public void OnClick()
 	{
-		InventoryListControl.instance.ButtonClicked(itemObject);
+		InventoryListControl.Instance.ButtonClicked(itemObject);
 	}
 }

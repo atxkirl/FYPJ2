@@ -2,25 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryListControl : MonoBehaviour
+public class InventoryListControl : SingletonHelper<InventoryListControl>
 {
-	public static InventoryListControl instance = null;
-	public GameObject canvas;
 	public GameObject buttonPrefab;
 
 	public List<GameObject> itemList;
 	public List<GameObject> buttonList;
-
-	void Awake()
-	{
-		//Check if instance already exists
-		if (instance == null)
-			instance = this;
-
-		//If instance already exists and it's not this then destroy
-		else if (instance != this)
-			Destroy(gameObject);
-	}
 
 	void Start()
 	{
@@ -79,8 +66,8 @@ public class InventoryListControl : MonoBehaviour
 		//Disable item
 		itemToAdd.SetActive(false);
 
-		//Append Player's carry weight
-		Player.instance.ModifyCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
+		//Update Player's carry weight
+		Player.Instance.ModifyCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
 
 		//Add item to list
 		itemList.Add(itemToAdd);
@@ -95,6 +82,9 @@ public class InventoryListControl : MonoBehaviour
 		//Checks if ItemHolder has a item selected
 		if(ItemHolder.instance.itemToPreview)
 		{
+			//Update Player's carry weight
+			Player.Instance.ModifyCarryWeight(-ItemHolder.instance.itemToPreview.GetComponent<Item>().itemWeight);
+
 			//Remove item from itemList and destroy item
 			itemList.Remove(ItemHolder.instance.itemToPreview);
 			Destroy(ItemHolder.instance.itemToPreview);

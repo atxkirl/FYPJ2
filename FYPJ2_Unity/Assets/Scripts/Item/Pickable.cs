@@ -5,13 +5,13 @@ using UnityEngine;
 public class Pickable : MonoBehaviour
 {
 	//Use this to apply effect upon collision
-	void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter(Collider other)
 	{
-		//Check if thing colliding is a Player
-		if (other.tag.Equals("Player"))
+		//Check if object colliding is Player
+		if(other.tag.Equals("Player"))
 		{
 			//Add item to player inventory
-			InventoryListControl.instance.AddNewItem(this.gameObject);
+			InventoryListControl.Instance.AddNewItem(this.gameObject);
 		}
 	}
 }

@@ -6,33 +6,21 @@ using UnityEngine;
 /// - Handles player stats
 /// - Handles player items
 
-public class Player : MonoBehaviour
+public class Player : SingletonHelper<Player>
 {
-	//Player Singleton
-	public static Player instance = null;
-
 	//Player stats
-	public string playerName;
-	public int playerHealth;
-	public int playerStamina;
-	public int playerMana;
+	public string playerName = "DEFAULT_NAME";
+	public int playerHealth = 100;
+	public int playerStamina = 50;
+	public int playerMana = 50;
 	//Player leveling
-	public int playerLevel;
-	public int playerExp;
+	public int playerLevel = 0;
+	public int playerExp = 0;
 	//Player carry weight
-	public int playerCurrentCarryWeight;
-	public int playerMaxCarryWeight;
-
-	void Awake()
-	{
-		//Check if instance already exists
-		if (instance == null)
-			instance = this;
-
-		//If instance already exists and it's not this then destroy
-		else if (instance != this)
-			Destroy(gameObject);
-	}
+	public int playerCurrentCarryWeight = 50;
+	public int playerMaxCarryWeight = 100;
+	//Player skill
+	public int playerSkillPoints = 100;
 
 	void Update()
 	{
@@ -52,26 +40,26 @@ public class Player : MonoBehaviour
 		//Test Inventory
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			InventoryListControl.instance.ToggleInventory();
+			InventoryListControl.Instance.ToggleInventory();
 		}
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			GameObject shield = (GameObject)Instantiate(Resources.Load("Items/Armor/Mythril Hulbark"));
-			InventoryListControl.instance.AddNewItem(shield);
+			InventoryListControl.Instance.AddNewItem(shield);
 		}
 		if (Input.GetKeyDown(KeyCode.G))
 		{
 			GameObject sword = (GameObject)Instantiate(Resources.Load("Items/Weapon/Sword of Icarus"));
-			InventoryListControl.instance.AddNewItem(sword);
+			InventoryListControl.Instance.AddNewItem(sword);
 		}
 		if (Input.GetKeyDown(KeyCode.H))
 		{
 			GameObject item = new GameObject("item", typeof(Item));
-			InventoryListControl.instance.AddNewItem(item);
+			InventoryListControl.Instance.AddNewItem(item);
 		}
 		if (Input.GetKeyDown(KeyCode.J))
 		{
-			InventoryListControl.instance.RemoveItem();
+			InventoryListControl.Instance.RemoveItem();
 		}
 		///End of Test Code
 	}
