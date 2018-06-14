@@ -9,12 +9,14 @@ public class InventoryListControl : SingletonHelper<InventoryListControl>
 	public List<GameObject> itemList;
 	public List<GameObject> buttonList;
 
-	void Start()
+	void Awake()
 	{
-		this.gameObject.SetActive(false);
+		Instance.CreateReference();
 
 		itemList = new List<GameObject>();
 		buttonList = new List<GameObject>();
+
+		this.gameObject.SetActive(false);
 	}
 
 	//Generates buttons based on items in the itemList

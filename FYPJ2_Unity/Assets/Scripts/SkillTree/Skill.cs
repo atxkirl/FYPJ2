@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class Skill
 {
-	public bool skillUnlocked;
-	public int skillID;
-	public int skillCost;
-	public int[] skillDependencies;
+    public int ID;
+    public int[] dependentSkills;
+    public int cost;
+    public bool isUnlocked;
 }

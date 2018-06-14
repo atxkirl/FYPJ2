@@ -34,4 +34,10 @@ public class SingletonHelper<T> : MonoBehaviour where T : Component
 			Destroy(this);
 		}
 	}
+
+	//This literally does nothing except reference the object so that you can set it inactive and still have Instance refer to this.
+	public void CreateReference()
+	{
+		Debug.Log("Reference made.");
+	}
 }

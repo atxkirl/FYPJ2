@@ -66,22 +66,24 @@ public class Node
         styleID.alignment = TextAnchor.UpperCenter;
 
         rectUnlocked = new Rect(position.x + width / 2, position.y + 3 * rowHeight, width / 2, rowHeight);
+
         rectUnlockLabel = new Rect(position.x, position.y + 3 * rowHeight, width / 2, rowHeight);
 
         styleField = new GUIStyle();
         styleField.alignment = TextAnchor.UpperRight;
 
         rectCostLabel = new Rect(position.x, position.y + 4 * rowHeight, width / 2, rowHeight);
+
         rectCost = new Rect(position.x + width / 2, position.y + 4 * rowHeight, 20, rowHeight);
 
         this.unlocked = unlocked;
 
         // We create the skill with current node info
         skill = new Skill();
-        skill.skillID = id;
-        skill.skillUnlocked = unlocked;
-        skill.skillCost = cost;
-        skill.skillDependencies = dependencies;
+        skill.ID = id;
+        skill.isUnlocked = unlocked;
+        skill.cost = cost;
+        skill.dependentSkills = dependencies;
 
         // Create string with ID info
         nodeTitle = new StringBuilder();
@@ -121,19 +123,15 @@ public class Node
         // Print the unlock field
         GUI.Label(rectUnlockLabel, "Unlocked: ", styleField);
         if (GUI.Toggle(rectUnlocked, unlocked, ""))
-		{
-			unlocked = true;
-		}
+            unlocked = true;
         else
-		{
-			unlocked = false;
-		}
+            unlocked = false;
 
-        skill.skillUnlocked = unlocked;
+        skill.isUnlocked = unlocked;
 
         // Print the cost field
         GUI.Label(rectCostLabel, "Cost: ", styleField);
-        skill.skillCost = int.Parse(GUI.TextField(rectCost, skill.skillCost.ToString()));
+        skill.cost = int.Parse(GUI.TextField(rectCost, skill.cost.ToString()));
     }
 
     public bool ProcessEvents(Event e)

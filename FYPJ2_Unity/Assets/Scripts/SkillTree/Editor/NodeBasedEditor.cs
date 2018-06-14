@@ -5,8 +5,8 @@ using System.IO;
 
 public class NodeBasedEditor : EditorWindow
 {
-    private List<Node> nodes;
-    private List<Connection> connections;
+    private List<Node> nodes = new List<Node>();
+    private List<Connection> connections = new List<Connection>();
 
     private GUIStyle nodeStyle;
     private GUIStyle selectedNodeStyle;
@@ -33,7 +33,11 @@ public class NodeBasedEditor : EditorWindow
     // Dictionary with the skills in our skilltree
     private Dictionary<int, Skill> skillDictionary;
 
-    [MenuItem("Window/Node Based Editor")]
+	// Filepaths for JSON files
+	string nodeDataPath = "Assets/Scripts/SkillTree/Data/nodeData.json";
+	string skilltreeDataPath = "Assets/Scripts/SkillTree/Data/skilltree.json";
+
+	[MenuItem("Window/Node Based Editor")]
     private static void OpenWindow()
     {
         NodeBasedEditor window = GetWindow<NodeBasedEditor>();
@@ -366,7 +370,7 @@ public class NodeBasedEditor : EditorWindow
         if (nodes.Count > 0)
         {
             // We fill with as many skills as nodes we have
-            skillTree.skillTree = new List<Skill>();
+            skillTree.skillList = new Skill[nodes.Count];
             int[] dependencies;
             List<int> dependenciesList = new List<int>();
 
@@ -397,17 +401,14 @@ public class NodeBasedEditor : EditorWindow
                 }
                 dependencies = dependenciesList.ToArray();
                 dependenciesList.Clear();
-                skillTree.skillTree[i] = nodes[i].skill;
-                skillTree.skillTree[i].skillDependencies = dependencies;
+                skillTree.skillList[i] = nodes[i].skill;
+                skillTree.skillList[i].dependentSkills = dependencies;
             }
 
             string json = JsonUtility.ToJson(skillTree);
-            string path = null;
-
-            path = "Assets/SkillTree/Data/skilltree.json";
 
             // Finally, we write the JSON string with the SkillTree data in our file
-            using (FileStream fs = new FileStream(path, FileMode.Create))
+            using (FileStream fs = new FileStream(skilltreeDataPath, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(fs))
                 {
@@ -429,14 +430,12 @@ public class NodeBasedEditor : EditorWindow
         for (int i = 0; i < nodes.Count; ++i)
         {
             nodeData.nodeDataCollection[i] = new NodeData();
-            nodeData.nodeDataCollection[i].id_Node = nodes[i].skill.skillID;
+            nodeData.nodeDataCollection[i].id_Node = nodes[i].skill.ID;
             nodeData.nodeDataCollection[i].position = nodes[i].rect.position;
         }
 
         string json = JsonUtility.ToJson(nodeData);
-        string path = "Assets/SkillTree/Data/nodeData.json";
-
-        using (FileStream fs = new FileStream(path, FileMode.Create))
+        using (FileStream fs = new FileStream(nodeDataPath, FileMode.Create))
         {
             using (StreamWriter writer = new StreamWriter(fs))
             {
@@ -450,51 +449,50 @@ public class NodeBasedEditor : EditorWindow
     {
         ClearNodes();
 
-        string path = "Assets/SkillTree/Data/nodeData.json";
         string dataAsJson;
         NodeDataCollection loadedData;
-        if (File.Exists(path))
+        if (File.Exists(nodeDataPath))
         {
             // Read the json from the file into a string
-            dataAsJson = File.ReadAllText(path);
+            dataAsJson = File.ReadAllText(nodeDataPath);
 
             // Pass the json to JsonUtility, and tell it to create a SkillTree object from it
             loadedData = JsonUtility.FromJson<NodeDataCollection>(dataAsJson);
 
-			List<Skill> _skillTree;
+            Skill[] _skillTree;
             List<Skill> originNode = new List<Skill>();
             skillDictionary = new Dictionary<int, Skill>();
-            path = "Assets/SkillTree/Data/skilltree.json";
+
             Vector2 pos = Vector2.zero;
-            if (File.Exists(path))
+            if (File.Exists(skilltreeDataPath))
             {
                 // Read the json from the file into a string
-                dataAsJson = File.ReadAllText(path);
+                dataAsJson = File.ReadAllText(skilltreeDataPath);
 
                 // Pass the json to JsonUtility, and tell it to create a SkillTree object from it
                 SkillTree skillData = JsonUtility.FromJson<SkillTree>(dataAsJson);
 
                 // Store the SkillTree as an array of Skill
-                _skillTree = new List<Skill>();
-                _skillTree = skillData.skillTree;
+                _skillTree = new Skill[skillData.skillList.Length];
+                _skillTree = skillData.skillList;
 
                 // Create nodes
-                for (int i = 0; i < _skillTree.Count; ++i)
+                for (int i = 0; i < _skillTree.Length; ++i)
                 {
                     for (int j = 0; j < loadedData.nodeDataCollection.Length; ++j)
                     {
-                        if (loadedData.nodeDataCollection[j].id_Node == _skillTree[i].skillID)
+                        if (loadedData.nodeDataCollection[j].id_Node == _skillTree[i].ID)
                         {
                             pos = loadedData.nodeDataCollection[j].position;
                             break;
                         }
                     }
                     LoadSkillCreateNode(_skillTree[i], pos);
-                    if (_skillTree[i].skillDependencies.Length == 0)
+                    if (_skillTree[i].dependentSkills.Length == 0)
                     {
                         originNode.Add(_skillTree[i]);
                     }
-                    skillDictionary.Add(_skillTree[i].skillID, _skillTree[i]);
+                    skillDictionary.Add(_skillTree[i].ID, _skillTree[i]);
                 }
 
                 Skill outSkill;
@@ -502,13 +500,13 @@ public class NodeBasedEditor : EditorWindow
                 // Create connections
                 for (int i = 0; i < nodes.Count; ++i)
                 {
-                    for (int j = 0; j < nodes[i].skill.skillDependencies.Length; ++j)
+                    for (int j = 0; j < nodes[i].skill.dependentSkills.Length; ++j)
                     {
-                        if (skillDictionary.TryGetValue(nodes[i].skill.skillDependencies[j], out outSkill))
+                        if (skillDictionary.TryGetValue(nodes[i].skill.dependentSkills[j], out outSkill))
                         {
                             for (int k = 0; k < nodes.Count; ++k)
                             {
-                                if (nodes[k].skill.skillID == outSkill.skillID)
+                                if (nodes[k].skill.ID == outSkill.ID)
                                 {
                                     outNode = nodes[k];
                                     OnClickOutPoint(outNode.outPoint);
@@ -534,7 +532,7 @@ public class NodeBasedEditor : EditorWindow
             nodes = new List<Node>();
         }
 
-        nodes.Add(new Node(position, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, skill.skillID, skill.skillUnlocked, skill.skillCost, skill.skillDependencies));
+        nodes.Add(new Node(position, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode,  skill.ID, skill.isUnlocked, skill.cost, skill.dependentSkills));
         ++nodeCount;
     }
 }
