@@ -42,7 +42,7 @@ public class Bullet : MonoBehaviour
 	{
 		if(other.gameObject.tag.Equals("Player"))
 		{
-			Player.Instance.ModifyHP(damage);
+			Player.Instance.ModifyHealthPoints(damage);
 		}
 		if (other.gameObject != owner)
 		{

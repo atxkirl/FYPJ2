@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryListControl : SingletonHelper<InventoryListControl>
+public class InventoryListControl : SingletonMono<InventoryListControl>
 {
 	public GameObject buttonPrefab;
 

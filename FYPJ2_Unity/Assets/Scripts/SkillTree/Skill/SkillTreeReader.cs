@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-public class SkillTreeReader : SingletonHelper<SkillTreeReader>
+public class SkillTreeReader : SingletonMono<SkillTreeReader>
 {
     // Array with all the skills in our skilltree
     private Skill[] skillTree;
@@ -82,7 +82,7 @@ public class SkillTreeReader : SingletonHelper<SkillTreeReader>
         bool canUnlock = true;
         if(skillDict.TryGetValue(skillID, out skillInspected)) // The skill exists
         {
-            if(skillInspected.cost <= Player.Instance.playerSkillPoints) // Enough points available
+            if(skillInspected.cost <= Player.Instance.GetSkillPoints()) // Enough points available
             {
                 int[] dependencies = skillInspected.dependentSkills;
                 for (int i = 0; i < dependencies.Length; ++i)
@@ -118,9 +118,9 @@ public class SkillTreeReader : SingletonHelper<SkillTreeReader>
     {
         if(skillDict.TryGetValue(skillID, out skillInspected))
         {
-            if (skillInspected.cost <= Player.Instance.playerSkillPoints)
+            if (skillInspected.cost <= Player.Instance.GetSkillPoints())
             {
-				Player.Instance.playerSkillPoints -= skillInspected.cost;
+				Player.Instance.ModifySkillPoints(-skillInspected.cost);
 				skillInspected.isUnlocked = true;
 
 				// We replace the entry on the dictionary with the new one (already unlocked)

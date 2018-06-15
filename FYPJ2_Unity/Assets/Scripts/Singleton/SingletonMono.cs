@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SingletonHelper<T> : MonoBehaviour where T : Component
+public abstract class SingletonMono<T> : MonoBehaviour where T : Component
 {
 	private static T _instance;
 

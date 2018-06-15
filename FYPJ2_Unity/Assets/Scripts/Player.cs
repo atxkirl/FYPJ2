@@ -6,21 +6,24 @@ using UnityEngine;
 /// - Handles player stats
 /// - Handles player items
 
-public class Player : SingletonHelper<Player>
+public class Player : SingletonMono<Player>
 {
-	//Player stats
-	public string playerName = "DEFAULT_NAME";
-	public int playerHealth = 100;
-	public int playerStamina = 50;
-	public int playerMana = 50;
-	//Player leveling
-	public int playerLevel = 0;
-	public int playerExp = 0;
-	//Player carry weight
-	public int playerCurrentCarryWeight = 50;
-	public int playerMaxCarryWeight = 100;
-	//Player skill
-	public int playerSkillPoints = 100;
+	[Header("Player Stats")]
+	[SerializeField]
+	private string playerName = "DEFAULT_NAME";
+	[SerializeField]
+	private int playerHealth = 100;
+	[SerializeField]
+	private int playerStamina = 50;
+	[SerializeField]
+	private int playerMana = 50;
+	[Header("Player Strength")]
+	[SerializeField]
+	private int playerCurrentCarryWeight = 50;
+	private int playerMaxCarryWeight = 100;
+	[Header("Player Skillpoints")]
+	[SerializeField]
+	private int playerSkillPoints = 100;
 
 	void Update()
 	{
@@ -100,43 +103,131 @@ public class Player : SingletonHelper<Player>
 		return false;
 	}
 
+	//Check if the player has a name
+	public bool IsNamed()
+	{
+		return (playerName != "DEFAULT_NAME");
+	}
+
 	///////////////////////////////////
 	// MODIFY PLAYER STATS FUNCTIONS //
 	///////////////////////////////////
 
-	//Modify HP
-	public void ModifyHP(int amountToModify)
+	//Modify Health Points
+	public void ModifyHealthPoints(int amountToModify)
 	{
 		playerHealth += amountToModify;
 
 		if (playerHealth < 0)
 			playerHealth = 0;
+		if (playerHealth > 999)
+			playerHealth = 999;
 	}
 
-	//Modify MP
-	public void ModifyMP(int amountToModify)
+	//Modify Mana Points
+	public void ModifyManaPoints(int amountToModify)
 	{
 		playerMana += amountToModify;
 
 		if (playerMana < 0)
 			playerMana = 0;
+		if (playerMana > 999)
+			playerMana = 999;
 	}
 
-	//Modify SP
-	public void ModifySP(int amountToModify)
+	//Modify Stamina Points
+	public void ModifyStaminaPoints(int amountToModify)
 	{
 		playerStamina += amountToModify;
 
 		if (playerStamina < 0)
 			playerStamina = 0;
+		if (playerStamina > 999)
+			playerStamina = 999;
 	}
 
-	//Modify CarryWeight
+	//Modify Skill Points
+	public void ModifySkillPoints(int amountToModify)
+	{
+		playerSkillPoints += amountToModify;
+
+		if (playerSkillPoints < 0)
+			playerSkillPoints = 0;
+		if (playerSkillPoints > 999)
+			playerSkillPoints = 999;
+	}
+
+	//Modify Carry Weight
 	public void ModifyCarryWeight(int amountToModify)
 	{
 		playerCurrentCarryWeight += amountToModify;
 
 		if (playerCurrentCarryWeight < 0)
 			playerCurrentCarryWeight = 0;
+		if (playerCurrentCarryWeight > 999)
+			playerCurrentCarryWeight = 999;
+	}
+
+	//Modify Max Carry Weight
+	public void ModifyMaxCarryWeight(int amountToModify)
+	{
+		playerMaxCarryWeight += amountToModify;
+
+		if (playerMaxCarryWeight < 0)
+			playerMaxCarryWeight = 0;
+		if (playerMaxCarryWeight > 999)
+			playerMaxCarryWeight = 999;
+	}
+
+	//Modify Player Name
+	public void ModifyPlayerName(string name)
+	{
+		playerName = name;
+	}
+
+	///////////////////////////////////
+	//  GET PLAYER STATS FUNCTIONS   //
+	///////////////////////////////////
+
+	//Get HealthPoints
+	public int GetHealthPoints()
+	{
+		return playerHealth;
+	}
+
+	//Get ManaPoints
+	public int GetManaPoints()
+	{
+		return playerMana;
+	}
+
+	//Get StaminaPoints
+	public int GetStaminaPoints()
+	{
+		return playerStamina;
+	}
+
+	//Get SkillPoints
+	public int GetSkillPoints()
+	{
+		return playerSkillPoints;
+	}
+
+	//Get CarryWeight
+	public int GetCarryWeight()
+	{
+		return playerCurrentCarryWeight;
+	}
+
+	//Get Max CarryWeight
+	public int GetMaxCarryWeight()
+	{
+		return playerMaxCarryWeight;
+	}
+
+	//Get Player Name
+	public string GetPlayerName()
+	{
+		return playerName;
 	}
 }
