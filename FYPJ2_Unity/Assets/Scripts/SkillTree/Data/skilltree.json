@@ -1,1 +1,0 @@
-{"skillList":[{"ID":0,"dependentSkills":[],"cost":0,"isUnlocked":false},{"ID":1,"dependentSkills":[0],"cost":0,"isUnlocked":false},{"ID":2,"dependentSkills":[0],"cost":0,"isUnlocked":false},{"ID":3,"dependentSkills":[1,2],"cost":0,"isUnlocked":false}]}
