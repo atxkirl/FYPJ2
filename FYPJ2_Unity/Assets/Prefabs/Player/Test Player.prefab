@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 23260257257341642}
   - component: {fileID: 114417267701367708}
   - component: {fileID: 114037559506108150}
+  - component: {fileID: 143477959185201526}
   m_Layer: 0
   m_Name: Test Player
   m_TagString: Player
@@ -194,15 +195,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675533453644794}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.94, y: 0.505, z: 2.46}
+  m_LocalRotation: {x: -0, y: -0.5841805, z: -0, w: -0.8116239}
+  m_LocalPosition: {x: 30.2, y: 0.505, z: 35.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4227954387942512}
   - {fileID: 4399008056278912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -288.51, z: 0}
 --- !u!20 &20083763872895830
 Camera:
   m_ObjectHideFlags: 1
@@ -405,6 +406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpSpeed: 10
+  gravity: -9.8
 --- !u!114 &114160714820688812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -437,10 +440,8 @@ MonoBehaviour:
   playerHealth: 100
   playerStamina: 100
   playerMana: 100
-  playerLevel: 100
-  playerExp: 100
   playerCurrentCarryWeight: 99
-  playerMaxCarryWeight: 100
+  playerSkillPoints: 100
 --- !u!114 &114503976996372356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,4 +515,21 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &143477959185201526
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675533453644794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
