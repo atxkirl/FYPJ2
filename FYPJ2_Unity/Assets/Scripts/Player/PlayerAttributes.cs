@@ -4,9 +4,9 @@ public class PlayerAttributes
 	public Attributes attribute;
 	public int amount;
 
-	public PlayerAttributes(Attributes newAttribute, int newAmount)
+	public PlayerAttributes(Attributes _attribute, int _amount)
 	{
-		attribute = newAttribute;
-		amount = newAmount;
+		attribute = _attribute;
+		amount = _amount;
 	}
 }

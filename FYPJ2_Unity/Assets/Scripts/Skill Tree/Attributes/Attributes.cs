@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu (menuName = "Custom Objects/Create Attribute")]
+[CreateAssetMenu (menuName = "Player/Create Attribute")]
 public class Attributes : ScriptableObject
 {
 	public string description;

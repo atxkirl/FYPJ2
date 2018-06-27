@@ -19,18 +19,15 @@ public class Player : SingletonMono<Player>
 	[Header("Player Strength")]
 	[SerializeField]
 	private int playerCurrentCarryWeight = 50;
+	[SerializeField]
 	private int playerMaxCarryWeight = 100;
 	[Header("Player Skillpoints")]
 	[SerializeField]
 	private int playerSkillPoints = 100;
 
-	//Testing
-	[Header("Player Attributes")]
+	//PLAYER ATTRIBUTES
 	public List<PlayerAttributes> playerAttributes = new List<PlayerAttributes>();
-
-	[Header("Player Skills Enabled")]
 	public List<Skills> playerSkills = new List<Skills>();
-	//End of Testing
 
 	void Update()
 	{
