@@ -7,231 +7,357 @@ using UnityEngine;
 
 public class Player : SingletonMono<Player>
 {
-	[Header("Player Stats")]
+	//Player Name
+	string playerName;
+
+	//Health
 	[SerializeField]
-	private string playerName = "DEFAULT_NAME";
+	int playerHealth, playerMaxHealth, playerMaxHealthModifier;
+	//Stamina
 	[SerializeField]
-	private int playerHealth = 100;
+	int playerStamina, playerMaxStamina, playerMaxStaminaModifier;
+	//Mana
 	[SerializeField]
-	private int playerStamina = 50;
+	int playerMana, playerMaxMana, playerMaxManaModifier;
+	//Carry Weight
 	[SerializeField]
-	private int playerMana = 50;
-	[Header("Player Strength")]
+	int playerCarryWeight, playerMaxCarryWeight, playerMaxCarryWeightModifier;
+	//Skill
 	[SerializeField]
-	private int playerCurrentCarryWeight = 50;
+	int playerSkillpoints, playerMaxSkillpoints, playerMaxSkillpointsModifier;
 	[SerializeField]
-	private int playerMaxCarryWeight = 100;
-	[Header("Player Skillpoints")]
-	[SerializeField]
-	private int playerSkillPoints = 100;
+	List<SkillBase> playerSkills = new List<SkillBase>();
 
-	//PLAYER ATTRIBUTES
-	public List<PlayerAttributes> playerAttributes = new List<PlayerAttributes>();
-	public List<Skills> playerSkills = new List<Skills>();
+	//////////////////////
+	// GETTER FUNCTIONS //
+	//////////////////////
 
-	void Update()
-	{
-		///Test Code
-		//Test Carry Weight
-		if (Input.GetKeyDown(KeyCode.Equals))
-		{
-			++playerCurrentCarryWeight;
-		}
-		if (Input.GetKeyDown(KeyCode.Minus))
-		{
-			--playerCurrentCarryWeight;
-			if (playerCurrentCarryWeight < 0)
-				playerCurrentCarryWeight = 0;
-		}
-
-		//Test Inventory
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			InventoryListControl.Instance.ToggleInventory();
-		}
-		if (Input.GetKeyDown(KeyCode.F))
-		{
-			GameObject shield = (GameObject)Instantiate(Resources.Load("Items/Armor/Mythril Hulbark"));
-			InventoryListControl.Instance.AddNewItem(shield);
-		}
-		if (Input.GetKeyDown(KeyCode.G))
-		{
-			GameObject sword = (GameObject)Instantiate(Resources.Load("Items/Weapon/Sword of Icarus"));
-			InventoryListControl.Instance.AddNewItem(sword);
-		}
-		if (Input.GetKeyDown(KeyCode.H))
-		{
-			GameObject item = new GameObject("item", typeof(Item));
-			InventoryListControl.Instance.AddNewItem(item);
-		}
-		if (Input.GetKeyDown(KeyCode.J))
-		{
-			InventoryListControl.Instance.RemoveItem();
-		}
-		///End of Test Code
-	}
-
-	///////////////////////////////////
-	// CHECK PLAYER STATS FUNCTIONS  //
-	///////////////////////////////////
-
-	//Check if the player is carrying too much
-	public bool IsOverburdened()
-	{
-		if (playerCurrentCarryWeight > playerMaxCarryWeight)
-			return true;
-		return false;
-	}
-
-	//Check if the player is tired - stamina
-	public bool IsTired()
-	{
-		if (playerStamina <= 0)
-			return true;
-		return false;
-	}
-
-	//Check if the player is drained - mana
-	public bool IsDrained()
-	{
-		if (playerMana <= 0)
-			return true;
-		return false;
-	}
-
-	//Check if the player is dead - health
-	public bool IsDead()
-	{
-		if (playerHealth <= 0)
-			return true;
-		return false;
-	}
-
-	//Check if the player has a name
-	public bool IsNamed()
-	{
-		return (playerName != "DEFAULT_NAME");
-	}
-
-	///////////////////////////////////
-	// MODIFY PLAYER STATS FUNCTIONS //
-	///////////////////////////////////
-
-	//Modify Health Points
-	public void ModifyHealthPoints(int amountToModify)
-	{
-		playerHealth += amountToModify;
-
-		if (playerHealth < 0)
-			playerHealth = 0;
-		if (playerHealth > 999)
-			playerHealth = 999;
-	}
-
-	//Modify Mana Points
-	public void ModifyManaPoints(int amountToModify)
-	{
-		playerMana += amountToModify;
-
-		if (playerMana < 0)
-			playerMana = 0;
-		if (playerMana > 999)
-			playerMana = 999;
-	}
-
-	//Modify Stamina Points
-	public void ModifyStaminaPoints(int amountToModify)
-	{
-		playerStamina += amountToModify;
-
-		if (playerStamina < 0)
-			playerStamina = 0;
-		if (playerStamina > 999)
-			playerStamina = 999;
-	}
-
-	//Modify Skill Points
-	public void ModifySkillPoints(int amountToModify)
-	{
-		playerSkillPoints += amountToModify;
-
-		if (playerSkillPoints < 0)
-			playerSkillPoints = 0;
-		if (playerSkillPoints > 999)
-			playerSkillPoints = 999;
-	}
-
-	//Modify Carry Weight
-	public void ModifyCarryWeight(int amountToModify)
-	{
-		playerCurrentCarryWeight += amountToModify;
-
-		if (playerCurrentCarryWeight < 0)
-			playerCurrentCarryWeight = 0;
-		if (playerCurrentCarryWeight > 999)
-			playerCurrentCarryWeight = 999;
-	}
-
-	//Modify Max Carry Weight
-	public void ModifyMaxCarryWeight(int amountToModify)
-	{
-		playerMaxCarryWeight += amountToModify;
-
-		if (playerMaxCarryWeight < 0)
-			playerMaxCarryWeight = 0;
-		if (playerMaxCarryWeight > 999)
-			playerMaxCarryWeight = 999;
-	}
-
-	//Modify Player Name
-	public void ModifyPlayerName(string name)
-	{
-		playerName = name;
-	}
-
-	///////////////////////////////////
-	//  GET PLAYER STATS FUNCTIONS   //
-	///////////////////////////////////
-
-	//Get HealthPoints
-	public int GetHealthPoints()
+	/// <summary>
+	/// Get player's current health
+	/// </summary>
+	public int GetCurrentHealth()
 	{
 		return playerHealth;
 	}
 
-	//Get ManaPoints
-	public int GetManaPoints()
+	/// <summary>
+	/// Get player's max health
+	/// </summary>
+	public int GetMaxHealth()
 	{
-		return playerMana;
+		return playerMaxHealth + playerMaxHealthModifier;
 	}
 
-	//Get StaminaPoints
-	public int GetStaminaPoints()
+	/// <summary>
+	/// Get player's current stamina
+	/// </summary>
+	public int GetCurrentStamina()
 	{
 		return playerStamina;
 	}
 
-	//Get SkillPoints
-	public int GetSkillPoints()
+	/// <summary>
+	/// Get player's max stamina
+	/// </summary>
+	public int GetMaxStamina()
 	{
-		return playerSkillPoints;
+		return playerMaxStamina + playerMaxStaminaModifier;
 	}
 
-	//Get CarryWeight
-	public int GetCarryWeight()
+	/// <summary>
+	/// Get player's current mana
+	/// </summary>
+	public int GetCurrentMana()
 	{
-		return playerCurrentCarryWeight;
+		return playerMana;
 	}
 
-	//Get Max CarryWeight
+	/// <summary>
+	/// Get player's max mana
+	/// </summary>
+	public int GetMaxMana()
+	{
+		return playerMaxMana + playerMaxManaModifier;
+	}
+
+	/// <summary>
+	/// Get player's current weight
+	/// </summary>
+	public int GetCurrentCarryWeight()
+	{
+		return playerCarryWeight;
+	}
+
+	/// <summary>
+	/// Get player's max weight
+	/// </summary>
 	public int GetMaxCarryWeight()
 	{
-		return playerMaxCarryWeight;
+		return playerMaxCarryWeight + playerMaxCarryWeightModifier;
 	}
 
-	//Get Player Name
-	public string GetPlayerName()
+	/// <summary>
+	/// Get player's current skillpoints
+	/// </summary>
+	public int GetCurrentSkillpoints()
 	{
-		return playerName;
+		return playerSkillpoints;
+	}
+
+	/// <summary>
+	/// Get player's max skillpoints
+	/// </summary>
+	public int GetMaxSkillpoints()
+	{
+		return playerMaxSkillpoints + playerMaxSkillpointsModifier;
+	}
+
+	/// <summary>
+	/// Get list of player's skills
+	/// </summary>
+	public List<SkillBase> GetSkills()
+	{
+		return playerSkills;
+	}
+
+	//////////////////////
+	// SETTER FUNCTIONS //
+	//////////////////////
+
+	/// <summary>
+	/// Set player's current health
+	/// </summary>
+	public void SetCurrentHealth(int _playerHealth)
+	{
+		playerHealth = _playerHealth;
+	}
+
+	/// <summary>
+	/// Set player's max health
+	/// </summary>
+	public void SetMaxHealth(int _playerMaxHealth)
+	{
+		playerMaxHealth = _playerMaxHealth;
+	}
+
+	/// <summary>
+	/// Set player's current stamina
+	/// </summary>
+	public void SetCurrentStamina(int _playerStamina)
+	{
+		playerStamina = _playerStamina;
+	}
+
+	/// <summary>
+	/// Set player's max stamina
+	/// </summary>
+	public void SetMaxStamina(int _playerMaxStamina)
+	{
+		playerMaxStamina = _playerMaxStamina;
+	}
+
+	/// <summary>
+	/// Set player's current mana
+	/// </summary>
+	public void SetCurrentMana(int _playerMana)
+	{
+		playerMana = _playerMana;
+	}
+
+	/// <summary>
+	/// Set player's max mana
+	/// </summary>
+	public void SetMaxMana(int _playerMaxMana)
+	{
+		playerMaxMana = _playerMaxMana;
+	}
+
+	/// <summary>
+	/// Set player's current weight
+	/// </summary>
+	public void SetCurrentCarryWeight(int _playerCarryWeight)
+	{
+		playerCarryWeight = _playerCarryWeight;
+	}
+
+	/// <summary>
+	/// Set player's max weight
+	/// </summary>
+	public void SetMaxCarryWeight(int _playerMaxCarryWeight)
+	{
+		playerMaxCarryWeight = _playerMaxCarryWeight;
+	}
+
+	/// <summary>
+	/// Set player's current skillpoints
+	/// </summary>
+	public void SetCurrentSkillpoints(int _playerSkillpoints)
+	{
+		playerSkillpoints = _playerSkillpoints;
+	}
+
+	/// <summary>
+	/// Set player's max skillpoints
+	/// </summary>
+	public void SetMaxSkillpoints(int _playerMaxSkillpoints)
+	{
+		playerMaxSkillpoints = _playerMaxSkillpoints;
+	}
+
+	/// <summary>
+	/// Set player's list of skills
+	/// </summary>
+	public void SetSkills(List<SkillBase> _playerSkills)
+	{
+		playerSkills = _playerSkills;
+	}
+
+	/// <summary>
+	/// Adds a skill to the player
+	/// </summary>
+	public void AddSkill(SkillBase _skill)
+	{
+		playerSkills.Add(_skill);
+	}
+
+	//////////////////////
+	// MODIFY FUNCTIONS //
+	//////////////////////
+
+	/// <summary>
+	/// Modify player's current health
+	/// </summary>
+	public void ModifyCurrentHealth(int _amountToModify)
+	{
+		playerHealth += _amountToModify;
+
+		ClampBetweenValues(ref playerHealth, 0, GetMaxHealth());
+	}
+
+	/// <summary>
+	/// Modify player's max health
+	/// </summary>
+	public void ModifyMaxHealth(int _amountToModify)
+	{
+		playerMaxHealthModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerMaxHealthModifier, -playerMaxHealth, 999);
+	}
+
+	/// <summary>
+	/// Modify player's current stamina
+	/// </summary>
+	public void ModifyCurrentStamina(int _amountToModify)
+	{
+		playerStamina += _amountToModify;
+
+		ClampBetweenValues(ref playerStamina, 0, GetMaxStamina());
+	}
+
+	/// <summary>
+	/// Modify player's max stamina
+	/// </summary>
+	public void ModifyMaxStamina(int _amountToModify)
+	{
+		playerMaxStaminaModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerMaxStaminaModifier, -playerMaxStamina, 999);
+	}
+
+	/// <summary>
+	/// Modify player's current mana
+	/// </summary>
+	public void ModifyCurrentMana(int _amountToModify)
+	{
+		playerMana += _amountToModify;
+
+		ClampBetweenValues(ref playerMana, 0, GetMaxMana());
+	}
+
+	/// <summary>
+	/// Modify player's max mana
+	/// </summary>
+	public void ModifyMaxMana(int _amountToModify)
+	{
+		playerMaxManaModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerMaxManaModifier, -playerMaxMana, 999);
+	}
+
+	/// <summary>
+	/// Modify player's current carry weight
+	/// </summary>
+	public void ModifyCurrentCarryWeight(int _amountToModify)
+	{
+		playerCarryWeight += _amountToModify;
+
+		ClampBetweenValues(ref playerCarryWeight, 0, GetMaxCarryWeight());
+	}
+
+	/// <summary>
+	/// Modify player's max carry weight
+	/// </summary>
+	public void ModifyMaxCarryWeight(int _amountToModify)
+	{
+		playerMaxCarryWeightModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerMaxCarryWeightModifier, -playerMaxCarryWeight, 999);
+	}
+
+	/// <summary>
+	/// Modify player's current skillpoints
+	/// </summary>
+	public void ModifyCurrentSkillpoints(int _amountToModify)
+	{
+		playerSkillpoints += _amountToModify;
+
+		ClampBetweenValues(ref playerSkillpoints, 0, GetMaxSkillpoints());
+	}
+
+	/// <summary>
+	/// Modify player's max skillpoints
+	/// </summary>
+	public void ModifyMaxSkillpoints(int _amountToModify)
+	{
+		playerMaxSkillpointsModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerMaxSkillpointsModifier, -playerMaxSkillpoints, 999);
+	}
+
+	///////////////////////
+	// CHECKER FUNCTIONS //
+	///////////////////////
+
+	/// <summary>
+	/// Checks to see if the player is carrying too much stuff
+	/// </summary>
+	public bool IsOverburdened()
+	{
+		return (playerCarryWeight > GetMaxCarryWeight());
+	}
+
+	/// <summary>
+	/// Checks to see if the player is alive or dead
+	/// </summary>
+	public bool IsDead()
+	{
+		return (playerHealth <= 0);
+	}
+
+	////////////////////////
+	// CLAMPING FUNCTIONS //
+	////////////////////////
+
+	private bool CheckBetweenValues(int _amountToCheck, int _min, int _max)
+	{
+		return ((_amountToCheck < _max) && (_amountToCheck > _min));
+	}
+
+	private void ClampBetweenValues(ref int _amountToCheck, int _min, int _max)
+	{
+		if (_amountToCheck < _min)
+			_amountToCheck = _min;
+		if (_amountToCheck > _max)
+			_amountToCheck = _max;
 	}
 }

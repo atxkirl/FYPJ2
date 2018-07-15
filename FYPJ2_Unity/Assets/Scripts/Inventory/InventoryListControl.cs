@@ -69,7 +69,7 @@ public class InventoryListControl : SingletonMono<InventoryListControl>
 		itemToAdd.SetActive(false);
 
 		//Update Player's carry weight
-		Player.Instance.ModifyCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
+		Player.Instance.ModifyCurrentCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
 
 		//Add item to list
 		itemList.Add(itemToAdd);
@@ -85,7 +85,7 @@ public class InventoryListControl : SingletonMono<InventoryListControl>
 		if(ItemHolder.instance.itemToPreview)
 		{
 			//Update Player's carry weight
-			Player.Instance.ModifyCarryWeight(-ItemHolder.instance.itemToPreview.GetComponent<Item>().itemWeight);
+			Player.Instance.ModifyCurrentCarryWeight(-ItemHolder.instance.itemToPreview.GetComponent<Item>().itemWeight);
 
 			//Remove item from itemList and destroy item
 			itemList.Remove(ItemHolder.instance.itemToPreview);
