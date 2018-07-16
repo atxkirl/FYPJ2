@@ -30,26 +30,26 @@ public class characterController : MonoBehaviour
 		else
 			speed = 10.0f;
 		//end of test code
+		
+		if (controller.isGrounded)
+		{
+			moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
+			moveDirection *= speed;
 
-        if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+			if (Input.GetButton("Jump"))
+			{
+				moveDirection.y = jumpSpeed;
+			}
         }
-
-        moveDirection.y += gravity * Time.deltaTime;
+		else
+		{
+			moveDirection.y -= gravity * Time.deltaTime;
+			moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), moveDirection.y, Input.GetAxis("Vertical")));
+			moveDirection.x *= (speed * 0.5f);
+			moveDirection.z *= (speed * 0.5f);
+		}
+        
         controller.Move(moveDirection * Time.deltaTime);
-
-		//float translation = Input.GetAxis("Vertical") * speed;
-  //      float strafe = Input.GetAxis("Horizontal") * speed;
-  //      translation *= Time.deltaTime;
-  //      strafe *= Time.deltaTime;
-
-  //      transform.Translate(strafe, 0, translation);
 
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;

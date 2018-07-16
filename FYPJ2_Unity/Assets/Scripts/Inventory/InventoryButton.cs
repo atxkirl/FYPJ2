@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
+	public InventoryListControl controllingInventoryList;
 	public Text itemText;
 	public GameObject itemObject;
 
@@ -20,6 +21,6 @@ public class InventoryButton : MonoBehaviour
 	//Returns the object held in the button to the controller
 	public void OnClick()
 	{
-		InventoryListControl.Instance.ButtonClicked(itemObject);
+		controllingInventoryList.ButtonClicked(itemObject);
 	}
 }

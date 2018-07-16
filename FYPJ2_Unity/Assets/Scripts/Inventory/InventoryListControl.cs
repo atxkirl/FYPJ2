@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryListControl : SingletonMono<InventoryListControl>
+public class InventoryListControl : MonoBehaviour
 {
 	public GameObject buttonPrefab;
 
-	public List<GameObject> itemList;
-	public List<GameObject> buttonList;
+	public List<GameObject> itemList = new List<GameObject>();
+	public List<GameObject> buttonList = new List<GameObject>();
 
 	void Awake()
 	{
-		Instance.CreateReference();
-
-		itemList = new List<GameObject>();
-		buttonList = new List<GameObject>();
-
 		this.gameObject.SetActive(false);
 	}
 
@@ -116,5 +111,11 @@ public class InventoryListControl : SingletonMono<InventoryListControl>
 	public void ButtonClicked(GameObject itemInButton)
 	{
 		ItemHolder.instance.SetItem(itemInButton);
+	}
+
+	//Check if inventory is open
+	public bool IsInventoryOpen()
+	{
+		return this.gameObject.activeInHierarchy;
 	}
 }
