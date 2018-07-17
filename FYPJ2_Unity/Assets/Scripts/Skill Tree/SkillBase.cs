@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SkillBase : MonoBehaviour
+public class SkillBase : MonoBehaviour
 {
 	[Header("Skill Dependencies")]
 	[SerializeField]
@@ -24,30 +24,33 @@ public abstract class SkillBase : MonoBehaviour
 	protected bool IsUnlockable()
 	{
 		if (Player.Instance.GetCurrentSkillpoints() < pointsNeeded)
+		{
+			Debug.Log("Not enought skillpoints. Player has: " + Player.Instance.GetCurrentSkillpoints() + " Skill requires: " + pointsNeeded + ".");
 			return false;
+		}
 
 		List<SkillBase> playerSkills = Player.Instance.GetSkills();
 		foreach(SkillBase skill in skillsNeeded)
 		{
 			if (!playerSkills.Contains(skill))
+			{
+				Debug.Log("Player is missing '" + skill.skillName + "' skill.");
 				return false;
+			}
 		}
 
+		Debug.Log(skillName + " is unlockable by player.");
 		return true;
 	}
 
 	//Unlocker function
-	protected bool UnlockSkill()
+	public void UnlockSkill()
 	{
 		if (IsUnlockable())
 		{
 			Player.Instance.AddSkill(this);
 			isUnlocked = true;
-
-			return isUnlocked;
 		}
-
-		return false;
 	}
 
 	//Get Skillpoints
@@ -68,6 +71,18 @@ public abstract class SkillBase : MonoBehaviour
 		return isUnlocked;
 	}
 
+	//Get Skill Name
+	public string GetSkillName()
+	{
+		return skillName;
+	}
+
+	//Get Skill Description
+	public string GetSkillDescription()
+	{
+		return skillDescription;
+	}
+
 	//Get Pre-requisite Skills
 	public List<SkillBase> GetRequiredSkills()
 	{
@@ -75,5 +90,8 @@ public abstract class SkillBase : MonoBehaviour
 	}
 
 	//Abstract skill effect function - inherited classes need to implement this
-	public abstract void ApplySkillEffect();
+	public virtual void ApplySkillEffect()
+	{
+		Debug.Log("SkillBase ApplySkillEffect() called. Did you not override this function in child class?");
+	}
 }

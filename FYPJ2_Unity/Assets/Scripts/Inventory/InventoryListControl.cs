@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryListControl : MonoBehaviour
+public class InventoryListControl : Toggleable
 {
 	public GameObject buttonPrefab;
 
 	public List<GameObject> itemList = new List<GameObject>();
 	public List<GameObject> buttonList = new List<GameObject>();
-
-	void Awake()
-	{
-		this.gameObject.SetActive(false);
-	}
 
 	//Generates buttons based on items in the itemList
 	void GenerateButtons()
@@ -77,14 +72,14 @@ public class InventoryListControl : MonoBehaviour
 	public void RemoveItem()
 	{
 		//Checks if ItemHolder has a item selected
-		if(ItemHolder.instance.itemToPreview)
+		if(ItemHolder.Instance.itemToPreview)
 		{
 			//Update Player's carry weight
-			Player.Instance.ModifyCurrentCarryWeight(-ItemHolder.instance.itemToPreview.GetComponent<Item>().itemWeight);
+			Player.Instance.ModifyCurrentCarryWeight(-ItemHolder.Instance.itemToPreview.GetComponent<Item>().itemWeight);
 
 			//Remove item from itemList and destroy item
-			itemList.Remove(ItemHolder.instance.itemToPreview);
-			Destroy(ItemHolder.instance.itemToPreview);
+			itemList.Remove(ItemHolder.Instance.itemToPreview);
+			Destroy(ItemHolder.Instance.itemToPreview);
 
 			//Regenerate buttons to update
 			GenerateButtons();
@@ -92,25 +87,24 @@ public class InventoryListControl : MonoBehaviour
 	}
 
 	//Toggle on/off inventory
-	public void ToggleInventory()
+	public override void Toggle()
 	{
-		this.gameObject.SetActive(!this.gameObject.activeSelf);
+		base.Toggle();
 
 		if (this.gameObject.activeSelf)
 		{
 			GenerateButtons();
-			Cursor.lockState = CursorLockMode.None;
 		}
 		else
 		{
-			Cursor.lockState = CursorLockMode.Locked;
+			ItemHolder.Instance.itemToPreview = null;
 		}
 	}
 
 	//Handles Button Clicks
 	public void ButtonClicked(GameObject itemInButton)
 	{
-		ItemHolder.instance.SetItem(itemInButton);
+		ItemHolder.Instance.SetItem(itemInButton);
 	}
 
 	//Check if inventory is open

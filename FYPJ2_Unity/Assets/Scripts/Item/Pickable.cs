@@ -11,7 +11,7 @@ public class Pickable : MonoBehaviour
 		if(other.tag.Equals("Player"))
 		{
 			//Add item to player inventory
-			GameManager.Instance.playerInventory.AddNewItem(this.gameObject);
+			InputManager.Instance.playerInventory.GetComponent<InventoryListControl>().AddNewItem(this.gameObject);
 		}
 	}
 }

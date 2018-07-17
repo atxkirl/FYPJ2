@@ -24,7 +24,7 @@ public class Player : SingletonMono<Player>
 	int playerCarryWeight, playerMaxCarryWeight, playerMaxCarryWeightModifier;
 	//Skill
 	[SerializeField]
-	int playerSkillpoints, playerMaxSkillpoints, playerMaxSkillpointsModifier;
+	int playerSkillpoints, playerMaxSkillpoints;
 	[SerializeField]
 	List<SkillBase> playerSkills = new List<SkillBase>();
 
@@ -109,7 +109,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetMaxSkillpoints()
 	{
-		return playerMaxSkillpoints + playerMaxSkillpointsModifier;
+		return playerMaxSkillpoints;
 	}
 
 	/// <summary>
@@ -217,7 +217,18 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void AddSkill(SkillBase _skill)
 	{
+		//Check if player already has the skill
+		if(playerSkills.Contains(_skill))
+		{
+			return;
+		}
+
+		//Add skill to player's list of skill
 		playerSkills.Add(_skill);
+		//Update player's skillpoints
+		ModifyCurrentSkillpoints(-_skill.GetSkillpointsNeeded());
+		//Apply new skill's effect to player
+		_skill.ApplySkillEffect();
 	}
 
 	//////////////////////
@@ -312,16 +323,6 @@ public class Player : SingletonMono<Player>
 		playerSkillpoints += _amountToModify;
 
 		ClampBetweenValues(ref playerSkillpoints, 0, GetMaxSkillpoints());
-	}
-
-	/// <summary>
-	/// Modify player's max skillpoints
-	/// </summary>
-	public void ModifyMaxSkillpoints(int _amountToModify)
-	{
-		playerMaxSkillpointsModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerMaxSkillpointsModifier, -playerMaxSkillpoints, 999);
 	}
 
 	///////////////////////

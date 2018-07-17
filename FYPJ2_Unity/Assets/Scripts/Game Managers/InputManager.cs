@@ -4,22 +4,37 @@ using UnityEngine;
 
 public class InputManager : SingletonMono<InputManager>
 {
+	public GameObject playerInventory = null;
+	public GameObject otherInventory = null;
+	public GameObject skillTree = null;
+
 	private void Update()
 	{
-		//Update inventory
-		UpdateInventory();
-	}
-
-	private void UpdateInventory()
-	{
+		//Toggling
 		if (Input.GetButtonDown("ToggleInventory"))
 		{
-			GameManager.Instance.playerInventory.ToggleInventory();
+			if (playerInventory)
+			{
+				playerInventory.GetComponent<InventoryListControl>().Toggle();
+				skillTree.GetComponent<Toggleable>().Toggle(false);
+			}
 		}
-		if(Input.GetButtonDown("DeleteItem"))
+		if (Input.GetButtonDown("ToggleSkills"))
 		{
-			if(GameManager.Instance.playerInventory)
-				GameManager.Instance.playerInventory.RemoveItem();
+			if (skillTree)
+			{
+				skillTree.GetComponent<Toggleable>().Toggle();
+				playerInventory.GetComponent<InventoryListControl>().Toggle(false);
+			}
+		}
+
+		//Inventory control
+		if (Input.GetButtonDown("DeleteItem"))
+		{
+			if (playerInventory)
+			{
+				playerInventory.GetComponent<InventoryListControl>().RemoveItem();
+			}
 		}
 	}
 }

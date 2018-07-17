@@ -2,21 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemHolder : MonoBehaviour
+public class ItemHolder : SingletonMono<ItemHolder>
 {
-	public static ItemHolder instance = null;
 	public GameObject itemToPreview;
-
-	void Awake()
-	{
-		//Check if instance already exists
-		if (instance == null)
-			instance = this;
-
-		//If instance already exists and it's not this then destroy
-		else if (instance != this)
-			Destroy(gameObject);
-	}
 
 	void OnEnable()
 	{
@@ -36,6 +24,9 @@ public class ItemHolder : MonoBehaviour
 			this.GetComponent<MeshCollider>().sharedMesh = null;
 			this.GetComponent<MeshRenderer>().material = null;
 		}
+
+		if (!InputManager.Instance.playerInventory.activeSelf && !InputManager.Instance.otherInventory.activeSelf)
+			itemToPreview = null;
 	}
 
 	public void SetItem(GameObject item)

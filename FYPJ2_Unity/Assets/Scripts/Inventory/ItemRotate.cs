@@ -33,7 +33,7 @@ public class ItemRotate : MonoBehaviour
 					itemToRotate = rayCastHit.collider.gameObject;
 
 					//Checks if item that cursor is over is the itemHolder
-					if (itemToRotate != ItemHolder.instance.gameObject)
+					if (itemToRotate != ItemHolder.Instance.gameObject)
 						itemToRotate = null;
 				}
 			}

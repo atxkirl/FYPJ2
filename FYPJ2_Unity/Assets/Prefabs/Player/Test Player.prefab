@@ -405,9 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f87a4949d92834aa4113747b4b9f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpSpeed: 10
-  gravity: -9.8
+  speed: 5
+  jumpSpeed: 5
+  gravity: 9.8
 --- !u!114 &114160714820688812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,23 +436,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45a0bae3aa3f3a47930c5a266a9295b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Kevin
   playerHealth: 100
+  playerMaxHealth: 100
+  playerMaxHealthModifier: 100
   playerStamina: 100
+  playerMaxStamina: 100
+  playerMaxStaminaModifier: 0
   playerMana: 100
-  playerCurrentCarryWeight: 99
-  playerSkillPoints: 100
-  playerAttributes:
-  - attribute: {fileID: 11400000, guid: 18a038cbeb26aef49acaef73eac53482, type: 2}
-    amount: 10
-  - attribute: {fileID: 11400000, guid: 6c13763a8838dfa48b21c0e30d61b21e, type: 2}
-    amount: 10
-  - attribute: {fileID: 11400000, guid: 3ae1144b82fcb8249ae3b4f64c61a3be, type: 2}
-    amount: 10
-  - attribute: {fileID: 11400000, guid: e59e41de038e33c489019f46c7679e08, type: 2}
-    amount: 10
-  - attribute: {fileID: 0}
-    amount: 0
+  playerMaxMana: 100
+  playerMaxManaModifier: 0
+  playerCarryWeight: 0
+  playerMaxCarryWeight: 100
+  playerMaxCarryWeightModifier: 0
+  playerSkillpoints: 999
+  playerMaxSkillpoints: 99999
   playerSkills: []
 --- !u!114 &114503976996372356
 MonoBehaviour:
