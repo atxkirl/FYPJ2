@@ -18,15 +18,19 @@ public class ItemHolder : SingletonMono<ItemHolder>
 
 	void Update()
 	{
+		//Set itemToPreview to null if player's own inventory is not showing, or if the other (trading/looting) inventory is open
+		if (!InputManager.Instance.playerInventory.activeSelf)
+			itemToPreview = null;
+		if (InputManager.Instance.otherInventory.activeSelf)
+			itemToPreview = null;
+
+		//Reset all the meshes if there is no itemToPreview is not set
 		if (!itemToPreview)
 		{
 			this.GetComponent<MeshFilter>().mesh = null;
 			this.GetComponent<MeshCollider>().sharedMesh = null;
 			this.GetComponent<MeshRenderer>().material = null;
 		}
-
-		if (!InputManager.Instance.playerInventory.activeSelf && !InputManager.Instance.otherInventory.activeSelf)
-			itemToPreview = null;
 	}
 
 	public void SetItem(GameObject item)

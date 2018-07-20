@@ -9,8 +9,14 @@ public class InventoryListControl : Toggleable
 	public List<GameObject> itemList = new List<GameObject>();
 	public List<GameObject> buttonList = new List<GameObject>();
 
+	//Check if given input is an Item
+	protected bool IsItem(GameObject itemToCheck)
+	{
+		return itemToCheck.GetComponent<Item>();
+	}
+
 	//Generates buttons based on items in the itemList
-	void GenerateButtons()
+	protected void GenerateButtons()
 	{
 		//Removes existing buttons
 		ClearButtons();
@@ -26,7 +32,7 @@ public class InventoryListControl : Toggleable
 	}
 
 	//Clears buttons from inventory prior to generation
-	void ClearButtons()
+	protected void ClearButtons()
 	{
 		if (buttonList.Count > 0)
 		{
@@ -39,7 +45,7 @@ public class InventoryListControl : Toggleable
 	}
 
 	//Adds a inventory button with an item attached to it
-	void AddNewButton(GameObject itemToAdd)
+	protected void AddNewButton(GameObject itemToAdd)
 	{
 		GameObject button = Instantiate(buttonPrefab) as GameObject;
 		button.SetActive(true);
@@ -53,13 +59,13 @@ public class InventoryListControl : Toggleable
 	}
 
 	//Adds an item to the itemList
-	public void AddNewItem(GameObject itemToAdd)
+	public virtual void AddNewItem(GameObject itemToAdd)
 	{
+		if (!IsItem(itemToAdd))
+			return;
+
 		//Disable item
 		itemToAdd.SetActive(false);
-
-		//Update Player's carry weight
-		Player.Instance.ModifyCurrentCarryWeight(itemToAdd.GetComponent<Item>().itemWeight);
 
 		//Add item to list
 		itemList.Add(itemToAdd);
@@ -69,21 +75,17 @@ public class InventoryListControl : Toggleable
 	}
 
 	//Removes an item from the itemList
-	public void RemoveItem()
+	public virtual void RemoveItem(GameObject itemToRemove)
 	{
-		//Checks if ItemHolder has a item selected
-		if(ItemHolder.Instance.itemToPreview)
-		{
-			//Update Player's carry weight
-			Player.Instance.ModifyCurrentCarryWeight(-ItemHolder.Instance.itemToPreview.GetComponent<Item>().itemWeight);
+		if (!IsItem(itemToRemove))
+			return;
 
-			//Remove item from itemList and destroy item
-			itemList.Remove(ItemHolder.Instance.itemToPreview);
-			Destroy(ItemHolder.Instance.itemToPreview);
+		//Remove item from itemList and destroy item
+		itemList.Remove(ItemHolder.Instance.itemToPreview);
+		Destroy(ItemHolder.Instance.itemToPreview);
 
-			//Regenerate buttons to update
-			GenerateButtons();
-		}
+		//Regenerate buttons to update
+		GenerateButtons();
 	}
 
 	//Toggle on/off inventory
@@ -105,6 +107,11 @@ public class InventoryListControl : Toggleable
 	public void ButtonClicked(GameObject itemInButton)
 	{
 		ItemHolder.Instance.SetItem(itemInButton);
+
+		foreach(GameObject button in buttonList)
+		{
+			button.GetComponent<InventoryButton>().buttonClicked = false;
+		}
 	}
 
 	//Check if inventory is open

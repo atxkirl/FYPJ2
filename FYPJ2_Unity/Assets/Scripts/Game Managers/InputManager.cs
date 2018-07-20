@@ -33,7 +33,20 @@ public class InputManager : SingletonMono<InputManager>
 		{
 			if (playerInventory)
 			{
-				playerInventory.GetComponent<InventoryListControl>().RemoveItem();
+				if (ItemHolder.Instance.itemToPreview)
+				{
+					playerInventory.GetComponent<PlayerInventory>().RemoveItem(ItemHolder.Instance.itemToPreview);
+				}
+			}
+		}
+		if (Input.GetButtonDown("EquipItem"))
+		{
+			if (playerInventory)
+			{
+				if (ItemHolder.Instance.itemToPreview)
+				{
+					playerInventory.GetComponent<PlayerInventory>().EquipItem(ItemHolder.Instance.itemToPreview);
+				}
 			}
 		}
 	}

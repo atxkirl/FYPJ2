@@ -10,27 +10,98 @@ public class Player : SingletonMono<Player>
 	//Player Name
 	string playerName;
 
+	[Header("Basic Stats")]
 	//Health
 	[SerializeField]
-	int playerHealth, playerMaxHealth, playerMaxHealthModifier;
+	int playerHealth;
+	[SerializeField]
+	int playerMaxHealth;
+	[SerializeField]
+	int playerMaxHealthModifier;
 	//Stamina
 	[SerializeField]
-	int playerStamina, playerMaxStamina, playerMaxStaminaModifier;
+	int playerStamina;
+	[SerializeField]
+	int playerMaxStamina;
+	[SerializeField]
+	int playerMaxStaminaModifier;
 	//Mana
 	[SerializeField]
-	int playerMana, playerMaxMana, playerMaxManaModifier;
+	int playerMana;
+	[SerializeField]
+	int playerMaxMana;
+	[SerializeField]
+	int playerMaxManaModifier;
 	//Carry Weight
 	[SerializeField]
-	int playerCarryWeight, playerMaxCarryWeight, playerMaxCarryWeightModifier;
+	int playerCarryWeight;
+	[SerializeField]
+	int playerMaxCarryWeight;
+	[SerializeField]
+	int playerMaxCarryWeightModifier;
+
+	[Header("Attack/Defence")]
+	//Attack
+	[SerializeField]
+	int playerAttack;
+	[SerializeField]
+	int playerAttackModifier;
+	//Defence
+	[SerializeField]
+	int playerDefence;
+	[SerializeField]
+	int playerDefenceModifier;
+
+	[Header("Skills")]
 	//Skill
 	[SerializeField]
-	int playerSkillpoints, playerMaxSkillpoints;
+	int playerSkillpoints;
+	[SerializeField]
+	int playerMaxSkillpoints;
 	[SerializeField]
 	List<SkillBase> playerSkills = new List<SkillBase>();
+
+	[Header("Inventory")]
+	//Inventory
+	[SerializeField]
+	List<GameObject> playerItems = new List<GameObject>();
+
+	[Header("Equipment")]
+	//Equipped Items
+	[SerializeField]
+	GameObject playerHelmet = null;
+	[SerializeField]
+	GameObject playerChestplate = null;
+	[SerializeField]
+	GameObject playerPants = null;
+	[SerializeField]
+	GameObject playerBoots = null;
+	[SerializeField]
+	GameObject playerWeapon = null;
+
+	//Max Amounts
+	int maxInt = 99999;
+	float maxFloat = 99999.0f;
 
 	//////////////////////
 	// GETTER FUNCTIONS //
 	//////////////////////
+
+	/// <summary>
+	/// Get player's current attack damage
+	/// </summary>
+	public int GetCurrentAttack()
+	{
+		return playerAttack + playerAttackModifier;
+	}
+
+	/// <summary>
+	/// Get player's current defence
+	/// </summary>
+	public int GetCurrentDefence()
+	{
+		return playerDefence + playerDefenceModifier;
+	}
 
 	/// <summary>
 	/// Get player's current health
@@ -120,9 +191,33 @@ public class Player : SingletonMono<Player>
 		return playerSkills;
 	}
 
+	/// <summary>
+	/// Get list of player's inventory
+	/// </summary>
+	public List<GameObject> GetInventory()
+	{
+		return playerItems;
+	}
+
 	//////////////////////
 	// SETTER FUNCTIONS //
 	//////////////////////
+
+	/// <summary>
+	/// Set player's current attack
+	/// </summary>
+	public void SetCurrentAttack(int _playerAttack)
+	{
+		playerAttack = _playerAttack;
+	}
+
+	/// <summary>
+	/// Set player's current defence
+	/// </summary>
+	public void SetCurrentDefence(int _playerDefence)
+	{
+		playerDefence = _playerDefence;
+	}
 
 	/// <summary>
 	/// Set player's current health
@@ -212,6 +307,10 @@ public class Player : SingletonMono<Player>
 		playerSkills = _playerSkills;
 	}
 
+	//////////////////////////
+	// ADD/REMOVE FUNCTIONS //
+	//////////////////////////
+
 	/// <summary>
 	/// Adds a skill to the player
 	/// </summary>
@@ -231,9 +330,198 @@ public class Player : SingletonMono<Player>
 		_skill.ApplySkillEffect();
 	}
 
+	/// <summary>
+	/// Removes a skill from the player
+	/// </summary>
+	public void RemoveSkill(SkillBase _skill)
+	{
+		//Check if player has the skill
+		if (!playerSkills.Contains(_skill))
+		{
+			return;
+		}
+
+		//Remove skill from player's list of skill
+		playerSkills.Remove(_skill);
+	}
+
+	/// <summary>
+	/// Adds an item to the player
+	/// </summary>
+	public void AddItem(GameObject _item)
+	{
+		//Check if input is an Item
+		if (!IsItem(_item))
+			return;
+
+		//Add item to player's list of items
+		playerItems.Add(_item);
+		//Update player's carry capacity
+		ModifyCurrentCarryWeight(_item.GetComponent<Item>().itemWeight);
+	}
+
+	/// <summary>
+	/// Removes an item from the player
+	/// </summary>
+	public void RemoveItem(GameObject _item)
+	{
+		//Check if input is an Item
+		if (!IsItem(_item))
+			return;
+		//Check if player has this item
+		if (!HasItem(_item))
+			return;
+
+		//Remove item from player's list of items
+		playerItems.Remove(_item);
+		//Update player's carry capacity
+		ModifyCurrentCarryWeight(-_item.GetComponent<Item>().itemWeight);
+	}
+
+	/// <summary>
+	/// Equips Items to the player
+	/// </summary>
+	public void EquipItem(GameObject _item)
+	{
+		//Check if player has this item
+		if (!HasItem(_item))
+			return;
+
+		//Item is armour piece
+		if (_item.GetComponent<Armor>())
+		{
+			//Set item into the correct slot
+			if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_HELMET))
+			{
+				//If the item we're trying to equip has already been equipped, then just return;
+				if (playerHelmet.Equals(_item))
+					return;
+				//If the item is different, then unequip the old armor
+				UnEquipItem(playerHelmet);
+				//Equip new armor
+				playerHelmet = _item;
+			}
+			else if (_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_CHEST))
+			{
+				//If the item we're trying to equip has already been equipped, then just return;
+				if (playerChestplate.Equals(_item))
+					return;
+				//If the item is different, then unequip the old armor
+				UnEquipItem(playerChestplate);
+				//Equip new armor
+				playerChestplate = _item;
+			}
+			else if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_PANTS))
+			{
+				//If the item we're trying to equip has already been equipped, then just return;
+				if (playerPants.Equals(_item))
+					return;
+				//If the item is different, then unequip the old armor
+				UnEquipItem(playerPants);
+				//Equip new armor
+				playerPants = _item;
+			}
+			else if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_BOOTS))
+			{
+				//If the item we're trying to equip has already been equipped, then just return;
+				if (playerBoots.Equals(_item))
+					return;
+				//If the item is different, then unequip the old armor
+				UnEquipItem(playerBoots);
+				//Equip new armor
+				playerBoots = _item;
+			}
+
+			//Update player's defence stats
+			ModifyCurrentDefence(_item.GetComponent<Armor>().armorDefence);
+		}
+		//Item is weapon
+		if (_item.GetComponent<Weapon>())
+		{
+			//If the item we're trying to equip has already been equipped, then just return;
+			if (playerWeapon.Equals(_item))
+				return;
+			//If the item is different, then unequip the old weapon
+			UnEquipItem(playerWeapon);
+			//Equip new weapon
+			playerWeapon = _item;
+
+			//Update player's attack stats
+			ModifyCurrentAttack(_item.GetComponent<Weapon>().weaponDamage);
+		}
+
+		//Set item flag to be equipped
+		_item.GetComponent<Item>().itemEquipped = true;
+	}
+
+	/// <summary>
+	/// UnEquips Items to the player
+	/// </summary>
+	public void UnEquipItem(GameObject _item)
+	{
+		//Check if player has this item
+		if (!HasItem(_item))
+			return;
+
+		//Remove item's buff
+		if(_item.GetComponent<Armor>())
+		{
+			ModifyCurrentDefence(-_item.GetComponent<Armor>().armorDefence);
+		}
+		else if (_item.GetComponent<Weapon>())
+		{
+			ModifyCurrentAttack(-_item.GetComponent<Weapon>().weaponDamage);
+		}
+		//Remove item from equipment slot
+		if (_item.Equals(playerHelmet))
+		{
+			playerHelmet = null;
+		}
+		else if (_item.Equals(playerChestplate))
+		{
+			playerChestplate = null;
+		}
+		else if (_item.Equals(playerPants))
+		{
+			playerPants = null;
+		}
+		else if (_item.Equals(playerBoots))
+		{
+			playerBoots = null;
+		}
+		else if (_item.Equals(playerWeapon))
+		{
+			playerWeapon = null;
+		}
+
+		//Set item to be unequiped
+		GameObject item = playerItems.Find(x => playerItems.Contains(_item));
+		item.GetComponent<Item>().itemEquipped = false;
+	}
+
 	//////////////////////
 	// MODIFY FUNCTIONS //
 	//////////////////////
+
+	/// <summary>
+	/// Modify player's current attack
+	/// </summary>
+	public void ModifyCurrentAttack(int _amountToModify)
+	{
+		playerAttackModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerAttackModifier, 0, maxInt);
+	}
+
+	/// <summary>
+	/// Modify player's current defence
+	/// </summary>
+	public void ModifyCurrentDefence(int _amountToModify)
+	{
+		playerDefenceModifier += _amountToModify;
+
+		ClampBetweenValues(ref playerDefenceModifier, 0, maxInt);
+	}
 
 	/// <summary>
 	/// Modify player's current health
@@ -252,7 +540,7 @@ public class Player : SingletonMono<Player>
 	{
 		playerMaxHealthModifier += _amountToModify;
 
-		ClampBetweenValues(ref playerMaxHealthModifier, -playerMaxHealth, 999);
+		ClampBetweenValues(ref playerMaxHealthModifier, -playerMaxHealth, maxInt);
 	}
 
 	/// <summary>
@@ -272,7 +560,7 @@ public class Player : SingletonMono<Player>
 	{
 		playerMaxStaminaModifier += _amountToModify;
 
-		ClampBetweenValues(ref playerMaxStaminaModifier, -playerMaxStamina, 999);
+		ClampBetweenValues(ref playerMaxStaminaModifier, -playerMaxStamina, maxInt);
 	}
 
 	/// <summary>
@@ -292,7 +580,7 @@ public class Player : SingletonMono<Player>
 	{
 		playerMaxManaModifier += _amountToModify;
 
-		ClampBetweenValues(ref playerMaxManaModifier, -playerMaxMana, 999);
+		ClampBetweenValues(ref playerMaxManaModifier, -playerMaxMana, maxInt);
 	}
 
 	/// <summary>
@@ -302,7 +590,7 @@ public class Player : SingletonMono<Player>
 	{
 		playerCarryWeight += _amountToModify;
 
-		ClampBetweenValues(ref playerCarryWeight, 0, GetMaxCarryWeight());
+		ClampBetweenValues(ref playerCarryWeight, 0, maxInt);
 	}
 
 	/// <summary>
@@ -343,6 +631,22 @@ public class Player : SingletonMono<Player>
 	public bool IsDead()
 	{
 		return (playerHealth <= 0);
+	}
+
+	/// <summary>
+	/// Check if the player has this item in inventory
+	/// </summary>
+	bool HasItem(GameObject _item)
+	{
+		return playerItems.Contains(_item);
+	}
+
+	/// <summary>
+	/// Check if this is an item
+	/// </summary>
+	bool IsItem(GameObject _item)
+	{
+		return _item.GetComponent<Item>();
 	}
 
 	////////////////////////

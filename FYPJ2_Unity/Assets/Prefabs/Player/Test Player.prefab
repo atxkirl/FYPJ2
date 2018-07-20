@@ -364,8 +364,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.6101341}
+  m_Center: {x: 0.00000000611424, y: 0, z: 0.3050682}
 --- !u!81 &81774409444692516
 AudioListener:
   m_ObjectHideFlags: 1
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 100
   playerMaxHealth: 100
-  playerMaxHealthModifier: 100
+  playerMaxHealthModifier: 0
   playerStamina: 100
   playerMaxStamina: 100
   playerMaxStaminaModifier: 0
@@ -446,11 +446,21 @@ MonoBehaviour:
   playerMaxMana: 100
   playerMaxManaModifier: 0
   playerCarryWeight: 0
-  playerMaxCarryWeight: 100
+  playerMaxCarryWeight: 10000
   playerMaxCarryWeightModifier: 0
+  playerAttack: 10
+  playerAttackModifier: 0
+  playerDefence: 10
+  playerDefenceModifier: 0
   playerSkillpoints: 999
   playerMaxSkillpoints: 99999
   playerSkills: []
+  playerItems: []
+  playerHelmet: {fileID: 0}
+  playerChestplate: {fileID: 0}
+  playerPants: {fileID: 0}
+  playerBoots: {fileID: 0}
+  playerWeapon: {fileID: 0}
 --- !u!114 &114503976996372356
 MonoBehaviour:
   m_ObjectHideFlags: 1
