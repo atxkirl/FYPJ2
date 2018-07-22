@@ -17,7 +17,7 @@ public class SkillButton : MonoBehaviour
 	{
 		if(skillObject && skillText)
 		{
-			skillName = skillObject.GetComponent<SkillBase>().GetSkillName();
+			skillName = skillObject.GetComponent<SkillBase>().displayName;
 			skillText.text = skillName;
 		}
 	}

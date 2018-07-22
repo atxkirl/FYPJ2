@@ -51,14 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e675c65aad9c5146886439e0a1a3810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: HealthRegen Mk3
+  displayDescription: Allows the player to regenerate health by 20 points/5 seconds
   isUnlocked: 0
   pointsNeeded: 40
   skillsNeeded:
   - {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324, type: 2}
   - {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e, type: 2}
   skillEffect: 20
-  skillName: HealthRegen Mk3
-  skillDescription: Gives the player health regeneration over time. Current effect
-    is 20HP/5seconds
   elapsedTime: 0
   bounceTime: 5

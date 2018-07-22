@@ -4,14 +4,14 @@
 
 	public void SetStatistics(string newItemDisplayName, string newItemDisplayDescription, int newItemWeight, int newWeaponDamage)
 	{
-		itemDisplayName = newItemDisplayName;
-		itemDisplayDescription = newItemDisplayDescription;
+		displayName = newItemDisplayName;
+		displayDescription = newItemDisplayDescription;
 		itemWeight = newItemWeight;
 		weaponDamage = newWeaponDamage;
 	}
 
 	public override string GetStatistics()
 	{
-		return itemDisplayName + "-" + itemDisplayDescription + "-" + itemWeight + "-" + weaponDamage;
+		return displayName + "-" + displayDescription + "-" + itemWeight + "-" + weaponDamage;
 	}
 }

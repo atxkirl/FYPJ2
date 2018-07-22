@@ -682,6 +682,7 @@ GameObject:
   - component: {fileID: 114402268680349078}
   - component: {fileID: 114897390540635976}
   - component: {fileID: 114240727132983024}
+  - component: {fileID: 114339663211436120}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1317,6 +1318,7 @@ GameObject:
   - component: {fileID: 114936208030907230}
   - component: {fileID: 114885522235564470}
   - component: {fileID: 114858949956100138}
+  - component: {fileID: 114572208681881164}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1546,6 +1548,7 @@ GameObject:
   - component: {fileID: 222141608819582876}
   - component: {fileID: 114521400999321642}
   - component: {fileID: 114237466402946920}
+  - component: {fileID: 114065156418880952}
   - component: {fileID: 114034060940127780}
   - component: {fileID: 114709459192211516}
   m_Layer: 5
@@ -1796,6 +1799,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1436327344888392
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224466814040576864}
+  - component: {fileID: 222199248473488096}
+  - component: {fileID: 114839390315121440}
+  m_Layer: 5
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1438378842801152
 GameObject:
   m_ObjectHideFlags: 1
@@ -2006,6 +2026,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1504721057898542
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224553091984590232}
+  - component: {fileID: 222304876319992324}
+  - component: {fileID: 114787235222835414}
+  m_Layer: 5
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1505499866314762
 GameObject:
   m_ObjectHideFlags: 1
@@ -2035,6 +2072,7 @@ GameObject:
   - component: {fileID: 114014265924829456}
   - component: {fileID: 114636135281333464}
   - component: {fileID: 114717801224389188}
+  - component: {fileID: 114084511366677366}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2306,6 +2344,7 @@ GameObject:
   - component: {fileID: 222333755987299782}
   - component: {fileID: 114029512527117472}
   - component: {fileID: 114378871405838726}
+  - component: {fileID: 114733077727076102}
   - component: {fileID: 114113847097864616}
   m_Layer: 5
   m_Name: Button
@@ -2432,6 +2471,7 @@ GameObject:
   - component: {fileID: 114867914891788638}
   - component: {fileID: 114726125213823828}
   - component: {fileID: 114118556786172326}
+  - component: {fileID: 114955384870317480}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2606,6 +2646,7 @@ GameObject:
   - component: {fileID: 114163113895620790}
   - component: {fileID: 114148378447143976}
   - component: {fileID: 114600922207558370}
+  - component: {fileID: 114446534689789070}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2640,6 +2681,7 @@ GameObject:
   - component: {fileID: 114079097822392880}
   - component: {fileID: 114911387206260086}
   - component: {fileID: 114369042837109062}
+  - component: {fileID: 114531008859227224}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2659,6 +2701,7 @@ GameObject:
   - component: {fileID: 114987720330640414}
   - component: {fileID: 114667632099930878}
   - component: {fileID: 114983692819750962}
+  - component: {fileID: 114856995908383578}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2857,6 +2900,7 @@ GameObject:
   - component: {fileID: 114052923466707088}
   - component: {fileID: 114765261157083408}
   - component: {fileID: 114934684076438908}
+  - component: {fileID: 114094715473374604}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2963,6 +3007,26 @@ GameObject:
   - component: {fileID: 114697354583486470}
   m_Layer: 5
   m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1769313500166284
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224833453677845674}
+  - component: {fileID: 222627683797038180}
+  - component: {fileID: 114530048945685398}
+  - component: {fileID: 114614524544422290}
+  - component: {fileID: 114366074571845908}
+  - component: {fileID: 114042491351149328}
+  m_Layer: 5
+  m_Name: ToolTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3084,6 +3148,7 @@ GameObject:
   - component: {fileID: 114364396371033272}
   - component: {fileID: 114300658179785758}
   - component: {fileID: 114243492769244524}
+  - component: {fileID: 114823087154909266}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3255,6 +3320,7 @@ GameObject:
   - component: {fileID: 114982124121667994}
   - component: {fileID: 114725038992560532}
   - component: {fileID: 114226659688897200}
+  - component: {fileID: 114197375091529362}
   m_Layer: 5
   m_Name: OtherInventoryButton
   m_TagString: Untagged
@@ -3291,6 +3357,7 @@ GameObject:
   - component: {fileID: 114095214144651864}
   - component: {fileID: 114196883646885724}
   - component: {fileID: 114690113478183600}
+  - component: {fileID: 114381766661034386}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3535,6 +3602,7 @@ GameObject:
   - component: {fileID: 114380998477966264}
   - component: {fileID: 114424092469487522}
   - component: {fileID: 114461958141734632}
+  - component: {fileID: 114689247374206136}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3573,6 +3641,7 @@ GameObject:
   - component: {fileID: 114110596156640502}
   - component: {fileID: 114955627439739378}
   - component: {fileID: 114245570660084050}
+  - component: {fileID: 114075504694318256}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3818,7 +3887,7 @@ Transform:
   - {fileID: 224994854221325878}
   - {fileID: 224900954727031122}
   m_Father: {fileID: 224157096505249418}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4580584817843700
 Transform:
@@ -4219,7 +4288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114032300327283262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4231,7 +4300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
     type: 2}
   skillText: {fileID: 114040036480116512}
@@ -4249,6 +4318,7 @@ MonoBehaviour:
   controllingInventoryList: {fileID: 114410529067714974}
   itemText: {fileID: 114651002478114464}
   itemObject: {fileID: 0}
+  buttonClicked: 0
 --- !u!114 &114040036480116512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4281,7 +4351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114041721419868950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4314,7 +4384,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk2
+  m_Text: DEFAULT_NAME
+--- !u!114 &114042491351149328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
+  m_ChildAlignment: 4
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!114 &114043606470091052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4374,7 +4466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114048816256724660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4487,7 +4579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114056172522266212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4499,7 +4591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
     type: 2}
   skillText: {fileID: 114989096491921928}
@@ -4648,10 +4740,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
     type: 2}
   skillText: {fileID: 114598242503046558}
+--- !u!114 &114065156418880952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396868039531982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114034060940127780}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114034060940127780}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114065771631592032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4663,7 +4802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
     type: 2}
   skillText: {fileID: 114083996376271422}
@@ -4699,7 +4838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114071915367767158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4727,6 +4866,55 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114075504694318256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968223539542972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114076141755229518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4738,7 +4926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
     type: 2}
   skillText: {fileID: 114198234416111352}
@@ -4801,7 +4989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114083988248527824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4887,7 +5075,56 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk1
+  m_Text: DEFAULT_NAME
+--- !u!114 &114084511366677366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507911955245568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114086520235957054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4920,7 +5157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114091913922821998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4953,7 +5190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114092179119587960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4981,6 +5218,55 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114094715473374604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722071510785394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114095214144651864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5100,7 +5386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
     type: 2}
   skillText: {fileID: 114927461594818288}
@@ -5115,7 +5401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
     type: 2}
   skillText: {fileID: 114234258815327740}
@@ -5130,7 +5416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
     type: 2}
   skillText: {fileID: 114874326944270344}
@@ -5246,7 +5532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114135268108557954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5258,7 +5544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
     type: 2}
   skillText: {fileID: 114086520235957054}
@@ -5359,7 +5645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
     type: 2}
   skillText: {fileID: 114958751189441850}
@@ -5427,7 +5713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
     type: 2}
   skillText: {fileID: 114882456689191004}
@@ -5513,7 +5799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114175561317139816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5630,7 +5915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
     type: 2}
   skillText: {fileID: 114288752263461616}
@@ -5751,7 +6036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
     type: 2}
   skillText: {fileID: 114811596963094960}
@@ -5766,7 +6051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
     type: 2}
   skillText: {fileID: 114449996770347006}
@@ -5855,7 +6140,54 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk1
+  m_Text: DEFAULT_NAME
+--- !u!114 &114197375091529362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886662730049642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114725038992560532}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114725038992560532}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114198234416111352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5888,7 +6220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114198647112262622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5975,7 +6307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114209893549382230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6088,7 +6420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114220857142893938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6121,7 +6453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114222941307997212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6134,7 +6466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114225338843597584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6146,7 +6477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
     type: 2}
   skillText: {fileID: 114342887474225406}
@@ -6162,7 +6493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114227921123492914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6248,7 +6578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114234509238058576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6338,7 +6668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
     type: 2}
   skillText: {fileID: 114586277100926794}
@@ -6353,7 +6683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
     type: 2}
   skillText: {fileID: 114331819662444348}
@@ -6368,7 +6698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
     type: 2}
   skillText: {fileID: 114575101194767088}
@@ -6457,7 +6787,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114263238726103338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6517,7 +6847,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114275104359515312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6670,7 +7000,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114288752263461616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6703,7 +7033,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114293155101139794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6736,7 +7066,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114297525629575778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6987,7 +7317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
     type: 2}
   skillText: {fileID: 114653648318465514}
@@ -7050,7 +7380,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114328283948621794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7062,7 +7392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
     type: 2}
   skillText: {fileID: 114589470869205546}
@@ -7077,7 +7407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
     type: 2}
   skillText: {fileID: 114741446855741778}
@@ -7113,7 +7443,56 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk2
+  m_Text: DEFAULT_NAME
+--- !u!114 &114339663211436120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167204981613434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114340218679218822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7146,7 +7525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114340408054103998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7285,7 +7664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114342887474225406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7318,7 +7697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114349028238186810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7330,7 +7709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
     type: 2}
   skillText: {fileID: 114549102626009900}
@@ -7547,6 +7926,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114366074571845908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &114366088788505944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7611,7 +8003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
     type: 2}
   skillText: {fileID: 114455882356110902}
@@ -7695,6 +8087,55 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114381766661034386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893885676758396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114381778509016362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7706,7 +8147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
     type: 2}
   skillText: {fileID: 114663904508433106}
@@ -7734,7 +8175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
     type: 2}
   skillText: {fileID: 114272219142932362}
@@ -7829,7 +8270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
     type: 2}
   skillText: {fileID: 114210331757289280}
@@ -7945,7 +8386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114399934097523636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8063,7 +8504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
     type: 2}
   skillText: {fileID: 114130296870333300}
@@ -8099,7 +8540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114413532301697684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8339,7 +8780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
     type: 2}
   skillText: {fileID: 114030609800468718}
@@ -8370,6 +8811,55 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114446534689789070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666832720668478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114449996770347006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8402,7 +8892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114455882356110902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8435,7 +8925,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114457361526290138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8468,7 +8958,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114458449131926132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8533,7 +9023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
     type: 2}
   skillText: {fileID: 114070736704022468}
@@ -8548,7 +9038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
     type: 2}
   skillText: {fileID: 114476535481335000}
@@ -8584,7 +9074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114480433371787864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8617,7 +9107,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114482385416840242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8656,7 +9146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
     type: 2}
   skillText: {fileID: 114894666798283450}
@@ -8692,7 +9182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114495175950204538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8732,7 +9222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114498405270484210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8792,7 +9281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114503468972080714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8912,7 +9401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114521400999321642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8951,7 +9439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
     type: 2}
   skillText: {fileID: 114480433371787864}
@@ -8987,7 +9475,83 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk2
+  m_Text: DEFAULT_NAME
+--- !u!114 &114530048945685398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114531008859227224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669254285889220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114531497128876714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8999,7 +9563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
     type: 2}
   skillText: {fileID: 114293155101139794}
@@ -9014,7 +9578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
     type: 2}
   skillText: {fileID: 114091913922821998}
@@ -9137,7 +9701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
     type: 2}
   skillText: {fileID: 114342171703475822}
@@ -9152,7 +9716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
     type: 2}
   skillText: {fileID: 114526641376326026}
@@ -9215,7 +9779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114550742840711030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9281,7 +9845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
     type: 2}
   skillText: {fileID: 114197040332425776}
@@ -9312,6 +9876,55 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114572208681881164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338006471155902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114575101194767088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9344,7 +9957,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114575603757828172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9377,7 +9990,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114576257684398572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9645,7 +10258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114586975002180010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9731,7 +10344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114598242503046558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9764,7 +10377,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114599061719519982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9776,7 +10389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
     type: 2}
   skillText: {fileID: 114220857142893938}
@@ -9791,7 +10404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
     type: 2}
   skillText: {fileID: 114083857859862836}
@@ -9827,7 +10440,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk2
+  m_Text: DEFAULT_NAME
+--- !u!114 &114614524544422290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53deae27128686f47b907dbfa6f13fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipName: DEFAULT_NAME
+  tooltipDescription: DEFAULT_DESCRIPTION
+  textName: {fileID: 114839390315121440}
+  textDescription: {fileID: 114787235222835414}
 --- !u!114 &114622496470923258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9920,7 +10548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114638422139883902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9932,7 +10559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
     type: 2}
   skillText: {fileID: 114055292240276192}
@@ -10051,7 +10678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114655882435573394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10084,7 +10711,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114656722782875142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10123,7 +10750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
     type: 2}
   skillText: {fileID: 114204084191514426}
@@ -10159,7 +10786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114666252087463980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10171,7 +10798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
     type: 2}
   skillText: {fileID: 114412606464535404}
@@ -10239,7 +10866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
     type: 2}
   skillText: {fileID: 114043627938131894}
@@ -10257,6 +10884,55 @@ MonoBehaviour:
   buttonPrefab: {fileID: 1886662730049642}
   itemList: []
   buttonList: []
+--- !u!114 &114689247374206136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1961975067589734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114690113478183600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10268,7 +10944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
     type: 2}
   skillText: {fileID: 114854249398781130}
@@ -10283,7 +10959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
     type: 2}
   skillText: {fileID: 114604359605596892}
@@ -10298,7 +10974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
     type: 2}
   skillText: {fileID: 114863619459702024}
@@ -10367,7 +11043,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114711966821997762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10459,7 +11134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
     type: 2}
   skillText: {fileID: 114321280381041964}
@@ -10495,7 +11170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114717801224389188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10507,7 +11182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
     type: 2}
   skillText: {fileID: 114288100306132832}
@@ -10525,6 +11200,7 @@ MonoBehaviour:
   controllingInventoryList: {fileID: 114672984449727156}
   itemText: {fileID: 114356496342942556}
   itemObject: {fileID: 0}
+  buttonClicked: 0
 --- !u!114 &114725753776582968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10557,7 +11233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114726125213823828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10623,7 +11299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114728888758238888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10677,6 +11352,37 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114733077727076102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562717157141912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
+            type: 2}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114741446855741778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10709,7 +11415,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114749085826969810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10748,7 +11454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
     type: 2}
   skillText: {fileID: 114725753776582968}
@@ -11216,6 +11922,39 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114787235222835414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504721057898542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: WOW WEE THERES SO MUCH TEXT HERE
 --- !u!114 &114787334544826414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11228,7 +11967,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114790311587159410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11341,7 +12079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StrengthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
     type: 2}
   skillText: {fileID: 114340218679218822}
@@ -11377,7 +12115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114813338038971440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11420,7 +12158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
     type: 2}
   skillText: {fileID: 114942323900355570}
@@ -11447,6 +12185,55 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &114823087154909266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796282427855202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114825258611714982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11479,7 +12266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114831064668013122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11491,7 +12278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
     type: 2}
   skillText: {fileID: 114980412969848194}
@@ -11575,6 +12362,39 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114839390315121440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436327344888392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: SWORDY MCSWORDFACE
 --- !u!114 &114854249398781130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11607,7 +12427,56 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk1
+  m_Text: DEFAULT_NAME
+--- !u!114 &114856995908383578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670626708879888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114858949956100138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11619,7 +12488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
     type: 2}
   skillText: {fileID: 114905109405192570}
@@ -11682,7 +12551,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114863709895994646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11748,7 +12617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
     type: 2}
   skillText: {fileID: 114486955213577524}
@@ -11764,7 +12633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114874326944270344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11797,7 +12665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114876642326036600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11862,7 +12730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
     type: 2}
   skillText: {fileID: 114457361526290138}
@@ -11916,7 +12784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114885522235564470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12166,7 +13034,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StrengthPlus Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114897240568790166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12178,7 +13046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: StaminaPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
     type: 2}
   skillText: {fileID: 114825258611714982}
@@ -12320,7 +13188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthRegen Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114907680252083230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12649,7 +13517,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114927969974277238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12661,7 +13529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
     type: 2}
   skillText: {fileID: 114500444470513444}
@@ -12730,7 +13598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
     type: 2}
   skillText: {fileID: 114655882435573394}
@@ -12772,7 +13640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk1
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
     type: 2}
   skillText: {fileID: 114394770450549798}
@@ -12888,7 +13756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaRegen Mk2
+  m_Text: DEFAULT_NAME
 --- !u!114 &114946818540610466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12927,7 +13795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
     type: 2}
   skillText: {fileID: 114255797308485636}
@@ -12942,7 +13810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthRegen Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
     type: 2}
   skillText: {fileID: 114575603757828172}
@@ -12958,7 +13826,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 8
-  ApplyToChildren: 1
 --- !u!114 &114953220229701908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13012,6 +13879,55 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114955384870317480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593653209243598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
+            type: 2}
+          m_MethodName: EnterHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
+            type: 2}
+          m_MethodName: ExitHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114955627439739378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13097,7 +14013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HealthPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114965575935161112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13136,7 +14052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: ManaPlus Mk3
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
     type: 2}
   skillText: {fileID: 114717018130920204}
@@ -13225,7 +14141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ManaPlus Mk1
+  m_Text: DEFAULT_NAME
 --- !u!114 &114982124121667994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13289,7 +14205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b717349f28cfa8448acbe65e4f29d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: HealthPlus Mk2
+  skillName: DEFAULT_NAME
   skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
     type: 2}
   skillText: {fileID: 114041721419868950}
@@ -13352,7 +14268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: StaminaPlus Mk3
+  m_Text: DEFAULT_NAME
 --- !u!114 &114994687606263744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13539,6 +14455,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575415462190864}
+--- !u!222 &222199248473488096
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436327344888392}
 --- !u!222 &222206725397384222
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -13635,6 +14557,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629669249899860}
+--- !u!222 &222304876319992324
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504721057898542}
 --- !u!222 &222306667235689854
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -13881,6 +14809,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127856727938444}
+--- !u!222 &222627683797038180
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
 --- !u!222 &222628054267561608
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -14271,7 +15205,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 999
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &224006534428615936
 RectTransform:
@@ -14939,10 +15873,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224130301893388748}
-  - {fileID: 224748402827323608}
   - {fileID: 224704456989047314}
   - {fileID: 224805482464065032}
   - {fileID: 4392417409577610}
+  - {fileID: 224748402827323608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16090,6 +17024,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224466814040576864
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436327344888392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224833453677845674}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224488294387560784
 RectTransform:
   m_ObjectHideFlags: 1
@@ -16385,6 +17337,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224553091984590232
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504721057898542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224833453677845674}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17131,7 +18101,7 @@ RectTransform:
   m_Children:
   - {fileID: 224393148862583988}
   m_Father: {fileID: 224157096505249418}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17374,8 +18344,9 @@ RectTransform:
   m_Children:
   - {fileID: 4375090674438376}
   - {fileID: 4123691886370536}
+  - {fileID: 224833453677845674}
   m_Father: {fileID: 224157096505249418}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17600,7 +18571,7 @@ RectTransform:
   - {fileID: 224126976738602354}
   - {fileID: 224043474138960952}
   m_Father: {fileID: 224157096505249418}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17681,6 +18652,26 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224833453677845674
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769313500166284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224466814040576864}
+  - {fileID: 224553091984590232}
+  m_Father: {fileID: 224748402827323608}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 462}
+  m_SizeDelta: {x: 400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224837020719024166
 RectTransform:

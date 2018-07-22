@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac78e0f2a95a5448b2a3d287edb48e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: ManaPlus Mk1
+  displayDescription: Increases the player's max mana by 10 points.
   isUnlocked: 0
   pointsNeeded: 10
   skillsNeeded: []
   skillEffect: 10
-  skillName: ManaPlus Mk1
-  skillDescription: Increases the player's max mana by 10.

@@ -6,24 +6,22 @@ using UnityEngine;
 /// Base class for inventory items
 /// </summary>
 
-public class Item : MonoBehaviour
+public class Item : ButtonBase
 {
-	public string itemDisplayName = "DEFAULT_NAME";
-	public string itemDisplayDescription = "DEFAULT_DESCRIPTOR";
 	public int itemWeight = 0;
 	public bool itemEquipped = false;
 	public GameObject itemModel;
 
 	public virtual void SetStatistics(string newItemDisplayName, string newItemDisplayDescription, int newItemWeight, GameObject newItemModel)
 	{
-		itemDisplayName = newItemDisplayName;
-		itemDisplayDescription = newItemDisplayDescription;
+		displayName = newItemDisplayName;
+		displayDescription = newItemDisplayDescription;
 		itemWeight = newItemWeight;
 		itemModel = newItemModel;
 	}
 
 	public virtual string GetStatistics()
 	{
-		return itemDisplayName + "-" + itemDisplayDescription + "-" + itemWeight;
+		return displayName + "-" + displayDescription + "-" + itemWeight;
 	}
 }

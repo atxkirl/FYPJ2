@@ -51,14 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da740a27ae4a37547ba484a4b20fa682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: StaminaRegen Mk3
+  displayDescription: Allows the player to regenerate stamina by 20 points/ 5 seconds.
   isUnlocked: 0
   pointsNeeded: 40
   skillsNeeded:
   - {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a, type: 2}
   - {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188, type: 2}
   skillEffect: 20
-  skillName: StaminaRegen Mk3
-  skillDescription: Gives the player stamina regeneration over time. Current effect
-    is 20SP/5seconds
   elapsedTime: 0
   bounceTime: 5

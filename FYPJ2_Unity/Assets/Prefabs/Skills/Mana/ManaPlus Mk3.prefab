@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac78e0f2a95a5448b2a3d287edb48e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: ManaPlus Mk3
+  displayDescription: Increases the player's max mana by 50 points.
   isUnlocked: 0
   pointsNeeded: 30
   skillsNeeded:
   - {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21, type: 2}
   - {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a, type: 2}
   skillEffect: 30
-  skillName: ManaPlus Mk3
-  skillDescription: Increases the player's max mana by 30.

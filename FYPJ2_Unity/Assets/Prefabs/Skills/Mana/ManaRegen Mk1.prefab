@@ -51,12 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13aa876ac6455e4bb5fde01b8649a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: ManaRegen Mk1
+  displayDescription: Allows the player to regenerate mana by 1 point/5 seconds.
   isUnlocked: 0
   pointsNeeded: 20
   skillsNeeded: []
   skillEffect: 1
-  skillName: ManaRegen Mk1
-  skillDescription: Gives the player mana regeneration over time. Current effect is
-    1MP/5seconds
   elapsedTime: 0
   bounceTime: 5

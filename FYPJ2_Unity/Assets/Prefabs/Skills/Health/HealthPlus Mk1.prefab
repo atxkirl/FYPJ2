@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d4af7bdd7a4174a8603b3c52fc888e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUnlocked: 0
+  displayName: HealthPlus Mk1
+  displayDescription: Increases the player's max health by 10 points.
+  isUnlocked: 1
   pointsNeeded: 10
   skillsNeeded: []
   skillEffect: 10
-  skillName: HealthPlus Mk1
-  skillDescription: Increases the player's max health by 10.

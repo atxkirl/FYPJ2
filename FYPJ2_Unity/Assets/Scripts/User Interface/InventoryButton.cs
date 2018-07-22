@@ -7,7 +7,7 @@ public class InventoryButton : MonoBehaviour
 {
 	public InventoryListControl controllingInventoryList;
 	public Text itemText;
-	public GameObject itemObject;
+	public GameObject itemObject = null;
 	public bool buttonClicked = false;
 
 	private string padding = "  ";
@@ -16,7 +16,7 @@ public class InventoryButton : MonoBehaviour
 	public void SetButton(GameObject buttonObject)
 	{
 		itemObject = buttonObject;
-		itemText.text = padding + buttonObject.GetComponent<Item>().itemDisplayName;
+		itemText.text = padding + buttonObject.GetComponent<Item>().displayName;
 	}
 
 	//Returns the object held in the button to the controller
@@ -26,6 +26,16 @@ public class InventoryButton : MonoBehaviour
 
 		//Update button color
 		buttonClicked = !buttonClicked;
+	}
+
+	public void EnterHover()
+	{
+		itemObject.GetComponent<Item>().EnterHover();
+	}
+
+	public void ExitHover()
+	{
+		itemObject.GetComponent<Item>().ExitHover();
 	}
 
 	private void Update()

@@ -17,6 +17,7 @@ public class InputManager : SingletonMono<InputManager>
 			{
 				playerInventory.GetComponent<InventoryListControl>().Toggle();
 				skillTree.GetComponent<Toggleable>().Toggle(false);
+				ToolTip.Instance.ExitHover();
 			}
 		}
 		if (Input.GetButtonDown("ToggleSkills"))
@@ -25,6 +26,7 @@ public class InputManager : SingletonMono<InputManager>
 			{
 				skillTree.GetComponent<Toggleable>().Toggle();
 				playerInventory.GetComponent<InventoryListControl>().Toggle(false);
+				ToolTip.Instance.ExitHover();
 			}
 		}
 

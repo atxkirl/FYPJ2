@@ -51,10 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0418f1045079a43949aa55a97f1d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: StrengthPlus Mk2
+  displayDescription: Increases the player's max carry weight by 20 points.
   isUnlocked: 0
   pointsNeeded: 20
   skillsNeeded:
   - {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004, type: 2}
   skillEffect: 20
-  skillName: StrengthPlus Mk2
-  skillDescription: Increases the player's max carry weight by 20.

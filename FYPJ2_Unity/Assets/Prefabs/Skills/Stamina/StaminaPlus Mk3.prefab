@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c3d316123c01f4d978a0925f48397a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: StaminaPlus Mk3
+  displayDescription: Increases the player's max stamina by 50 points.
   isUnlocked: 0
   pointsNeeded: 30
   skillsNeeded:
   - {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017, type: 2}
   - {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457, type: 2}
   skillEffect: 30
-  skillName: StaminaPlus Mk3
-  skillDescription: Increases the player's max stamina by 30.

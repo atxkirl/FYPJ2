@@ -13,14 +13,14 @@
 
 	public void SetStatistics(string newItemDisplayName, string newItemDisplayDescription, int newItemWeight, int newArmourDefence)
 	{
-		itemDisplayName = newItemDisplayName;
-		itemDisplayDescription = newItemDisplayDescription;
+		displayName = newItemDisplayName;
+		displayDescription = newItemDisplayDescription;
 		itemWeight = newItemWeight;
 		armorDefence = newArmourDefence;
 	}
 
 	public override string GetStatistics()
 	{
-		return itemDisplayName + "-" + itemDisplayDescription + "-" + itemWeight + "-" + armorDefence;
+		return displayName + "-" + displayDescription + "-" + itemWeight + "-" + armorDefence;
 	}
 }

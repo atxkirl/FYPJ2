@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465262333719962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.437, y: 0.237, z: 3.381}
+  m_LocalPosition: {x: -857.4566, y: -471.08, z: -66.418396}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: df50ceac0d14fee499a53445c66660e6, type: 2}
+  - {fileID: 2100000, guid: 9cd7d88a2b7cfc1488ec5a1742d36e55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047d3578eff5e874f8c0c5197f4ab3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDisplayName: Mythril Boots
-  itemDisplayDescription: Bing Bong
+  displayName: Mythril Boots
+  displayDescription: Armoured boots made of mythril.
   itemWeight: 20
   itemEquipped: 0
   itemModel: {fileID: 1465262333719962}

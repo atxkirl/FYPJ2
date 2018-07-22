@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d4af7bdd7a4174a8603b3c52fc888e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: HealthPlus Mk3
+  displayDescription: Increases the player's max health by 50 points.
   isUnlocked: 0
   pointsNeeded: 50
   skillsNeeded:
   - {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c, type: 2}
   - {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68, type: 2}
   skillEffect: 50
-  skillName: HealthPlus Mk3
-  skillDescription: Increases the player's max health by 50.

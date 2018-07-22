@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillBase : MonoBehaviour
+public class SkillBase : ButtonBase
 {
 	[Header("Skill Dependencies")]
 	[SerializeField]
@@ -15,10 +15,6 @@ public class SkillBase : MonoBehaviour
 	[Header("Skill Description")]
 	[SerializeField]
 	protected int skillEffect = 0;
-	[SerializeField]
-	protected string skillName = "DEFAULT_NAME";
-	[SerializeField]
-	protected string skillDescription = "DEFAULT_DESCRIPTOR";
 
 	//Checker function
 	protected bool IsUnlockable()
@@ -34,12 +30,12 @@ public class SkillBase : MonoBehaviour
 		{
 			if (!playerSkills.Contains(skill))
 			{
-				Debug.Log("Player is missing '" + skill.skillName + "' skill.");
+				Debug.Log("Player is missing '" + skill.displayName + "' skill.");
 				return false;
 			}
 		}
 
-		Debug.Log(skillName + " is unlockable by player.");
+		Debug.Log(displayName + " is unlockable by player.");
 		return true;
 	}
 
@@ -69,18 +65,6 @@ public class SkillBase : MonoBehaviour
 	public bool GetIsUnlocked()
 	{
 		return isUnlocked;
-	}
-
-	//Get Skill Name
-	public string GetSkillName()
-	{
-		return skillName;
-	}
-
-	//Get Skill Description
-	public string GetSkillDescription()
-	{
-		return skillDescription;
 	}
 
 	//Get Pre-requisite Skills
