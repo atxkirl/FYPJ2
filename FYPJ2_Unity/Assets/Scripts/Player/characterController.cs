@@ -33,7 +33,7 @@ public class characterController : MonoBehaviour
 		
 		if (controller.isGrounded)
 		{
-			moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
+			moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")));
 			moveDirection *= speed;
 
 			if (Input.GetButton("Jump"))
@@ -43,8 +43,8 @@ public class characterController : MonoBehaviour
         }
 		else
 		{
-			moveDirection.y -= gravity * Time.deltaTime;
 			moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), moveDirection.y, Input.GetAxis("Vertical")));
+			moveDirection.y -= gravity * Time.deltaTime;
 			moveDirection.x *= (speed * 0.5f);
 			moveDirection.z *= (speed * 0.5f);
 		}

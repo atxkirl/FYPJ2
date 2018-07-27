@@ -7,7 +7,7 @@ public class ThirdPersonCamera : MonoBehaviour
 	public Camera playerCamera;
 	public Transform TargetLookAt;
 	public float distance = 5.0f;
-	public float minDistance = 2.0f;
+	public float minDistance = 1.5f;
 	public float maxDistance = 10.0f;
 	public float distanceSmooth = 0.05f;
 	public float distanceResumeSmooth = 0.5f;
@@ -116,20 +116,7 @@ public class ThirdPersonCamera : MonoBehaviour
         {
             
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-
             Quaternion rotation = Quaternion.Euler(0, mouseX, 0);
-
-            //if (rotation.eulerAngles.y < -180)
-            //{
-            //    rotation.eulerAngles.Set(rotation.eulerAngles.x, 180f + rotation.eulerAngles.y, rotation.eulerAngles.z);
-            //}
-            //else if (rotation.eulerAngles.y > 180)
-            //{
-            //    rotation.eulerAngles = new Vector3(rotation.eulerAngles.x, rotation.eulerAngles.y - 360, rotation.eulerAngles.z);
-            //}
-
-            //player.transform.eulerAngles = Vector3.SmoothDamp(player.transform.eulerAngles, rotation.eulerAngles, ref velRotate, rotate_Smooth);
-
             player.transform.rotation = Quaternion.Slerp(player.transform.rotation, rotation, rotate_Smooth_T);
         }
 
@@ -197,15 +184,15 @@ public class ThirdPersonCamera : MonoBehaviour
 		Helper.ClipPlanePoints clipPlanePoints = Helper.ClipPlaneAtNear(to);
 
 		Debug.DrawLine(from, to + transform.forward * playerCamera.nearClipPlane, Color.red);
-		Debug.DrawLine(from, clipPlanePoints.upperLeft);
-		Debug.DrawLine(from, clipPlanePoints.lowerLeft);
-		Debug.DrawLine(from, clipPlanePoints.upperRight);
-		Debug.DrawLine(from, clipPlanePoints.lowerRight);
+		Debug.DrawLine(from, clipPlanePoints.upperLeft, Color.red);
+		Debug.DrawLine(from, clipPlanePoints.lowerLeft, Color.red);
+		Debug.DrawLine(from, clipPlanePoints.upperRight, Color.red);
+		Debug.DrawLine(from, clipPlanePoints.lowerRight, Color.red);
 
-		Debug.DrawLine(clipPlanePoints.upperLeft, clipPlanePoints.upperRight);
-		Debug.DrawLine(clipPlanePoints.upperRight, clipPlanePoints.lowerRight);
-		Debug.DrawLine(clipPlanePoints.lowerRight, clipPlanePoints.lowerLeft);
-		Debug.DrawLine(clipPlanePoints.lowerLeft, clipPlanePoints.upperLeft);
+		Debug.DrawLine(clipPlanePoints.upperLeft, clipPlanePoints.upperRight, Color.red);
+		Debug.DrawLine(clipPlanePoints.upperRight, clipPlanePoints.lowerRight, Color.red);
+		Debug.DrawLine(clipPlanePoints.lowerRight, clipPlanePoints.lowerLeft, Color.red);
+		Debug.DrawLine(clipPlanePoints.lowerLeft, clipPlanePoints.upperLeft, Color.red);
 
 		if (Physics.Linecast(from, clipPlanePoints.upperLeft, out hitInfo) && hitInfo.collider.tag != "Player")
 		{
@@ -241,7 +228,7 @@ public class ThirdPersonCamera : MonoBehaviour
 				nearestDistance = hitInfo.distance;
 				clipPos = hitInfo.point;
 				clipPos.y = (from + transform.forward * playerCamera.nearClipPlane).y;
-			}
+			}		
 		}
 
 		if (Physics.Linecast(from, to + transform.forward * this.GetComponent<Camera>().nearClipPlane, out hitInfo) && hitInfo.collider.tag != "Player")
@@ -251,7 +238,7 @@ public class ThirdPersonCamera : MonoBehaviour
 				nearestDistance = hitInfo.distance;
 				clipPos = hitInfo.point;
 				clipPos.y = (from + transform.forward * playerCamera.nearClipPlane).y;
-			}
+			}			
 		}
 
 		return nearestDistance;
@@ -273,7 +260,6 @@ public class ThirdPersonCamera : MonoBehaviour
 			}
 
 			var nearestDistance = CheckCameraPoints(TargetLookAt.position, pos);
-
 			if (nearestDistance < 0 || nearestDistance > preOccludedDistance)
 			{
 				desiredDistance = preOccludedDistance;
