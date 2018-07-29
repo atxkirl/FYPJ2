@@ -48,9 +48,13 @@ public class CameraManager : MonoBehaviour
 		isFPSCamera = fpsCamera.gameObject.activeSelf;
 
 		if (!isFPSCamera)
+		{
 			tpsCam.SetMouseXY(fpsCam.mouseLook);
+		}
 		else
+		{
 			fpsCam.mouseLook = tpsCam.GetMouseXY();
+		}
 
 		currCamera = Camera.main;
 	}

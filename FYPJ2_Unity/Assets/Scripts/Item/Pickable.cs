@@ -14,4 +14,14 @@ public class Pickable : MonoBehaviour
 			InputManager.Instance.playerInventory.GetComponent<InventoryListControl>().AddNewItem(this.gameObject);
 		}
 	}
+	//Use this to apply effect upon collision
+	private void OnCollisionEnter(Collision collision)
+	{
+		//Check if object colliding is Player
+		if (collision.gameObject.tag.Equals("Player"))
+		{
+			//Add item to player inventory
+			InputManager.Instance.playerInventory.GetComponent<InventoryListControl>().AddNewItem(this.gameObject);
+		}
+	}
 }

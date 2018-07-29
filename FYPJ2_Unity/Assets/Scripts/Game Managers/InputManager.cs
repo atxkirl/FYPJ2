@@ -10,7 +10,7 @@ public class InputManager : SingletonMono<InputManager>
 
 	private void Update()
 	{
-		//Toggling
+		//Toggle Inventory
 		if (Input.GetButtonDown("ToggleInventory"))
 		{
 			if (playerInventory)
@@ -20,6 +20,7 @@ public class InputManager : SingletonMono<InputManager>
 				ToolTip.Instance.ExitHover();
 			}
 		}
+		//Toggle SkillTree
 		if (Input.GetButtonDown("ToggleSkills"))
 		{
 			if (skillTree)
@@ -30,8 +31,8 @@ public class InputManager : SingletonMono<InputManager>
 			}
 		}
 
-		//Inventory control
-		if (Input.GetButtonDown("DeleteItem"))
+		//Removing Item
+		if (Input.GetButtonDown("RemoveItem"))
 		{
 			if (playerInventory)
 			{
@@ -41,13 +42,21 @@ public class InputManager : SingletonMono<InputManager>
 				}
 			}
 		}
-		if (Input.GetButtonDown("EquipItem"))
+		//Equip/UnEquip Item
+		if (Input.GetButtonDown("EquipItem") || Input.GetButtonDown("UnEquipItem"))
 		{
 			if (playerInventory)
 			{
 				if (ItemHolder.Instance.itemToPreview)
 				{
-					playerInventory.GetComponent<PlayerInventory>().EquipItem(ItemHolder.Instance.itemToPreview);
+					if (ItemHolder.Instance.itemToPreview.GetComponent<Item>().itemEquipped)
+					{
+						playerInventory.GetComponent<PlayerInventory>().UnEquipItem(ItemHolder.Instance.itemToPreview);
+					}
+					else if (!ItemHolder.Instance.itemToPreview.GetComponent<Item>().itemEquipped)
+					{
+						playerInventory.GetComponent<PlayerInventory>().EquipItem(ItemHolder.Instance.itemToPreview);
+					}
 				}
 			}
 		}

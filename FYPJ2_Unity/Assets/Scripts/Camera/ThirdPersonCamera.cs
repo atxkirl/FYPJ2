@@ -288,7 +288,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
 	public void Reset()
 	{
-		mouseX = 0;
+		//mouseX = 0;
 		mouseY = 10;
 		distance = startDistance;
 		desiredDistance = distance;

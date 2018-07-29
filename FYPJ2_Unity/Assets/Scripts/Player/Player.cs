@@ -393,9 +393,12 @@ public class Player : SingletonMono<Player>
 			//Set item into the correct slot
 			if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_HELMET))
 			{
-				//If the item we're trying to equip has already been equipped, then just return;
-				if (playerHelmet.Equals(_item))
-					return;
+				if(playerHelmet != null)
+				{
+					//If the item we're trying to equip has already been equipped, then just return;
+					if (playerHelmet.Equals(_item))
+						return;
+				}
 				//If the item is different, then unequip the old armor
 				UnEquipItem(playerHelmet);
 				//Equip new armor
@@ -403,9 +406,12 @@ public class Player : SingletonMono<Player>
 			}
 			else if (_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_CHEST))
 			{
-				//If the item we're trying to equip has already been equipped, then just return;
-				if (playerChestplate.Equals(_item))
-					return;
+				if(playerChestplate != null)
+				{
+					//If the item we're trying to equip has already been equipped, then just return;
+					if (playerChestplate.Equals(_item))
+						return;
+				}
 				//If the item is different, then unequip the old armor
 				UnEquipItem(playerChestplate);
 				//Equip new armor
@@ -413,9 +419,12 @@ public class Player : SingletonMono<Player>
 			}
 			else if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_PANTS))
 			{
-				//If the item we're trying to equip has already been equipped, then just return;
-				if (playerPants.Equals(_item))
-					return;
+				if(playerPants != null)
+				{
+					//If the item we're trying to equip has already been equipped, then just return;
+					if (playerPants.Equals(_item))
+						return;
+				}
 				//If the item is different, then unequip the old armor
 				UnEquipItem(playerPants);
 				//Equip new armor
@@ -423,9 +432,12 @@ public class Player : SingletonMono<Player>
 			}
 			else if(_item.GetComponent<Armor>().armorType.Equals(Armor.ArmorType.ARMR_BOOTS))
 			{
-				//If the item we're trying to equip has already been equipped, then just return;
-				if (playerBoots.Equals(_item))
-					return;
+				if(playerBoots != null)
+				{
+					//If the item we're trying to equip has already been equipped, then just return;
+					if (playerBoots.Equals(_item))
+						return;
+				}
 				//If the item is different, then unequip the old armor
 				UnEquipItem(playerBoots);
 				//Equip new armor
@@ -438,9 +450,16 @@ public class Player : SingletonMono<Player>
 		//Item is weapon
 		if (_item.GetComponent<Weapon>())
 		{
-			//If the item we're trying to equip has already been equipped, then just return;
-			if (playerWeapon.Equals(_item))
-				return;
+			//Check if the player has any items equipped
+			if(playerWeapon != null)
+			{
+				//If the item we're trying to equip has already been equipped, then just return
+				if (playerWeapon.Equals(_item))
+				{
+					Debug.Log("Trying to equip same item as current weapon.");
+					return;
+				}
+			}
 			//If the item is different, then unequip the old weapon
 			UnEquipItem(playerWeapon);
 			//Equip new weapon
@@ -461,14 +480,16 @@ public class Player : SingletonMono<Player>
 	{
 		//Check if player has this item
 		if (!HasItem(_item))
+		{
 			return;
+		}
 
 		//Remove item's buff
 		if(_item.GetComponent<Armor>())
 		{
 			ModifyCurrentDefence(-_item.GetComponent<Armor>().armorDefence);
 		}
-		else if (_item.GetComponent<Weapon>())
+		if (_item.GetComponent<Weapon>())
 		{
 			ModifyCurrentAttack(-_item.GetComponent<Weapon>().weaponDamage);
 		}
@@ -495,8 +516,7 @@ public class Player : SingletonMono<Player>
 		}
 
 		//Set item to be unequiped
-		GameObject item = playerItems.Find(x => playerItems.Contains(_item));
-		item.GetComponent<Item>().itemEquipped = false;
+		_item.GetComponent<Item>().itemEquipped = false;
 	}
 
 	//////////////////////
