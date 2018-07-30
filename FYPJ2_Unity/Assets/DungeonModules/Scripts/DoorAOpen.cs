@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class DoorAOpen : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+	[SerializeField]
+	private GameObject doorTeleporter;
 
     // Update is called once per frame
     void Update()
     {
-    }
-    void OnTriggerEnter(Collider other)
-    {
-		if(other.tag == "Player")
+		if(doorTeleporter.GetComponent<SceneTeleporter>().justTeleported)
 		{
-
+			GetComponent<Animator>().SetTrigger("OpenDoor");
 		}
-	}
-
-	void OnTriggerExit(Collider other)
-	{
-		if (other.tag == "Player")
+		if (!doorTeleporter.GetComponent<SceneTeleporter>().justTeleported)
 		{
-
+			GetComponent<Animator>().ResetTrigger("OpenDoor");
 		}
 	}
 }
