@@ -18,6 +18,10 @@ public class QuestSystem : MonoBehaviour {
     [SerializeField]
     QuestNode curQuestB;
 
+    private bool sameQuest;
+
+    public QuestUI questUI;
+
     void Awake()
     {
         //Check if instance already exists
@@ -27,6 +31,15 @@ public class QuestSystem : MonoBehaviour {
         //If instance already exists and it's not this then destroy
         else if (instance != this)
             Destroy(gameObject);
+
+        if (curGameObjectA.GetComponent<QuestNode>())
+            curQuestA = curGameObjectA.GetComponent<QuestNode>();
+
+        if (curGameObjectB.GetComponent<QuestNode>())
+            curQuestB = curGameObjectB.GetComponent<QuestNode>();
+
+        if (curQuestA == curQuestB)
+            sameQuest = true;
     }
 
     // Use this for initialization
@@ -36,6 +49,9 @@ public class QuestSystem : MonoBehaviour {
 
         if (curGameObjectB.GetComponent<QuestNode>())
             curQuestB = curGameObjectB.GetComponent<QuestNode>();
+
+        if (curQuestA == curQuestB)
+            sameQuest = true;
     }
 	
 	// Update is called once per frame
@@ -45,26 +61,75 @@ public class QuestSystem : MonoBehaviour {
 
     public void ProgressQuest()
     {
-
         if (curQuestA.isCompleted && curQuestA.GetNextNode())
+        {
+            questUI.UpdateQuest(curQuestA);
             curQuestA = curQuestA.GetNextNode();
+            questUI.UpdateQuest(curQuestA);
+        }
 
-        if (curQuestA == curQuestB)
+        if (sameQuest)
+        {
+            curQuestB = curQuestA;
             return;
+        }
 
         if (curQuestB.isCompleted && curQuestB.GetNextNode())
+        {
+            questUI.UpdateQuest(curQuestB);
             curQuestB = curQuestB.GetNextNode();
+            questUI.UpdateQuest(curQuestB);
+        }
     }
 
     public void UpdateQuest(GameObject obj)
     {
+        if (curQuestA == curQuestB)
+            sameQuest = true;
+        else
+            sameQuest = false;
+
         if (curQuestA.isInProgress)
             curQuestA.CheckTarget(obj);
 
-        if (curQuestA == curQuestB)
+        if (sameQuest)
             return;
 
         if (curQuestB.isInProgress)
             curQuestB.CheckTarget(obj);
+    }
+
+    public GameObject GetQuestA()
+    {
+        return curGameObjectA;
+    }
+
+    public GameObject GetQuestB()
+    {
+        return curGameObjectB;
+    }
+
+    public bool GetSameQuest()
+    {
+        return sameQuest;
+    }
+
+    public void StartQuest(GameObject giver)
+    {
+        if (giver == curQuestA.GetQuestGiver() && !curQuestA.isInProgress && !curQuestA.isCompleted)
+        {
+            questUI.UpdateQuest(curQuestA);
+            curQuestA.isInProgress = true;
+        }
+
+        if (sameQuest)
+            return;
+
+        if (giver == curQuestB.GetQuestGiver() && !curQuestB.isInProgress && !curQuestB.isCompleted)
+        {
+            questUI.UpdateQuest(curQuestB);
+            curQuestB.isInProgress = true;
+        }
+
     }
 }
