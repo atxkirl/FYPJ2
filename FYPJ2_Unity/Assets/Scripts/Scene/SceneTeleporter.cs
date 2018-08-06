@@ -33,7 +33,7 @@ public class SceneTeleporter : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.CompareTag("Player"))
+		if(other.CompareTag("Player") && other.gameObject.GetComponent<Player>())
 		{
 			player = other.gameObject;
 
@@ -53,7 +53,7 @@ public class SceneTeleporter : MonoBehaviour
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Player"))
+		if (other.CompareTag("Player") && other.gameObject.GetComponent<Player>())
 		{
 			player = other.gameObject;
 
@@ -92,6 +92,7 @@ public class SceneTeleporter : MonoBehaviour
 				if (fadeImage.material.color.a >= 0.95f)
 				{
 					StartCoroutine("ScreenFadeOut");
+					player.GetComponent<PlayerMovement>().freezePlayer = true;
 					player.transform.position = teleportPosition.transform.position;
 
 					yield break;
@@ -113,6 +114,9 @@ public class SceneTeleporter : MonoBehaviour
 				c = fadeImage.material.color;
 				c.a = f;
 				fadeImage.material.color = c;
+
+				if (player != null && player.GetComponent<PlayerMovement>())
+					player.GetComponent<PlayerMovement>().freezePlayer = true;
 
 				yield return new WaitForSeconds(0.05f);
 			}

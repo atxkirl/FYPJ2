@@ -305,6 +305,7 @@ public class Player : SingletonMono<Player>
 
 		//Instantiate scene-based version of skill
 		GameObject skill = (GameObject)Instantiate(Resources.Load("Skills/" + _skill.displayName));
+		skill.GetComponent<SkillBase>().SetOwner(gameObject);
 
 		//Set player as skill's owner
 		_skill.SetOwner(gameObject);
