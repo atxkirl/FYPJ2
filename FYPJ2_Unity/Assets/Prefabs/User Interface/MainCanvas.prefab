@@ -1506,7 +1506,7 @@ GameObject:
   - component: {fileID: 114234509238058576}
   m_Layer: 5
   m_Name: ItemObject Holder
-  m_TagString: Untagged
+  m_TagString: ItemHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3979,7 +3979,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -3995,7 +3994,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4020,9 +4018,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!108 &108817933971572228
@@ -4100,8 +4098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -4142,7 +4139,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
+        - m_Target: {fileID: 114046455248668496, guid: dc5b75225d2129e4ca126a3f733bc32e,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -4160,7 +4157,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
+        - m_Target: {fileID: 114046455248668496, guid: dc5b75225d2129e4ca126a3f733bc32e,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -4421,8 +4418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -4451,8 +4447,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -4469,8 +4464,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -4496,8 +4490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk1
-  skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114758680139588902}
 --- !u!114 &114034060940127780
 MonoBehaviour:
@@ -4668,7 +4661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk3
-  skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
+  skillObject: {fileID: 1502690957377754, guid: 6950b0c956f4e2e4f9fcbd8a6bf50968,
     type: 2}
   skillText: {fileID: 114746885035127588}
 --- !u!114 &114052923466707088
@@ -4784,8 +4777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk1
-  skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114686853144881558}
 --- !u!114 &114070736704022468
 MonoBehaviour:
@@ -4863,7 +4855,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
+        - m_Target: {fileID: 114413083061725780, guid: 778ef61bb01969e47bb00db7d7eb8f96,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -4881,7 +4873,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
+        - m_Target: {fileID: 114413083061725780, guid: 778ef61bb01969e47bb00db7d7eb8f96,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -4912,8 +4904,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -4930,8 +4921,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -4990,8 +4980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk3
-  skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114198234416111352}
 --- !u!114 &114079097822392880
 MonoBehaviour:
@@ -5102,8 +5091,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5120,8 +5108,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5151,8 +5138,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5169,8 +5155,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5227,7 +5212,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
+        - m_Target: {fileID: 114798018280030836, guid: fe858fc51bc7d6048b6e2fe37829f80c,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -5245,7 +5230,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
+        - m_Target: {fileID: 114798018280030836, guid: fe858fc51bc7d6048b6e2fe37829f80c,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -5299,8 +5284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -5329,7 +5313,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+        - m_Target: {fileID: 114361297733368870, guid: 6d9ce42a1095a6e4dbf1d53ab2a587d1,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -5347,7 +5331,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+        - m_Target: {fileID: 114361297733368870, guid: 6d9ce42a1095a6e4dbf1d53ab2a587d1,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -5519,8 +5503,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5537,8 +5520,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5568,8 +5550,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5586,8 +5567,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5667,7 +5647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk3
-  skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
+  skillObject: {fileID: 1927605538231770, guid: dc5b75225d2129e4ca126a3f733bc32e,
     type: 2}
   skillText: {fileID: 114236824497243630}
 --- !u!114 &114110809736450958
@@ -5709,8 +5689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk3
-  skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114672487328275582}
 --- !u!114 &114119533668303558
 MonoBehaviour:
@@ -5761,8 +5740,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5779,8 +5757,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5839,8 +5816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk1
-  skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114680551187262976}
 --- !u!114 &114141321923097724
 MonoBehaviour:
@@ -5924,8 +5900,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -5942,8 +5917,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -5996,8 +5970,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -6038,8 +6011,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -6056,8 +6028,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -6110,8 +6081,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -6152,7 +6122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk2
-  skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
+  skillObject: {fileID: 1590986809656104, guid: 81c4b5251f323e345a56e0d003e5fc3f,
     type: 2}
   skillText: {fileID: 114514563410570762}
 --- !u!114 &114163113895620790
@@ -6268,8 +6238,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -6286,8 +6255,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -6367,8 +6335,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -6420,7 +6387,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
+      - m_Target: {fileID: 114102152939652218, guid: d1d6813544699564ca97f2c889d1aec5,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -6506,8 +6473,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -6625,7 +6591,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
+      - m_Target: {fileID: 114825845578784434, guid: 57447c8820a722d48bc16a31fbe64281,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -6735,7 +6701,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
+        - m_Target: {fileID: 114930853127718216, guid: 6950b0c956f4e2e4f9fcbd8a6bf50968,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -6753,7 +6719,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
+        - m_Target: {fileID: 114930853127718216, guid: 6950b0c956f4e2e4f9fcbd8a6bf50968,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -6807,8 +6773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -6903,7 +6868,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
+        - m_Target: {fileID: 114102152939652218, guid: d1d6813544699564ca97f2c889d1aec5,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -6921,7 +6886,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
+        - m_Target: {fileID: 114102152939652218, guid: d1d6813544699564ca97f2c889d1aec5,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -6952,7 +6917,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
+        - m_Target: {fileID: 114607440827270100, guid: 1e2b046896aaf6247bdba41002516ce3,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -6970,7 +6935,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
+        - m_Target: {fileID: 114607440827270100, guid: 1e2b046896aaf6247bdba41002516ce3,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -7001,8 +6966,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7019,8 +6983,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7062,8 +7025,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7080,8 +7042,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7119,7 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk2
-  skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
+  skillObject: {fileID: 1925376378016036, guid: d1d6813544699564ca97f2c889d1aec5,
     type: 2}
   skillText: {fileID: 114639176710181114}
 --- !u!114 &114232069907545322
@@ -7138,8 +7099,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7156,8 +7116,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7187,8 +7146,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7205,8 +7163,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7265,6 +7222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 1000
+  itemToRotate: {fileID: 0}
 --- !u!114 &114236066367410620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7343,8 +7301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk2
-  skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114280708342021892}
 --- !u!114 &114237466402946920
 MonoBehaviour:
@@ -7424,8 +7381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk2
-  skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114477526613940494}
 --- !u!114 &114243492769244524
 MonoBehaviour:
@@ -7439,8 +7395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk2
-  skillObject: {fileID: 1925376378016036, guid: 6b363d7580a98274fa60d38887534c0e,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114331819662444348}
 --- !u!114 &114245547370294100
 MonoBehaviour:
@@ -7481,8 +7436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk3
-  skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114896381318636320}
 --- !u!114 &114261409336556984
 MonoBehaviour:
@@ -7523,7 +7477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
+      - m_Target: {fileID: 114413083061725780, guid: 778ef61bb01969e47bb00db7d7eb8f96,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -7549,8 +7503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk2
-  skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114410041118403544}
 --- !u!114 &114261679421904184
 MonoBehaviour:
@@ -7568,8 +7521,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7586,8 +7538,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7617,8 +7568,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7635,8 +7585,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7722,7 +7671,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+      - m_Target: {fileID: 114888466295389766, guid: 9cb4663c4ce1428468f5b35402fd90e0,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -7794,8 +7743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk3
-  skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114651401376098162}
 --- !u!114 &114288100306132832
 MonoBehaviour:
@@ -7896,8 +7844,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -7926,8 +7873,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -7944,8 +7890,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -7998,8 +7943,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -8024,8 +7968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk2
-  skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114520182280441700}
 --- !u!114 &114319401378805928
 MonoBehaviour:
@@ -8039,7 +7982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk3
-  skillObject: {fileID: 1579168090885570, guid: 81303bbf8bd80d64591ad3216a440fd2,
+  skillObject: {fileID: 1579168090885570, guid: 3a9d352de02bea54b97ab91aabcef070,
     type: 2}
   skillText: {fileID: 114592324859610330}
 --- !u!114 &114319538958032278
@@ -8081,8 +8024,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -8107,8 +8049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk1
-  skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114288100306132832}
 --- !u!114 &114330000574300946
 MonoBehaviour:
@@ -8122,7 +8063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk1
-  skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+  skillObject: {fileID: 1386588700278252, guid: 9cb4663c4ce1428468f5b35402fd90e0,
     type: 2}
   skillText: {fileID: 114344729809851198}
 --- !u!114 &114330153212959210
@@ -8137,8 +8078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk2
-  skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114366003909989346}
 --- !u!114 &114331819662444348
 MonoBehaviour:
@@ -8212,7 +8152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
+      - m_Target: {fileID: 114565219335502902, guid: 81c4b5251f323e345a56e0d003e5fc3f,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -8242,8 +8182,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -8260,8 +8199,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -8287,8 +8225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk2
-  skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114236066367410620}
 --- !u!114 &114344729809851198
 MonoBehaviour:
@@ -8339,7 +8276,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
+        - m_Target: {fileID: 114909447512038928, guid: 247810c232ba66f448d94500237baae2,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -8357,7 +8294,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
+        - m_Target: {fileID: 114909447512038928, guid: 247810c232ba66f448d94500237baae2,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -8384,8 +8321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk2
-  skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114513417418110628}
 --- !u!114 &114356496342942556
 MonoBehaviour:
@@ -8436,7 +8372,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
+        - m_Target: {fileID: 114651790150791872, guid: 73e142ad874d56c4aa6ce9ee62d68793,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -8454,7 +8390,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
+        - m_Target: {fileID: 114651790150791872, guid: 73e142ad874d56c4aa6ce9ee62d68793,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -8554,7 +8490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
+      - m_Target: {fileID: 114570973205959872, guid: 3a9d352de02bea54b97ab91aabcef070,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -8734,8 +8670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk3
-  skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114455882356110902}
 --- !u!114 &114376623662268192
 MonoBehaviour:
@@ -8780,8 +8715,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -8798,8 +8732,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -8825,8 +8758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk3
-  skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114942323900355570}
 --- !u!114 &114379283601638638
 MonoBehaviour:
@@ -8867,8 +8799,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -8924,7 +8855,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
+        - m_Target: {fileID: 114825845578784434, guid: 57447c8820a722d48bc16a31fbe64281,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -8942,7 +8873,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
+        - m_Target: {fileID: 114825845578784434, guid: 57447c8820a722d48bc16a31fbe64281,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -8982,8 +8913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk1
-  skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114854463363814864}
 --- !u!114 &114387993936227620
 MonoBehaviour:
@@ -9028,8 +8958,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -9046,8 +8975,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -9100,7 +9028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
+      - m_Target: {fileID: 114046455248668496, guid: dc5b75225d2129e4ca126a3f733bc32e,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -9153,8 +9081,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -9222,7 +9149,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+        - m_Target: {fileID: 114031996427078220, guid: f5fea65ebeb654b4bb56dd9a2a948368,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -9240,7 +9167,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+        - m_Target: {fileID: 114031996427078220, guid: f5fea65ebeb654b4bb56dd9a2a948368,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -9267,8 +9194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk3
-  skillObject: {fileID: 1502690957377754, guid: 6120963bf60b42848a5d11bc786c66d6,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114172812125949888}
 --- !u!114 &114403389743313444
 MonoBehaviour:
@@ -9309,8 +9235,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -9362,8 +9287,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -9380,8 +9304,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -9620,8 +9543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -9699,7 +9621,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
+        - m_Target: {fileID: 114435177285943312, guid: 44d3c3094fac97a4f98da28d3b570545,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -9717,7 +9639,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
+        - m_Target: {fileID: 114435177285943312, guid: 44d3c3094fac97a4f98da28d3b570545,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -9781,7 +9703,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
+        - m_Target: {fileID: 114256108823345784, guid: a9da8dbb23ff4ca45afc9717f80cca3e,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -9799,7 +9721,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
+        - m_Target: {fileID: 114256108823345784, guid: a9da8dbb23ff4ca45afc9717f80cca3e,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -9830,8 +9752,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -9848,8 +9769,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -9935,8 +9855,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -9961,8 +9880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk2
-  skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114119533668303558}
 --- !u!114 &114462022243789358
 MonoBehaviour:
@@ -10003,7 +9921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk3
-  skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
+  skillObject: {fileID: 1973810341817052, guid: 73e142ad874d56c4aa6ce9ee62d68793,
     type: 2}
   skillText: {fileID: 114717018130920204}
 --- !u!114 &114468408558561048
@@ -10022,8 +9940,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -10040,8 +9957,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -10104,7 +10020,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+        - m_Target: {fileID: 114458240632634246, guid: 0500b5539e41b5840bb11068eacc695f,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -10122,7 +10038,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+        - m_Target: {fileID: 114458240632634246, guid: 0500b5539e41b5840bb11068eacc695f,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -10236,8 +10152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -10295,7 +10210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk2
-  skillObject: {fileID: 1853746343931898, guid: ee7325741d4974241887afa4eac07aa7,
+  skillObject: {fileID: 1853746343931898, guid: 2f32f8cc98c4e3944af66271f8fbfdc8,
     type: 2}
   skillText: {fileID: 114653648318465514}
 --- !u!114 &114489977793667068
@@ -10310,7 +10225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk3
-  skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+  skillObject: {fileID: 1279709965597988, guid: 0500b5539e41b5840bb11068eacc695f,
     type: 2}
   skillText: {fileID: 114187892538240440}
 --- !u!114 &114494425919675272
@@ -10329,8 +10244,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -10347,8 +10261,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -10440,7 +10353,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+      - m_Target: {fileID: 114031996427078220, guid: f5fea65ebeb654b4bb56dd9a2a948368,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -10691,8 +10604,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -10721,7 +10633,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+        - m_Target: {fileID: 114888466295389766, guid: 9cb4663c4ce1428468f5b35402fd90e0,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -10739,7 +10651,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
+        - m_Target: {fileID: 114888466295389766, guid: 9cb4663c4ce1428468f5b35402fd90e0,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -10797,8 +10709,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -10815,8 +10726,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -10842,7 +10752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk1
-  skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
+  skillObject: {fileID: 1249692014577502, guid: 96462a82941b35e4197f6fe035693d90,
     type: 2}
   skillText: {fileID: 114076085042716170}
 --- !u!114 &114538904981480770
@@ -10938,7 +10848,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
+      - m_Target: {fileID: 114823684809716562, guid: 2f32f8cc98c4e3944af66271f8fbfdc8,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -10964,8 +10874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk2
-  skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114526641376326026}
 --- !u!114 &114542185745636440
 MonoBehaviour:
@@ -11006,7 +10915,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
+      - m_Target: {fileID: 114651790150791872, guid: 73e142ad874d56c4aa6ce9ee62d68793,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -11090,7 +10999,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
+        - m_Target: {fileID: 114436219306988064, guid: 87f183d2718bb6540acba91a1c491523,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -11108,7 +11017,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
+        - m_Target: {fileID: 114436219306988064, guid: 87f183d2718bb6540acba91a1c491523,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -11189,7 +11098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk3
-  skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
+  skillObject: {fileID: 1566955307883688, guid: 87f183d2718bb6540acba91a1c491523,
     type: 2}
   skillText: {fileID: 114234258815327740}
 --- !u!114 &114572208681881164
@@ -11208,8 +11117,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -11226,8 +11134,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -11253,8 +11160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk1
-  skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114655882435573394}
 --- !u!114 &114575101194767088
 MonoBehaviour:
@@ -11328,7 +11234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
+      - m_Target: {fileID: 114436219306988064, guid: 87f183d2718bb6540acba91a1c491523,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -11376,8 +11282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk1
-  skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114005609395438398}
 --- !u!114 &114586277100926794
 MonoBehaviour:
@@ -11451,8 +11356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -11558,7 +11462,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
+      - m_Target: {fileID: 114798018280030836, guid: fe858fc51bc7d6048b6e2fe37829f80c,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -11644,8 +11548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -11697,8 +11600,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -11750,8 +11652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -11809,8 +11710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk1
-  skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114699470691151662}
 --- !u!114 &114604112694104868
 MonoBehaviour:
@@ -11824,8 +11724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk1
-  skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114123278660225178}
 --- !u!114 &114608023622934320
 MonoBehaviour:
@@ -11866,7 +11765,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
+      - m_Target: {fileID: 114909447512038928, guid: 247810c232ba66f448d94500237baae2,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -11918,8 +11817,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Material: {fileID: 2100000, guid: 8bae7f91d0278af41a15d0e0b4a9dc41, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11950,8 +11849,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -11968,8 +11866,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -12014,8 +11911,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -12032,8 +11928,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -12117,8 +12012,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -12135,8 +12029,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -12162,8 +12055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk2
-  skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114586277100926794}
 --- !u!114 &114636135281333464
 MonoBehaviour:
@@ -12204,8 +12096,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114888466295389766, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -12308,8 +12199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk2
-  skillObject: {fileID: 1590986809656104, guid: a967a1eef4b80d4479e52c0e84f1c457,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114070736704022468}
 --- !u!114 &114646824001669488
 MonoBehaviour:
@@ -12323,8 +12213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk2
-  skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114420622311524832}
 --- !u!114 &114648226265427618
 MonoBehaviour:
@@ -12578,8 +12467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -12604,8 +12492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk3
-  skillObject: {fileID: 1566955307883688, guid: 38f47d08be893014093541b065f15362,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114193634929596652}
 --- !u!114 &114669805590832558
 MonoBehaviour:
@@ -12720,7 +12607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk2
-  skillObject: {fileID: 1417714693280968, guid: 636c8f5d2ae00e845b9bce3dc1971188,
+  skillObject: {fileID: 1417714693280968, guid: f5fea65ebeb654b4bb56dd9a2a948368,
     type: 2}
   skillText: {fileID: 114704495007938644}
 --- !u!114 &114680551187262976
@@ -12768,8 +12655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk1
-  skillObject: {fileID: 1249692014577502, guid: f1adb4a1dee33034392b50264e58a086,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114083996376271422}
 --- !u!114 &114686853144881558
 MonoBehaviour:
@@ -12816,8 +12702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk3
-  skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114412055190773030}
 --- !u!114 &114689247374206136
 MonoBehaviour:
@@ -12835,8 +12720,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -12853,8 +12737,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -12880,7 +12763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaPlus Mk1
-  skillObject: {fileID: 1716151366803188, guid: ea306fecf74a19a42968eff58bd02017,
+  skillObject: {fileID: 1716151366803188, guid: 57447c8820a722d48bc16a31fbe64281,
     type: 2}
   skillText: {fileID: 114854249398781130}
 --- !u!114 &114695644753831324
@@ -12949,8 +12832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -13057,7 +12939,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
+        - m_Target: {fileID: 114823684809716562, guid: 2f32f8cc98c4e3944af66271f8fbfdc8,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -13075,7 +12957,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
+        - m_Target: {fileID: 114823684809716562, guid: 2f32f8cc98c4e3944af66271f8fbfdc8,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -13162,8 +13044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk1
-  skillObject: {fileID: 1386588700278252, guid: 45e72a799d8a59a4da73ad1f8afd2d5a,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114439808647389546}
 --- !u!114 &114719079058351328
 MonoBehaviour:
@@ -13204,8 +13085,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114046455248668496, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -13230,8 +13110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk1
-  skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114980412969848194}
 --- !u!114 &114725038992560532
 MonoBehaviour:
@@ -13287,8 +13166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -13352,7 +13230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk1
-  skillObject: {fileID: 1243441368263198, guid: 583907ff4b6f20e4e94536e6ae3af004,
+  skillObject: {fileID: 1243441368263198, guid: fe858fc51bc7d6048b6e2fe37829f80c,
     type: 2}
   skillText: {fileID: 114272219142932362}
 --- !u!114 &114738471539227686
@@ -13421,7 +13299,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
+      - m_Target: {fileID: 114435177285943312, guid: 44d3c3094fac97a4f98da28d3b570545,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -13474,8 +13352,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -13620,7 +13497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
+      - m_Target: {fileID: 114607440827270100, guid: 1e2b046896aaf6247bdba41002516ce3,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -13673,7 +13550,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114256108823345784, guid: b6c42373ecf375f498592eb2aebd6d9c,
+      - m_Target: {fileID: 114256108823345784, guid: a9da8dbb23ff4ca45afc9717f80cca3e,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -13699,7 +13576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk2
-  skillObject: {fileID: 1859517127421338, guid: 5180bccd1d2d138448ffd9017afd9e3a,
+  skillObject: {fileID: 1859517127421338, guid: 247810c232ba66f448d94500237baae2,
     type: 2}
   skillText: {fileID: 114470218012700488}
 --- !u!114 &114758680139588902
@@ -13774,8 +13651,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -13854,7 +13730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+      - m_Target: {fileID: 114361297733368870, guid: 6d9ce42a1095a6e4dbf1d53ab2a587d1,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -13884,8 +13760,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -13902,8 +13777,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -13956,8 +13830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14009,8 +13882,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14039,8 +13911,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -14057,8 +13928,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114361297733368870, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -14149,7 +14019,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
+      - m_Target: {fileID: 114458240632634246, guid: 0500b5539e41b5840bb11068eacc695f,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -14175,7 +14045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk1
-  skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
+  skillObject: {fileID: 1093376122795814, guid: a9da8dbb23ff4ca45afc9717f80cca3e,
     type: 2}
   skillText: {fileID: 114599729951545468}
 --- !u!114 &114781866307719958
@@ -14266,8 +14136,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -14284,8 +14153,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -14311,8 +14179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk3
-  skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114485873075309674}
 --- !u!114 &114792375681741456
 MonoBehaviour:
@@ -14330,8 +14197,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -14348,8 +14214,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114651790150791872, guid: c88968bf5010c524a98792116e3f8b34,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -14402,8 +14267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14480,8 +14344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaRegen Mk3
-  skillObject: {fileID: 1927605538231770, guid: 964b2bd6c5d0c964b9d4470af2f32e63,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114097096023842522}
 --- !u!114 &114820496519356828
 MonoBehaviour:
@@ -14522,8 +14385,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -14540,8 +14402,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114102152939652218, guid: 6b363d7580a98274fa60d38887534c0e,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -14567,7 +14428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk1
-  skillObject: {fileID: 1561602718960098, guid: c841af6cb1f167f4e89c946aeeddcf21,
+  skillObject: {fileID: 1561602718960098, guid: c636c68cc3b47e743a6a1910e73b2ab7,
     type: 2}
   skillText: {fileID: 114207870122941990}
 --- !u!114 &114835962920650612
@@ -14609,8 +14470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14668,8 +14528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk1
-  skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114202639751635914}
 --- !u!114 &114847055692406760
 MonoBehaviour:
@@ -14710,8 +14569,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114909447512038928, guid: 5180bccd1d2d138448ffd9017afd9e3a,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14736,8 +14594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk1
-  skillObject: {fileID: 1093376122795814, guid: b6c42373ecf375f498592eb2aebd6d9c,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114083857859862836}
 --- !u!114 &114853077194832296
 MonoBehaviour:
@@ -14778,7 +14635,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
+      - m_Target: {fileID: 114067773549980366, guid: 96462a82941b35e4197f6fe035693d90,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -14924,8 +14781,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -14954,8 +14810,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -14972,8 +14827,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114607440827270100, guid: f5342784ee611654682b7fce1dcb4f68,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -14999,8 +14853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk3
-  skillObject: {fileID: 1279709965597988, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114905109405192570}
 --- !u!114 &114867914891788638
 MonoBehaviour:
@@ -15102,7 +14955,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
+        - m_Target: {fileID: 114067773549980366, guid: 96462a82941b35e4197f6fe035693d90,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -15120,7 +14973,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114067773549980366, guid: f1adb4a1dee33034392b50264e58a086,
+        - m_Target: {fileID: 114067773549980366, guid: 96462a82941b35e4197f6fe035693d90,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -15201,8 +15054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114458240632634246, guid: 252c9ac73c17cc54e9acc09f63d05a99,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -15254,8 +15106,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114798018280030836, guid: 583907ff4b6f20e4e94536e6ae3af004,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -15311,7 +15162,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
+        - m_Target: {fileID: 114570973205959872, guid: 3a9d352de02bea54b97ab91aabcef070,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -15329,7 +15180,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
+        - m_Target: {fileID: 114570973205959872, guid: 3a9d352de02bea54b97ab91aabcef070,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -15418,8 +15269,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -15436,8 +15286,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -15523,8 +15372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114031996427078220, guid: 636c8f5d2ae00e845b9bce3dc1971188,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -15549,7 +15397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk2
-  skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
+  skillObject: {fileID: 1103720428355690, guid: 1e2b046896aaf6247bdba41002516ce3,
     type: 2}
   skillText: {fileID: 114041721419868950}
 --- !u!114 &114905109405192570
@@ -15624,7 +15472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
+      - m_Target: {fileID: 114018346509364308, guid: c636c68cc3b47e743a6a1910e73b2ab7,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -15704,8 +15552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -15767,7 +15614,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
+        - m_Target: {fileID: 114018346509364308, guid: c636c68cc3b47e743a6a1910e73b2ab7,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -15785,7 +15632,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
+        - m_Target: {fileID: 114018346509364308, guid: c636c68cc3b47e743a6a1910e73b2ab7,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -15812,7 +15659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StrengthPlus Mk2
-  skillObject: {fileID: 1150805474937442, guid: 4983d31fa167ec84baef414df184efd7,
+  skillObject: {fileID: 1150805474937442, guid: 778ef61bb01969e47bb00db7d7eb8f96,
     type: 2}
   skillText: {fileID: 114741446855741778}
 --- !u!114 &114921546760665580
@@ -15854,8 +15701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk3
-  skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114193431856416342}
 --- !u!114 &114931023955798778
 MonoBehaviour:
@@ -15923,7 +15769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthRegen Mk1
-  skillObject: {fileID: 1662803174711236, guid: 0ef2e5c05bdc8a7408a77fb7a606e324,
+  skillObject: {fileID: 1662803174711236, guid: 6d9ce42a1095a6e4dbf1d53ab2a587d1,
     type: 2}
   skillText: {fileID: 114044580510648862}
 --- !u!114 &114936208030907230
@@ -15996,7 +15842,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
+        - m_Target: {fileID: 114565219335502902, guid: 81c4b5251f323e345a56e0d003e5fc3f,
             type: 2}
           m_MethodName: EnterHover
           m_Mode: 1
@@ -16014,7 +15860,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114565219335502902, guid: a967a1eef4b80d4479e52c0e84f1c457,
+        - m_Target: {fileID: 114565219335502902, guid: 81c4b5251f323e345a56e0d003e5fc3f,
             type: 2}
           m_MethodName: ExitHover
           m_Mode: 1
@@ -16045,8 +15891,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -16063,8 +15908,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114413083061725780, guid: 4983d31fa167ec84baef414df184efd7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -16117,8 +15961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114825845578784434, guid: ea306fecf74a19a42968eff58bd02017,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -16284,8 +16127,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -16302,8 +16144,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114823684809716562, guid: ee7325741d4974241887afa4eac07aa7,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -16345,8 +16186,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -16363,8 +16203,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114436219306988064, guid: 38f47d08be893014093541b065f15362,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -16417,8 +16256,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114435177285943312, guid: e02cfd581a875344c84828b8ec026d18,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -16470,8 +16308,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: UnlockSkill
         m_Mode: 1
         m_Arguments:
@@ -16496,8 +16333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: ManaPlus Mk3
-  skillObject: {fileID: 1973810341817052, guid: c88968bf5010c524a98792116e3f8b34,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114640418262389252}
 --- !u!114 &114969111278301426
 MonoBehaviour:
@@ -16538,7 +16374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: StaminaRegen Mk3
-  skillObject: {fileID: 1186547134175940, guid: e02cfd581a875344c84828b8ec026d18,
+  skillObject: {fileID: 1186547134175940, guid: 44d3c3094fac97a4f98da28d3b570545,
     type: 2}
   skillText: {fileID: 114575101194767088}
 --- !u!114 &114980412969848194
@@ -16638,8 +16474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: HealthPlus Mk2
-  skillObject: {fileID: 1103720428355690, guid: f5342784ee611654682b7fce1dcb4f68,
-    type: 2}
+  skillObject: {fileID: 0}
   skillText: {fileID: 114141321923097724}
 --- !u!114 &114984554760226366
 MonoBehaviour:
@@ -16657,8 +16492,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -16675,8 +16509,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114570973205959872, guid: 81303bbf8bd80d64591ad3216a440fd2,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -16733,8 +16566,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: EnterHover
           m_Mode: 1
           m_Arguments:
@@ -16751,8 +16583,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114018346509364308, guid: c841af6cb1f167f4e89c946aeeddcf21,
-            type: 2}
+        - m_Target: {fileID: 0}
           m_MethodName: ExitHover
           m_Mode: 1
           m_Arguments:
@@ -16844,7 +16675,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114930853127718216, guid: 6120963bf60b42848a5d11bc786c66d6,
+      - m_Target: {fileID: 114930853127718216, guid: 6950b0c956f4e2e4f9fcbd8a6bf50968,
           type: 2}
         m_MethodName: UnlockSkill
         m_Mode: 1
@@ -20202,7 +20033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 475.00012}
+  m_AnchoredPosition: {x: 0, y: 475}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224581731233158758
@@ -20930,7 +20761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 475.00012}
+  m_AnchoredPosition: {x: 0, y: 475}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224713881047027858

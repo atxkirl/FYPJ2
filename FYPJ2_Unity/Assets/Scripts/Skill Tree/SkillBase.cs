@@ -6,6 +6,8 @@ public class SkillBase : ButtonBase
 {
 	[Header("Skill Dependencies")]
 	[SerializeField]
+	protected GameObject skillOwner = null;
+	[SerializeField]
 	protected bool isUnlocked = false;
 	[SerializeField]
 	protected int pointsNeeded = 0;
@@ -49,6 +51,12 @@ public class SkillBase : ButtonBase
 		}
 	}
 
+	//Set Skill Owner
+	public void SetOwner(GameObject _skillOwner)
+	{
+		skillOwner = _skillOwner;
+	}
+
 	//Get Skillpoints
 	public int GetSkillpointsNeeded()
 	{
@@ -71,6 +79,20 @@ public class SkillBase : ButtonBase
 	public List<SkillBase> GetRequiredSkills()
 	{
 		return skillsNeeded;
+	}
+
+	//Create shallow copy
+	public SkillBase ShallowCopy()
+	{
+		return (SkillBase)this.MemberwiseClone();
+	}
+
+	//Faux constructor
+	public void ConstructSkillBase(bool _isUnlocked, int _pointsNeeded, List<SkillBase> _skillsNeeded)
+	{
+		isUnlocked = _isUnlocked;
+		pointsNeeded = _pointsNeeded;
+		skillsNeeded = _skillsNeeded;
 	}
 
 	//Abstract skill effect function - inherited classes need to implement this

@@ -8,6 +8,7 @@ public class ItemRotate : MonoBehaviour
 
 	private Ray ray;
 	private RaycastHit rayCastHit;
+	[SerializeField]
 	private GameObject itemToRotate;
 
 	void Awake()
@@ -26,9 +27,9 @@ public class ItemRotate : MonoBehaviour
 			itemToRotate = null;
 
 			//Raycasts from cursor position
-			if(Physics.Raycast(ray, out rayCastHit))
+			if(Physics.Raycast(ray, out rayCastHit, float.MaxValue, 1 << LayerMask.NameToLayer("UI")))
 			{
-				if(rayCastHit.collider.gameObject)
+				if (rayCastHit.collider.gameObject)
 				{
 					itemToRotate = rayCastHit.collider.gameObject;
 

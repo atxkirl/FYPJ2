@@ -44,7 +44,9 @@ public class SceneTeleporter : MonoBehaviour
 					teleportPosition.GetComponent<SceneTeleporter>().justTeleported = true;
 				}
 
-				StartTeleport();
+				//Only start teleport if fadeImage is fully transparent
+				if(fadeImage.material.color.a == 0f)
+					StartTeleport();
 			}
 		}
 	}
@@ -59,7 +61,9 @@ public class SceneTeleporter : MonoBehaviour
 			{
 				if (Input.GetButtonDown("Interact"))
 				{
-					StartTeleport();
+					//Only start teleport if fadeImage is fully transparent
+					if (fadeImage.material.color.a == 0f)
+						StartTeleport();
 				}
 			}
 		}
@@ -102,14 +106,20 @@ public class SceneTeleporter : MonoBehaviour
 	{
 		if (player != null)
 		{
-			for (float f = 1f; f >= -0.05f; f -= 0.05f)
+			Color c;
+
+			for (float f = 1f; f > 0f; f -= 0.05f)
 			{
-				Color c = fadeImage.material.color;
+				c = fadeImage.material.color;
 				c.a = f;
 				fadeImage.material.color = c;
 
 				yield return new WaitForSeconds(0.05f);
 			}
+
+			c = fadeImage.material.color;
+			c.a = 0f;
+			fadeImage.material.color = c;
 		}
 	}
 }

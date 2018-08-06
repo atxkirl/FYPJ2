@@ -8,49 +8,21 @@ using UnityEngine;
 public class Player : SingletonMono<Player>
 {
 	//Player Name
+	[SerializeField]
 	string playerName;
 
-	[Header("Basic Stats")]
-	//Health
+	[Header("Equipment")]
+	//Equipped Items
 	[SerializeField]
-	int playerHealth;
+	GameObject playerHelmet = null;
 	[SerializeField]
-	int playerMaxHealth;
+	GameObject playerChestplate = null;
 	[SerializeField]
-	int playerMaxHealthModifier;
-	//Stamina
+	GameObject playerPants = null;
 	[SerializeField]
-	int playerStamina;
+	GameObject playerBoots = null;
 	[SerializeField]
-	int playerMaxStamina;
-	[SerializeField]
-	int playerMaxStaminaModifier;
-	//Mana
-	[SerializeField]
-	int playerMana;
-	[SerializeField]
-	int playerMaxMana;
-	[SerializeField]
-	int playerMaxManaModifier;
-	//Carry Weight
-	[SerializeField]
-	int playerCarryWeight;
-	[SerializeField]
-	int playerMaxCarryWeight;
-	[SerializeField]
-	int playerMaxCarryWeightModifier;
-
-	[Header("Attack/Defence")]
-	//Attack
-	[SerializeField]
-	int playerAttack;
-	[SerializeField]
-	int playerAttackModifier;
-	//Defence
-	[SerializeField]
-	int playerDefence;
-	[SerializeField]
-	int playerDefenceModifier;
+	GameObject playerWeapon = null;
 
 	[Header("Skills")]
 	//Skill
@@ -66,22 +38,30 @@ public class Player : SingletonMono<Player>
 	[SerializeField]
 	List<GameObject> playerItems = new List<GameObject>();
 
-	[Header("Equipment")]
-	//Equipped Items
-	[SerializeField]
-	GameObject playerHelmet = null;
-	[SerializeField]
-	GameObject playerChestplate = null;
-	[SerializeField]
-	GameObject playerPants = null;
-	[SerializeField]
-	GameObject playerBoots = null;
-	[SerializeField]
-	GameObject playerWeapon = null;
+	private void Awake()
+	{
+		///BASE STATS
+		//Add component HealthBase
+		if (!gameObject.GetComponent<HealthBase>())
+			gameObject.AddComponent<HealthBase>();
+		//Add component StaminaBase
+		if (!gameObject.GetComponent<StaminaBase>())
+			gameObject.AddComponent<StaminaBase>();
+		//Add component CarryWeightBase
+		if (!gameObject.GetComponent<CarryWeightBase>())
+			gameObject.AddComponent<CarryWeightBase>();
+		//Add component ManaBase
+		if (!gameObject.GetComponent<ManaBase>())
+			gameObject.AddComponent<ManaBase>();
 
-	//Max Amounts
-	int maxInt = 99999;
-	float maxFloat = 99999.0f;
+		///COMBAT STATS
+		//Add component AttackBase
+		if (!gameObject.GetComponent<AttackBase>())
+			gameObject.AddComponent<AttackBase>();
+		//Add component DefenceBase
+		if (!gameObject.GetComponent<DefenceBase>())
+			gameObject.AddComponent<DefenceBase>();
+	}
 
 	//////////////////////
 	// GETTER FUNCTIONS //
@@ -92,7 +72,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentAttack()
 	{
-		return playerAttack + playerAttackModifier;
+		return gameObject.GetComponent<AttackBase>().GetCurrentAttack();
 	}
 
 	/// <summary>
@@ -100,7 +80,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentDefence()
 	{
-		return playerDefence + playerDefenceModifier;
+		return gameObject.GetComponent<DefenceBase>().GetCurrentDefence();
 	}
 
 	/// <summary>
@@ -108,7 +88,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentHealth()
 	{
-		return playerHealth;
+		return gameObject.GetComponent<HealthBase>().GetCurrentHealth();
 	}
 
 	/// <summary>
@@ -116,7 +96,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetMaxHealth()
 	{
-		return playerMaxHealth + playerMaxHealthModifier;
+		return gameObject.GetComponent<HealthBase>().GetMaxHealth();
 	}
 
 	/// <summary>
@@ -124,7 +104,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentStamina()
 	{
-		return playerStamina;
+		return gameObject.GetComponent<StaminaBase>().GetCurrentStamina();
 	}
 
 	/// <summary>
@@ -132,7 +112,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetMaxStamina()
 	{
-		return playerMaxStamina + playerMaxStaminaModifier;
+		return gameObject.GetComponent<StaminaBase>().GetMaxStamina();
 	}
 
 	/// <summary>
@@ -140,7 +120,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentMana()
 	{
-		return playerMana;
+		return gameObject.GetComponent<ManaBase>().GetCurrentMana();
 	}
 
 	/// <summary>
@@ -148,7 +128,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetMaxMana()
 	{
-		return playerMaxMana + playerMaxManaModifier;
+		return gameObject.GetComponent<ManaBase>().GetMaxMana();
 	}
 
 	/// <summary>
@@ -156,7 +136,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetCurrentCarryWeight()
 	{
-		return playerCarryWeight;
+		return gameObject.GetComponent<CarryWeightBase>().GetCurrentCarryWeight();
 	}
 
 	/// <summary>
@@ -164,7 +144,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public int GetMaxCarryWeight()
 	{
-		return playerMaxCarryWeight + playerMaxCarryWeightModifier;
+		return gameObject.GetComponent<CarryWeightBase>().GetMaxCarryWeight();
 	}
 
 	/// <summary>
@@ -208,7 +188,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentAttack(int _playerAttack)
 	{
-		playerAttack = _playerAttack;
+		gameObject.GetComponent<AttackBase>().SetCurrentAttack(_playerAttack);
 	}
 
 	/// <summary>
@@ -216,7 +196,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentDefence(int _playerDefence)
 	{
-		playerDefence = _playerDefence;
+		gameObject.GetComponent<DefenceBase>().SetCurrentDefence(_playerDefence);
 	}
 
 	/// <summary>
@@ -224,7 +204,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentHealth(int _playerHealth)
 	{
-		playerHealth = _playerHealth;
+		gameObject.GetComponent<HealthBase>().SetCurrentHealth(_playerHealth);
 	}
 
 	/// <summary>
@@ -232,7 +212,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetMaxHealth(int _playerMaxHealth)
 	{
-		playerMaxHealth = _playerMaxHealth;
+		gameObject.GetComponent<HealthBase>().SetMaxHealth(_playerMaxHealth);
 	}
 
 	/// <summary>
@@ -240,7 +220,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentStamina(int _playerStamina)
 	{
-		playerStamina = _playerStamina;
+		gameObject.GetComponent<StaminaBase>().SetCurrentStamina(_playerStamina);
 	}
 
 	/// <summary>
@@ -248,7 +228,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetMaxStamina(int _playerMaxStamina)
 	{
-		playerMaxStamina = _playerMaxStamina;
+		gameObject.GetComponent<StaminaBase>().SetMaxStamina(_playerMaxStamina);
 	}
 
 	/// <summary>
@@ -256,7 +236,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentMana(int _playerMana)
 	{
-		playerMana = _playerMana;
+		gameObject.GetComponent<ManaBase>().SetCurrentMana(_playerMana);
 	}
 
 	/// <summary>
@@ -264,7 +244,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetMaxMana(int _playerMaxMana)
 	{
-		playerMaxMana = _playerMaxMana;
+		gameObject.GetComponent<ManaBase>().SetMaxMana(_playerMaxMana);
 	}
 
 	/// <summary>
@@ -272,7 +252,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetCurrentCarryWeight(int _playerCarryWeight)
 	{
-		playerCarryWeight = _playerCarryWeight;
+		gameObject.GetComponent<CarryWeightBase>().SetCurrentCarryWeight(_playerCarryWeight);
 	}
 
 	/// <summary>
@@ -280,7 +260,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void SetMaxCarryWeight(int _playerMaxCarryWeight)
 	{
-		playerMaxCarryWeight = _playerMaxCarryWeight;
+		gameObject.GetComponent<CarryWeightBase>().SetMaxCarryWeight(_playerMaxCarryWeight);
 	}
 
 	/// <summary>
@@ -317,11 +297,17 @@ public class Player : SingletonMono<Player>
 	public void AddSkill(SkillBase _skill)
 	{
 		//Check if player already has the skill
-		if(playerSkills.Contains(_skill))
+		if (playerSkills.Contains(_skill))
 		{
+			Debug.Log("Player already has skill: " + _skill.displayName);
 			return;
 		}
 
+		//Instantiate scene-based version of skill
+		GameObject skill = (GameObject)Instantiate(Resources.Load("Skills/" + _skill.displayName));
+
+		//Set player as skill's owner
+		_skill.SetOwner(gameObject);
 		//Add skill to player's list of skill
 		playerSkills.Add(_skill);
 		//Update player's skillpoints
@@ -448,7 +434,7 @@ public class Player : SingletonMono<Player>
 			ModifyCurrentDefence(_item.GetComponent<Armor>().armorDefence);
 		}
 		//Item is weapon
-		if (_item.GetComponent<Weapon>())
+		else if (_item.GetComponent<Weapon>())
 		{
 			//Check if the player has any items equipped
 			if(playerWeapon != null)
@@ -528,9 +514,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentAttack(int _amountToModify)
 	{
-		playerAttackModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerAttackModifier, 0, maxInt);
+		gameObject.GetComponent<AttackBase>().ModifyCurrentAttack(_amountToModify);
 	}
 
 	/// <summary>
@@ -538,9 +522,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentDefence(int _amountToModify)
 	{
-		playerDefenceModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerDefenceModifier, 0, maxInt);
+		gameObject.GetComponent<DefenceBase>().ModifyCurrentDefence(_amountToModify);
 	}
 
 	/// <summary>
@@ -548,9 +530,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentHealth(int _amountToModify)
 	{
-		playerHealth += _amountToModify;
-
-		ClampBetweenValues(ref playerHealth, 0, GetMaxHealth());
+		gameObject.GetComponent<HealthBase>().ModifyCurrentHealth(_amountToModify);
 	}
 
 	/// <summary>
@@ -558,9 +538,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyMaxHealth(int _amountToModify)
 	{
-		playerMaxHealthModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerMaxHealthModifier, -playerMaxHealth, maxInt);
+		gameObject.GetComponent<HealthBase>().ModifyMaxHealth(_amountToModify);
 	}
 
 	/// <summary>
@@ -568,9 +546,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentStamina(int _amountToModify)
 	{
-		playerStamina += _amountToModify;
-
-		ClampBetweenValues(ref playerStamina, 0, GetMaxStamina());
+		gameObject.GetComponent<StaminaBase>().ModifyCurrentStamina(_amountToModify);
 	}
 
 	/// <summary>
@@ -578,9 +554,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyMaxStamina(int _amountToModify)
 	{
-		playerMaxStaminaModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerMaxStaminaModifier, -playerMaxStamina, maxInt);
+		gameObject.GetComponent<StaminaBase>().ModifyMaxStamina(_amountToModify);
 	}
 
 	/// <summary>
@@ -588,9 +562,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentMana(int _amountToModify)
 	{
-		playerMana += _amountToModify;
-
-		ClampBetweenValues(ref playerMana, 0, GetMaxMana());
+		gameObject.GetComponent<ManaBase>().ModifyCurrentMana(_amountToModify);
 	}
 
 	/// <summary>
@@ -598,9 +570,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyMaxMana(int _amountToModify)
 	{
-		playerMaxManaModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerMaxManaModifier, -playerMaxMana, maxInt);
+		gameObject.GetComponent<ManaBase>().ModifyMaxMana(_amountToModify);
 	}
 
 	/// <summary>
@@ -608,9 +578,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyCurrentCarryWeight(int _amountToModify)
 	{
-		playerCarryWeight += _amountToModify;
-
-		ClampBetweenValues(ref playerCarryWeight, 0, maxInt);
+		gameObject.GetComponent<CarryWeightBase>().ModifyCurrentCarryWeight(_amountToModify);
 	}
 
 	/// <summary>
@@ -618,9 +586,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public void ModifyMaxCarryWeight(int _amountToModify)
 	{
-		playerMaxCarryWeightModifier += _amountToModify;
-
-		ClampBetweenValues(ref playerMaxCarryWeightModifier, -playerMaxCarryWeight, 999);
+		gameObject.GetComponent<CarryWeightBase>().ModifyMaxCarryWeight(_amountToModify);
 	}
 
 	/// <summary>
@@ -630,7 +596,7 @@ public class Player : SingletonMono<Player>
 	{
 		playerSkillpoints += _amountToModify;
 
-		ClampBetweenValues(ref playerSkillpoints, 0, GetMaxSkillpoints());
+		NumberHelper.Instance.ClampBetweenValues(ref playerSkillpoints, 0, GetMaxSkillpoints());
 	}
 
 	///////////////////////
@@ -642,7 +608,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public bool IsOverburdened()
 	{
-		return (playerCarryWeight > GetMaxCarryWeight());
+		return gameObject.GetComponent<CarryWeightBase>().CheckIsOverburdened();
 	}
 
 	/// <summary>
@@ -650,7 +616,7 @@ public class Player : SingletonMono<Player>
 	/// </summary>
 	public bool IsDead()
 	{
-		return (playerHealth <= 0);
+		return gameObject.GetComponent<HealthBase>().CheckIsDead();
 	}
 
 	/// <summary>
@@ -667,22 +633,5 @@ public class Player : SingletonMono<Player>
 	bool IsItem(GameObject _item)
 	{
 		return _item.GetComponent<Item>();
-	}
-
-	////////////////////////
-	// CLAMPING FUNCTIONS //
-	////////////////////////
-
-	private bool CheckBetweenValues(int _amountToCheck, int _min, int _max)
-	{
-		return ((_amountToCheck < _max) && (_amountToCheck > _min));
-	}
-
-	private void ClampBetweenValues(ref int _amountToCheck, int _min, int _max)
-	{
-		if (_amountToCheck < _min)
-			_amountToCheck = _min;
-		if (_amountToCheck > _max)
-			_amountToCheck = _max;
 	}
 }
