@@ -11,6 +11,7 @@ public class StaminaRegen : SkillBase
 	private void Update()
 	{
 		elapsedTime += Time.deltaTime;
+		ApplySkillEffect();
 	}
 
 	public override void ApplySkillEffect()
@@ -19,8 +20,11 @@ public class StaminaRegen : SkillBase
 		{
 			elapsedTime -= bounceTime;
 
-			//Add health to the player
-			Player.Instance.ModifyCurrentStamina(skillEffect);
+			if(skillOwner.GetComponent<StaminaBase>())
+			{
+				//Add stamina to the player
+				skillOwner.GetComponent<StaminaBase>().ModifyCurrentStamina(skillEffect);
+			}
 		}
 	}
 }

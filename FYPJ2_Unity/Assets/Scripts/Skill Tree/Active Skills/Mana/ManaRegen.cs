@@ -11,6 +11,7 @@ public class ManaRegen : SkillBase
 	private void Update()
 	{
 		elapsedTime += Time.deltaTime;
+		ApplySkillEffect();
 	}
 
 	public override void ApplySkillEffect()
@@ -19,8 +20,11 @@ public class ManaRegen : SkillBase
 		{
 			elapsedTime -= bounceTime;
 
-			//Add health to the player
-			Player.Instance.ModifyCurrentMana(skillEffect);
+			if (skillOwner.GetComponent<ManaBase>())
+			{
+				//Add mana to the player
+				skillOwner.GetComponent<ManaBase>().ModifyCurrentMana(skillEffect);
+			}
 		}
 	}
 }
