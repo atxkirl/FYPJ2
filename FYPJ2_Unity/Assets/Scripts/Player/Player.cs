@@ -12,20 +12,22 @@ public class Player : SingletonMono<Player>
 	string playerName;
 
 	[Header("Equipment")]
-	//Equipped Items
 	[SerializeField]
-	GameObject playerHelmet = null;
+	public GameObject playerHelmet = null;
 	[SerializeField]
-	GameObject playerChestplate = null;
+	public GameObject playerChestplate = null;
 	[SerializeField]
-	GameObject playerPants = null;
+	public GameObject playerPants = null;
 	[SerializeField]
-	GameObject playerBoots = null;
+	public GameObject playerBoots = null;
 	[SerializeField]
-	GameObject playerWeapon = null;
+	public GameObject playerWeapon = null;
+
+	[Header("MeleeBox")]
+	[SerializeField]
+	public GameObject playerMeleeBox = null;
 
 	[Header("Skills")]
-	//Skill
 	[SerializeField]
 	int playerSkillpoints;
 	[SerializeField]
@@ -34,7 +36,6 @@ public class Player : SingletonMono<Player>
 	List<SkillBase> playerSkills = new List<SkillBase>();
 
 	[Header("Inventory")]
-	//Inventory
 	[SerializeField]
 	List<GameObject> playerItems = new List<GameObject>();
 
@@ -61,6 +62,15 @@ public class Player : SingletonMono<Player>
 		//Add component DefenceBase
 		if (!gameObject.GetComponent<DefenceBase>())
 			gameObject.AddComponent<DefenceBase>();
+	}
+
+	private void Update()
+	{
+		if(playerWeapon != null)
+		{
+			if (playerWeapon.GetComponent<ShootProjectile>())
+				playerWeapon.GetComponent<ShootProjectile>().Update();
+		}
 	}
 
 	//////////////////////
@@ -451,6 +461,14 @@ public class Player : SingletonMono<Player>
 			UnEquipItem(playerWeapon);
 			//Equip new weapon
 			playerWeapon = _item;
+			//Set weapon model into player hand
+			PlayerHand.Instance.childObject.GetComponent<MeshFilter>().mesh = _item.GetComponent<MeshFilter>().mesh;
+			PlayerHand.Instance.childObject.transform.localScale *= 0.25f;
+
+			if (playerWeapon.GetComponent<ShootProjectile>())
+				playerWeapon.GetComponent<ShootProjectile>().controllingObject = this.gameObject;
+			if (playerWeapon.GetComponent<Melee>())
+				playerMeleeBox.GetComponent<MeleeBox>().controllingObject = this.gameObject;
 
 			//Update player's attack stats
 			ModifyCurrentAttack(_item.GetComponent<Weapon>().weaponDamage);
@@ -500,6 +518,8 @@ public class Player : SingletonMono<Player>
 		else if (_item.Equals(playerWeapon))
 		{
 			playerWeapon = null;
+			PlayerHand.Instance.childObject.GetComponent<MeshFilter>().mesh = null;
+			PlayerHand.Instance.childObject.transform.localScale /= 0.25f;
 		}
 
 		//Set item to be unequiped

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MeleeBox : MonoBehaviour
 {
-	[SerializeField]
-	private GameObject controllingObject;
+	public GameObject controllingObject;
 	[SerializeField]
 	private GameObject collidingObject;
 	[SerializeField]
@@ -28,38 +27,7 @@ public class MeleeBox : MonoBehaviour
 
 		if(Input.GetButtonDown("FirePrimary"))
 		{
-			if (collidingObject != null && collidingObject.CompareTag("Enemy"))
-			{
-				//Check if colliding object has HealthBase script attached
-				if (collidingObject.GetComponent<HealthBase>())
-				{
-					int resultDamage = attackDamage;
-
-					//See if need to take into account colliding object's defence
-					if (collidingObject.GetComponent<DefenceBase>())
-					{
-						//Calculate final attack damage, taking into account opponent's defence - if any
-						resultDamage = attackDamage - collidingObject.GetComponent<DefenceBase>().GetCurrentDefence();
-
-						//Make sure damage done does not end up increasing opponent's health
-						if (resultDamage < 0)
-							resultDamage = 0;
-
-						Debug.Log("attack - defence");
-						collidingObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
-					}
-					//Colliding object does not have defence stat so just deal raw damage
-					else
-					{
-						//Make sure damage done does not end up increasing opponent's health
-						if (resultDamage < 0)
-							resultDamage = 0;
-
-						Debug.Log("attack raw");
-						collidingObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
-					}
-				}
-			}
+			//MeleeOnce();
 		}
 	}
 
@@ -81,6 +49,40 @@ public class MeleeBox : MonoBehaviour
 			if (other.CompareTag("Enemy"))
 			{
 				collidingObject = other.gameObject;
+			}
+		}
+	}
+
+	public void MeleeOnce()
+	{
+		if (collidingObject != null && collidingObject.CompareTag("Enemy"))
+		{
+			//Check if colliding object has HealthBase script attached
+			if (collidingObject.GetComponent<HealthBase>())
+			{
+				int resultDamage = attackDamage;
+
+				//See if need to take into account colliding object's defence
+				if (collidingObject.GetComponent<DefenceBase>())
+				{
+					//Calculate final attack damage, taking into account opponent's defence - if any
+					resultDamage = attackDamage - collidingObject.GetComponent<DefenceBase>().GetCurrentDefence();
+
+					//Make sure damage done does not end up increasing opponent's health
+					if (resultDamage < 0)
+						resultDamage = 0;
+
+					collidingObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
+				}
+				//Colliding object does not have defence stat so just deal raw damage
+				else
+				{
+					//Make sure damage done does not end up increasing opponent's health
+					if (resultDamage < 0)
+						resultDamage = 0;
+
+					collidingObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
+				}
 			}
 		}
 	}

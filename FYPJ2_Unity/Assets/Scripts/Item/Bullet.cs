@@ -23,29 +23,41 @@ public class Bullet : MonoBehaviour
 	{
 		//Update projectile position
 		transform.position += transform.forward * speed * Time.deltaTime;
-
-		//Raycast to check collision
-		RaycastHit hit;
-		Ray ray = new Ray(transform.position + transform.forward * GetComponent<SphereCollider>().radius, transform.forward);
-
-		if (Physics.Raycast(ray, out hit, speed * Time.deltaTime))
-		{
-			if (hit.transform.gameObject != owner)
-			{
-				DestroyBullet();
-				return;
-			}
-		}
 	}
 
-	void OnCollisionEnter(Collision other)
+	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.tag.Equals("Player"))
+		if (other.gameObject != owner && other.gameObject.tag != owner.tag)
 		{
-			Player.Instance.ModifyCurrentHealth(damage);
-		}
-		if (other.gameObject != owner)
-		{
+			//Deal Damage
+			//Check if colliding object has HealthBase script attached
+			if (other.gameObject.GetComponent<HealthBase>())
+			{
+				int resultDamage = damage;
+
+				//See if need to take into account colliding object's defence
+				if (other.gameObject.GetComponent<DefenceBase>())
+				{
+					//Calculate final attack damage, taking into account opponent's defence - if any
+					resultDamage = damage - other.gameObject.GetComponent<DefenceBase>().GetCurrentDefence();
+
+					//Make sure damage done does not end up increasing opponent's health
+					if (resultDamage < 0)
+						resultDamage = 0;
+
+					other.gameObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
+				}
+				//Colliding object does not have defence stat so just deal raw damage
+				else
+				{
+					//Make sure damage done does not end up increasing opponent's health
+					if (resultDamage < 0)
+						resultDamage = 0;
+
+					other.gameObject.GetComponent<HealthBase>().ModifyCurrentHealth(-resultDamage);
+				}
+			}
+
 			//Destroy projectile
 			DestroyBullet();
 		}
@@ -53,6 +65,7 @@ public class Bullet : MonoBehaviour
 
 	void DestroyBullet()
 	{
-		this.gameObject.SetActive(false);
+		//this.gameObject.SetActive(false);
+		Destroy(this.gameObject);
 	}
 }

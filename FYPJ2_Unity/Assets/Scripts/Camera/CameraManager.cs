@@ -2,24 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class CameraManager : SingletonMono<CameraManager>
 {
-	public static CameraManager instance;
 	public Camera fpsCamera;
 	public Camera tpsCamera;
 	public Camera currCamera;
 	public bool isFPSCamera;
-
-	void Awake()
-	{
-		//Check if instance already exists
-		if (instance == null)
-			instance = this;
-
-		//If instance already exists and it's not this then destroy
-		else if (instance != this)
-			Destroy(gameObject);
-	}
 
 	void Start()
 	{
@@ -31,7 +19,7 @@ public class CameraManager : MonoBehaviour
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.V))
+		if(Input.GetButtonDown("ChangeCameraView"))
 		{
 			SwapCamera();
 		}

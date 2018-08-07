@@ -7,13 +7,14 @@ public class InputManager : SingletonMono<InputManager>
 	public GameObject playerInventory = null;
 	public GameObject otherInventory = null;
 	public GameObject skillTree = null;
+	public GameObject playerHand = null;
 
 	private void Update()
 	{
 		//Toggle Inventory
 		if (Input.GetButtonDown("ToggleInventory"))
 		{
-			if (playerInventory)
+			if (playerInventory != null)
 			{
 				playerInventory.GetComponent<InventoryListControl>().Toggle();
 				skillTree.GetComponent<Toggleable>().Toggle(false);
@@ -23,7 +24,7 @@ public class InputManager : SingletonMono<InputManager>
 		//Toggle SkillTree
 		if (Input.GetButtonDown("ToggleSkills"))
 		{
-			if (skillTree)
+			if (skillTree != null)
 			{
 				skillTree.GetComponent<Toggleable>().Toggle();
 				playerInventory.GetComponent<InventoryListControl>().Toggle(false);
@@ -34,7 +35,7 @@ public class InputManager : SingletonMono<InputManager>
 		//Removing Item
 		if (Input.GetButtonDown("RemoveItem"))
 		{
-			if (playerInventory)
+			if (playerInventory != null)
 			{
 				if (ItemHolder.Instance.itemToPreview)
 				{
@@ -45,7 +46,7 @@ public class InputManager : SingletonMono<InputManager>
 		//Equip/UnEquip Item
 		if (Input.GetButtonDown("EquipItem") || Input.GetButtonDown("UnEquipItem"))
 		{
-			if (playerInventory)
+			if (playerInventory != null)
 			{
 				if (ItemHolder.Instance.itemToPreview)
 				{
@@ -57,6 +58,44 @@ public class InputManager : SingletonMono<InputManager>
 					{
 						playerInventory.GetComponent<PlayerInventory>().EquipItem(ItemHolder.Instance.itemToPreview);
 					}
+				}
+			}
+		}
+
+		//Fire Weapon
+		if(Input.GetButton("FirePrimary"))
+		{
+			if(playerHand != null && Player.Instance.playerWeapon != null)
+			{
+				//Check if weapon is projectile or melee
+				if(Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
+				{
+					Player.Instance.playerWeapon.GetComponent<ShootProjectile>().FireWeapon();
+				}
+				//Weapon is a melee weapon
+				else if(Player.Instance.playerWeapon.GetComponent<Melee>())
+				{
+					Player.Instance.playerMeleeBox.GetComponent<MeleeBox>().MeleeOnce();	
+				}
+			}
+		}
+		if (Input.GetButtonUp("FirePrimary"))
+		{
+			if (playerHand != null && Player.Instance.playerWeapon != null)
+			{
+				if (Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
+				{
+					Player.Instance.playerWeapon.GetComponent<ShootProjectile>().ResetWeapon();
+				}
+			}
+		}
+		if(Input.GetButtonDown("ChangeFiremode"))
+		{
+			if (playerHand != null && Player.Instance.playerWeapon != null)
+			{
+				if (Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
+				{
+					Player.Instance.playerWeapon.GetComponent<ShootProjectile>().ChangeFiretype();
 				}
 			}
 		}
