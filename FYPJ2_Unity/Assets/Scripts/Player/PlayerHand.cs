@@ -8,6 +8,22 @@ public class PlayerHand : SingletonMono<PlayerHand>
 	public GameObject tpsHand;
 	public GameObject childObject;
 
+	[SerializeField]
+	private float fpsScale = 0.5f;
+	[SerializeField]
+	private float tpsScale = 0.25f;
+
+	public void SetObject(GameObject objectToHold)
+	{
+		Instance.childObject.GetComponent<MeshFilter>().mesh = objectToHold.GetComponent<MeshFilter>().mesh;
+		Instance.childObject.GetComponent<MeshRenderer>().materials = objectToHold.GetComponent<MeshRenderer>().materials;
+	}
+
+	public void RemoveObject()
+	{
+		Instance.childObject.GetComponent<MeshFilter>().mesh = null;
+	}
+
 	private void Update()
 	{
 		if(childObject != null && Player.Instance.playerWeapon != null)
@@ -17,14 +33,19 @@ public class PlayerHand : SingletonMono<PlayerHand>
 			Player.Instance.playerWeapon.transform.rotation = childObject.transform.rotation;
 		}
 
-		if(fpsHand != null)
+		if(CameraManager.Instance.isFPSCamera)
 		{
+			Instance.childObject.transform.localScale = new Vector3(fpsScale, fpsScale, fpsScale);
+
 			transform.position = fpsHand.transform.position;
 			transform.rotation = fpsHand.transform.rotation;
 		}
-		else if (tpsHand != null)
+		if (!CameraManager.Instance.isFPSCamera)
 		{
+			Instance.childObject.transform.localScale = new Vector3(tpsScale, tpsScale, tpsScale);
+
 			transform.position = tpsHand.transform.position;
+			transform.rotation = Player.Instance.gameObject.transform.rotation;
 		}
 	}
 }

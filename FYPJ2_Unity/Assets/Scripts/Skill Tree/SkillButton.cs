@@ -12,6 +12,15 @@ public class SkillButton : MonoBehaviour
 	private GameObject skillObject = null;
 	[SerializeField]
 	private Text skillText = null;
+	[SerializeField]
+	private Image skillLink = null;
+
+	private void Start()
+	{
+		GetComponent<Button>().image.color = Color.gray;
+		if (skillLink != null)
+			skillLink.color = Color.gray;
+	}
 
 	private void Update()
 	{
@@ -19,6 +28,31 @@ public class SkillButton : MonoBehaviour
 		{
 			skillName = skillObject.GetComponent<SkillBase>().displayName;
 			skillText.text = skillName;
+		}
+
+		//Skill is unlocked by player
+		foreach (SkillBase skill in Player.Instance.GetComponent<Player>().GetSkills())
+		{
+			if (skill.displayName == skillObject.GetComponent<SkillBase>().displayName)
+			{
+				GetComponent<Button>().image.color = Color.green;
+				if (skillLink != null)
+					skillLink.color = Color.green;
+
+				return;
+			}
+		}
+		//Skill is unlockable
+		if (skillObject.GetComponent<SkillBase>().IsUnlockable())
+		{
+			GetComponent<Button>().image.color = Color.white;
+		}
+		//Skill is not unlockable
+		else
+		{
+			GetComponent<Button>().image.color = Color.gray;
+			if (skillLink != null)
+				skillLink.color = Color.gray;
 		}
 	}
 }

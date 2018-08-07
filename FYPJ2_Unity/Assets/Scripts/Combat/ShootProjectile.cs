@@ -49,7 +49,9 @@ public class ShootProjectile : MonoBehaviour
 		}
 
 		if (FireModesMap.Contains(fireModeList[0]))
+		{
 			FireModesMap.Add(fireModeList[fireModeList.Count - 1], fireModeList[0]);
+		}
 
 		//Assign first firemode
 		fireMode = fireModeList[0];
@@ -152,8 +154,11 @@ public class ShootProjectile : MonoBehaviour
 	// Change firemode
 	public void ChangeFiretype()
 	{
-		fireMode = (FireMode)FireModesMap[fireMode];
-		ResetWeapon();
+		if(fireModeList.Count > 1)
+		{
+			fireMode = (FireMode)FireModesMap[fireMode];
+			ResetWeapon();
+		}
 	}
 
 	// Add ammo

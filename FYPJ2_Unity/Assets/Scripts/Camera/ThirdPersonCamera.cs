@@ -112,10 +112,9 @@ public class ThirdPersonCamera : MonoBehaviour
         else
             mouseGoingUp = false;
 
-        if (!Input.GetMouseButton(1))
+        if (!Input.GetButton("FireSecondary"))
         {
-            
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject player = Player.Instance.gameObject;
             Quaternion rotation = Quaternion.Euler(0, mouseX, 0);
             player.transform.rotation = Quaternion.Slerp(player.transform.rotation, rotation, rotate_Smooth_T);
         }

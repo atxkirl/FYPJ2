@@ -10,7 +10,7 @@ public class HealthBase : MonoBehaviour
 	[SerializeField]
 	int maxHealth;
 	[SerializeField]
-	int maxHealthModifier;
+	public int maxHealthModifier;
 
     float testCase = 0;
 

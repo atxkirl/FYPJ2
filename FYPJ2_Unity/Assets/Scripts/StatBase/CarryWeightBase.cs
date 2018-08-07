@@ -9,7 +9,7 @@ public class CarryWeightBase : MonoBehaviour
 	[SerializeField]
 	int maxCarryWeight;
 	[SerializeField]
-	int maxCarryWeightModifier;
+	public int maxCarryWeightModifier;
 
 	/// <summary>
 	/// Get current carryWeight

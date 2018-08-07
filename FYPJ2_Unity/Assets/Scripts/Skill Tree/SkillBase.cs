@@ -19,11 +19,10 @@ public class SkillBase : ButtonBase
 	protected int skillEffect = 0;
 
 	//Checker function
-	protected bool IsUnlockable()
+	public bool IsUnlockable()
 	{
 		if (Player.Instance.GetCurrentSkillpoints() < pointsNeeded)
 		{
-			Debug.Log("Not enought skillpoints. Player has: " + Player.Instance.GetCurrentSkillpoints() + " Skill requires: " + pointsNeeded + ".");
 			return false;
 		}
 
@@ -32,12 +31,9 @@ public class SkillBase : ButtonBase
 		{
 			if (!playerSkills.Contains(skill))
 			{
-				Debug.Log("Player is missing '" + skill.displayName + "' skill.");
 				return false;
 			}
 		}
-
-		Debug.Log(displayName + " is unlockable by player.");
 		return true;
 	}
 

@@ -9,7 +9,7 @@ public class ManaBase : MonoBehaviour
 	[SerializeField]
 	int maxMana;
 	[SerializeField]
-	int maxManaModifier;
+	public int maxManaModifier;
 
 	/// <summary>
 	/// Get current mana

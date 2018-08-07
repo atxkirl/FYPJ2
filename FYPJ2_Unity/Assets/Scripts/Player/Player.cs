@@ -462,8 +462,7 @@ public class Player : SingletonMono<Player>
 			//Equip new weapon
 			playerWeapon = _item;
 			//Set weapon model into player hand
-			PlayerHand.Instance.childObject.GetComponent<MeshFilter>().mesh = _item.GetComponent<MeshFilter>().mesh;
-			PlayerHand.Instance.childObject.transform.localScale *= 0.25f;
+			PlayerHand.Instance.SetObject(_item);
 
 			if (playerWeapon.GetComponent<ShootProjectile>())
 				playerWeapon.GetComponent<ShootProjectile>().controllingObject = this.gameObject;
@@ -518,8 +517,7 @@ public class Player : SingletonMono<Player>
 		else if (_item.Equals(playerWeapon))
 		{
 			playerWeapon = null;
-			PlayerHand.Instance.childObject.GetComponent<MeshFilter>().mesh = null;
-			PlayerHand.Instance.childObject.transform.localScale /= 0.25f;
+			PlayerHand.Instance.RemoveObject();
 		}
 
 		//Set item to be unequiped

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemHolder : SingletonMono<ItemHolder>
 {
@@ -36,7 +37,7 @@ public class ItemHolder : SingletonMono<ItemHolder>
 	public void SetItem(GameObject item)
 	{
 		itemToPreview = item;
-		
+
 		//Set itemHolder's mesh to be the item's mesh, if item does not have a mesh, just set itemHolder's mesh to be null
 		if (!item.GetComponent<MeshFilter>())
 		{

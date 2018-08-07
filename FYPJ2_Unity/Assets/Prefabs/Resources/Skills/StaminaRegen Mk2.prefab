@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: StaminaRegen Mk2
-  displayDescription: Allows the player to regenerate stamina by 5 points/ 5 seconds.
+  displayDescription: Allows the player to regenerate stamina by 5 points/second.
   skillOwner: {fileID: 0}
-  isUnlocked: 0
+  isUnlocked: 1
   pointsNeeded: 30
   skillsNeeded:
   - {fileID: 114888466295389766, guid: 9cb4663c4ce1428468f5b35402fd90e0, type: 2}
   skillEffect: 5
   elapsedTime: 0
-  bounceTime: 5
+  bounceTime: 1

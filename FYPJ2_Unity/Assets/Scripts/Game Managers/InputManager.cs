@@ -11,6 +11,22 @@ public class InputManager : SingletonMono<InputManager>
 
 	private void Update()
 	{
+		//Movement Sprinting
+		if(Input.GetButton("Sprint"))
+		{
+			if(Player.Instance.gameObject.GetComponent<PlayerMovement>())
+			{
+				Player.Instance.gameObject.GetComponent<PlayerMovement>().sprinting = true;
+			}
+		}
+		if (Input.GetButtonUp("Sprint"))
+		{
+			if (Player.Instance.gameObject.GetComponent<PlayerMovement>())
+			{
+				Player.Instance.gameObject.GetComponent<PlayerMovement>().sprinting = false;
+			}
+		}
+
 		//Toggle Inventory
 		if (Input.GetButtonDown("ToggleInventory"))
 		{
@@ -65,23 +81,23 @@ public class InputManager : SingletonMono<InputManager>
 		//Fire Weapon
 		if(Input.GetButton("FirePrimary"))
 		{
-			if(playerHand != null && Player.Instance.playerWeapon != null)
+			if (playerHand != null && Player.Instance.playerWeapon != null && !playerInventory.activeSelf)
 			{
 				//Check if weapon is projectile or melee
-				if(Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
+				if (Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
 				{
 					Player.Instance.playerWeapon.GetComponent<ShootProjectile>().FireWeapon();
 				}
 				//Weapon is a melee weapon
-				else if(Player.Instance.playerWeapon.GetComponent<Melee>())
+				else if (Player.Instance.playerWeapon.GetComponent<Melee>())
 				{
-					Player.Instance.playerMeleeBox.GetComponent<MeleeBox>().MeleeOnce();	
+					Player.Instance.playerMeleeBox.GetComponent<MeleeBox>().MeleeOnce();
 				}
 			}
 		}
 		if (Input.GetButtonUp("FirePrimary"))
 		{
-			if (playerHand != null && Player.Instance.playerWeapon != null)
+			if (playerHand != null && Player.Instance.playerWeapon != null && !playerInventory.activeSelf)
 			{
 				if (Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
 				{
@@ -91,7 +107,7 @@ public class InputManager : SingletonMono<InputManager>
 		}
 		if(Input.GetButtonDown("ChangeFiremode"))
 		{
-			if (playerHand != null && Player.Instance.playerWeapon != null)
+			if (playerHand != null && Player.Instance.playerWeapon != null && !playerInventory.activeSelf)
 			{
 				if (Player.Instance.playerWeapon.GetComponent<ShootProjectile>())
 				{

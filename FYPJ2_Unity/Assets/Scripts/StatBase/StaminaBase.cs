@@ -9,7 +9,7 @@ public class StaminaBase : MonoBehaviour
 	[SerializeField]
 	int maxStamina;
 	[SerializeField]
-	int maxStaminaModifier;
+	public int maxStaminaModifier;
 
 	/// <summary>
 	/// Get current stamina
