@@ -7,9 +7,9 @@ public class SoundManager : SingletonMono<SoundManager>
 	[SerializeField]
 	private AudioSource soundSource;
 	[SerializeField]
-	private float minVolume = 0.5f;
+	public float minVolume = 0.5f;
 	[SerializeField]
-	private float maxVolume = 1.0f;
+	public float maxVolume = 1.0f;
 
 	private void Awake()
 	{
