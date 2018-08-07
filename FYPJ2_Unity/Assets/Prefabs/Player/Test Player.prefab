@@ -911,6 +911,9 @@ MonoBehaviour:
   health: 1
   maxHealth: 100
   maxHealthModifier: 0
+  barDisplay: 0
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 0}
 --- !u!114 &114503976996372356
 MonoBehaviour:
   m_ObjectHideFlags: 1

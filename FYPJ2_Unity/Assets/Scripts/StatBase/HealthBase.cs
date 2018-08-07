@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBase : MonoBehaviour
 {
@@ -24,12 +25,13 @@ public class HealthBase : MonoBehaviour
     {
         progressBarEmpty = Resources.Load("bar_mask") as Texture2D;
         progressBarFull = Resources.Load("bar_health") as Texture2D;
-    }
 
-    /// <summary>
-    /// Get current health
-    /// </summary>
-    public int GetCurrentHealth()
+	}
+
+	/// <summary>
+	/// Get current health
+	/// </summary>
+	public int GetCurrentHealth()
 	{
 		return health;
 	}
@@ -90,25 +92,25 @@ public class HealthBase : MonoBehaviour
         if (Player.Instance.gameObject == this.gameObject)
             return;
 
-        Vector3 viewPos = CameraManager.instance.currCamera.WorldToViewportPoint(transform.position);
+        Vector3 viewPos = CameraManager.Instance.currCamera.WorldToViewportPoint(transform.position);
 
         if (viewPos.z < 0 || viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y >1)
             return;
 
         barDisplay = (float)GetCurrentHealth() / (float)GetMaxHealth();
 
-        Vector3 screenPos = CameraManager.instance.currCamera.WorldToScreenPoint(transform.position);
+        Vector3 screenPos = CameraManager.Instance.currCamera.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + (transform.localScale.y * 0.6f), transform.position.z));
         screenPos.y = Screen.height - screenPos.y;
 
-        Vector2 pos = new Vector2(screenPos.x - 40, screenPos.y - 70);
-        Vector2 size = new Vector2(140, 10);
+        Vector2 pos = new Vector2(screenPos.x - (progressBarEmpty.width * 0.5f), screenPos.y);
+        Vector2 size = new Vector2(progressBarEmpty.width, progressBarEmpty.height);
         int test = progressBarEmpty.height;
 
         GUI.BeginGroup(new Rect(pos, size)/*, progressBarEmpty*/);
         GUI.DrawTexture(new Rect(new Vector2(), size), progressBarEmpty);
         //GUI.Box(new Rect(new Vector2(), size), progressBarEmpty);
 
-        size.x -= 20;
+        size.x -= (progressBarEmpty.width / 7);
 
         GUI.BeginGroup(new Rect(10, 0, size.x * barDisplay, size.y)/*, progressBarFull*/);
         GUI.DrawTexture(new Rect(0, 0, size.x, size.y), progressBarFull);
